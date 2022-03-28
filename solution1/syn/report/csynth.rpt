@@ -1,0 +1,169 @@
+
+
+================================================================
+== Synthesis Summary Report of 'crypto_aead_encrypt'
+================================================================
++ General Information: 
+    * Date:           Mon Mar 28 17:32:57 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        PII-2022-Grazzani-Rogora-Zaffiretti
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu35p-fsvh2104-1-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----+------------+------------+-----+
+    |                      Modules                      | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |      |    |            |            |     |
+    |                      & Loops                      | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF     |     LUT    | URAM|
+    +---------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----+------------+------------+-----+
+    |+ crypto_aead_encrypt                              |     -|  66.57|        -|          -|         -|        -|     -|        no|     -|   -|  2812 (~0%)|  30174 (3%)|    -|
+    | + crypto_aead_encrypt_Pipeline_VITIS_LOOP_224_1   |     -|  97.40|       10|  1.000e+03|         -|       10|     -|        no|     -|   -|    79 (~0%)|   318 (~0%)|    -|
+    |  o VITIS_LOOP_224_1                               |     -|  99.50|        8|    800.000|         1|        1|     8|       yes|     -|   -|           -|           -|    -|
+    | + LOADBYTES_1                                     |     -|  96.62|        -|          -|         -|        -|     -|        no|     -|   -|   107 (~0%)|   382 (~0%)|    -|
+    |  o VITIS_LOOP_224_1                               |     -|  99.50|        -|          -|         1|        1|     -|       yes|     -|   -|           -|           -|    -|
+    | + LOADBYTES_1                                     |     -|  96.62|        -|          -|         -|        -|     -|        no|     -|   -|   107 (~0%)|   382 (~0%)|    -|
+    |  o VITIS_LOOP_224_1                               |     -|  99.50|        -|          -|         1|        1|     -|       yes|     -|   -|           -|           -|    -|
+    | + crypto_aead_encrypt_Pipeline_VITIS_LOOP_224_11  |     -|  97.40|       10|  1.000e+03|         -|       10|     -|        no|     -|   -|    79 (~0%)|   318 (~0%)|    -|
+    |  o VITIS_LOOP_224_1                               |     -|  99.50|        8|    800.000|         1|        1|     8|       yes|     -|   -|           -|           -|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + ROUND_6                                         |     -|  97.87|        0|      0.000|         -|        0|     -|        no|     -|   -|           -|  2112 (~0%)|    -|
+    | + crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_1   |     -|  97.05|        -|          -|         -|        -|     -|        no|     -|   -|    34 (~0%)|   307 (~0%)|    -|
+    |  o VITIS_LOOP_230_1                               |     -|  99.50|        -|          -|         1|        1|     -|       yes|     -|   -|           -|           -|    -|
+    | + crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_12  |     -|  97.35|       10|  1.000e+03|         -|       10|     -|        no|     -|   -|     6 (~0%)|   243 (~0%)|    -|
+    |  o VITIS_LOOP_230_1                               |     -|  99.50|        8|    800.000|         1|        1|     8|       yes|     -|   -|           -|           -|    -|
+    | + crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_13  |     -|  97.35|       10|  1.000e+03|         -|       10|     -|        no|     -|   -|     6 (~0%)|   243 (~0%)|    -|
+    |  o VITIS_LOOP_230_1                               |     -|  99.50|        8|    800.000|         1|        1|     8|       yes|     -|   -|           -|           -|    -|
+    | o VITIS_LOOP_271_1                                |     -|  99.50|        -|          -|         -|        -|     -|        no|     -|   -|           -|           -|    -|
+    | o VITIS_LOOP_287_2                                |     -|  99.50|        -|          -|         -|        -|     -|        no|     -|   -|           -|           -|    -|
+    |  o VITIS_LOOP_230_1                               |     -|  99.50|        8|    800.000|         1|        -|     8|        no|     -|   -|           -|           -|    -|
+    +---------------------------------------------------+------+-------+---------+-----------+----------+---------+------+----------+------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| ad        | ap_none | 8        |
+| adlen     | ap_none | 64       |
+| ap_return |         | 32       |
+| c         | ap_none | 8        |
+| clen      | ap_none | 64       |
+| k         | ap_none | 8        |
+| m         | ap_none | 8        |
+| mlen      | ap_none | 64       |
+| npub      | ap_none | 8        |
+| nsec      | ap_none | 8        |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------------------+
+| Argument | Direction | Datatype                |
++----------+-----------+-------------------------+
+| c        | out       | unsigned char*          |
+| clen     | out       | long long unsigned int* |
+| m        | in        | unsigned char const *   |
+| mlen     | in        | long long unsigned int  |
+| ad       | in        | unsigned char const *   |
+| adlen    | in        | long long unsigned int  |
+| nsec     | unused    | unsigned char const *   |
+| npub     | in        | unsigned char const *   |
+| k        | in        | unsigned char const *   |
+| return   | out       | int                     |
++----------+-----------+-------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| c        | c            | port    |
+| c        | c_ap_vld     | port    |
+| clen     | clen         | port    |
+| clen     | clen_ap_vld  | port    |
+| m        | m            | port    |
+| mlen     | mlen         | port    |
+| ad       | ad           | port    |
+| adlen    | adlen        | port    |
+| nsec     | nsec         | port    |
+| npub     | npub         | port    |
+| k        | k            | port    |
+| return   | ap_return    | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| Name                                              | DSP | Pragma | Variable  | Op  | Impl   | Latency |
++---------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| + crypto_aead_encrypt                             | 0   |        |           |     |        |         |
+|   clen                                            | -   |        | add_ln249 | add | fabric | 0       |
+|   add_ln275_fu_1035_p2                            | -   |        | add_ln275 | add | fabric | 0       |
+|   sub_ln279_fu_1094_p2                            | -   |        | sub_ln279 | sub | fabric | 0       |
+|   add_ln230_fu_1223_p2                            | -   |        | add_ln230 | add | fabric | 0       |
+|   sub_ln230_fu_1241_p2                            | -   |        | sub_ln230 | sub | fabric | 0       |
+|   add_ln293_fu_1261_p2                            | -   |        | add_ln293 | add | fabric | 0       |
+|   sub_ln298_fu_1311_p2                            | -   |        | sub_ln298 | sub | fabric | 0       |
+|  + crypto_aead_encrypt_Pipeline_VITIS_LOOP_224_1  | 0   |        |           |     |        |         |
+|    add_ln224_fu_84_p2                             | -   |        | add_ln224 | add | fabric | 0       |
+|    sub_ln224_fu_105_p2                            | -   |        | sub_ln224 | sub | fabric | 0       |
+|  + LOADBYTES_1                                    | 0   |        |           |     |        |         |
+|    add_ln224_fu_70_p2                             | -   |        | add_ln224 | add | fabric | 0       |
+|    sub_ln224_fu_85_p2                             | -   |        | sub_ln224 | sub | fabric | 0       |
+|  + crypto_aead_encrypt_Pipeline_VITIS_LOOP_224_11 | 0   |        |           |     |        |         |
+|    add_ln224_fu_84_p2                             | -   |        | add_ln224 | add | fabric | 0       |
+|    sub_ln224_fu_105_p2                            | -   |        | sub_ln224 | sub | fabric | 0       |
+|  + LOADBYTES_1                                    | 0   |        |           |     |        |         |
+|    add_ln224_fu_70_p2                             | -   |        | add_ln224 | add | fabric | 0       |
+|    sub_ln224_fu_85_p2                             | -   |        | sub_ln224 | sub | fabric | 0       |
+|  + crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_1  | 0   |        |           |     |        |         |
+|    add_ln230_fu_67_p2                             | -   |        | add_ln230 | add | fabric | 0       |
+|    sub_ln230_fu_79_p2                             | -   |        | sub_ln230 | sub | fabric | 0       |
+|  + crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_12 | 0   |        |           |     |        |         |
+|    add_ln230_fu_69_p2                             | -   |        | add_ln230 | add | fabric | 0       |
+|    sub_ln230_fu_87_p2                             | -   |        | sub_ln230 | sub | fabric | 0       |
+|  + crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_13 | 0   |        |           |     |        |         |
+|    add_ln230_fu_69_p2                             | -   |        | add_ln230 | add | fabric | 0       |
+|    sub_ln230_fu_87_p2                             | -   |        | sub_ln230 | sub | fabric | 0       |
++---------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+  No pragmas found
+
