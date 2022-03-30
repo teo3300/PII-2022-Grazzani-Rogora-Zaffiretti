@@ -169,9 +169,9 @@ static  char aesl_internal__OC_str7[6] = "PT = ";
 static  char aesl_internal__OC_str8[6] = "AD = ";
 static  char aesl_internal__OC_str9[35] = "crypto_aead_encrypt returned <%d>\n";
 static  char aesl_internal__OC_str12[35] = "crypto_aead_decrypt returned <%d>\n";
-static  char aesl_internal__OC_str16[5] = "%02X";
-static  char aesl_internal__OC_str13[72] = "crypto_aead_decrypt returned bad 'mlen': Got <%I64u>, expected <%I64u>\n";
 static  char aesl_internal__OC_str14[51] = "crypto_aead_decrypt did not recover the plaintext\n";
+static  char aesl_internal__OC_str13[72] = "crypto_aead_decrypt returned bad 'mlen': Got <%I64u>, expected <%I64u>\n";
+static  char aesl_internal__OC_str16[5] = "%02X";
 
 
 /* Function Bodies */
