@@ -2,7 +2,7 @@
 #define WORD_H_
 
 #include <stdint.h>
-#include <string.h>
+//#include <string.h>
 
 typedef uint64_t uint64_t;
 
