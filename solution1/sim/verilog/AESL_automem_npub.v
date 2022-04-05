@@ -23,8 +23,8 @@ module AESL_automem_npub (
 
 //------------------------Parameter----------------------
 localparam
-    TV_IN  = "../tv/cdatafile/c.crypto_aead_encrypt_h.autotvin_npub.dat", 
-    TV_OUT = "../tv/rtldatafile/rtl.crypto_aead_encrypt_h.autotvout_npub.dat"; 
+    TV_IN  = "../tv/cdatafile/c.crypto_aead_decrypt_c.autotvin_npub.dat", 
+    TV_OUT = "../tv/rtldatafile/rtl.crypto_aead_decrypt_c.autotvout_npub.dat"; 
 //------------------------Local signal-------------------
 parameter DATA_WIDTH = 32'd 8;
 parameter ADDR_WIDTH = 32'd 4;

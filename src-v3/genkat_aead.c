@@ -42,7 +42,7 @@
 #define DECRYPT 1
 #define FULL 0
 
-#define CHECK STATE
+#define CHECK FULL
 
 #include "api.h"
 #include "crypto_aead.h"
@@ -75,11 +75,12 @@ int generate_test_vectors() {
     u8 key[CRYPTO_KEYBYTES];
     u8 nonce[CRYPTO_NPUBBYTES];
     u8 msg[MAX_MESSAGE_LENGTH];
-    u8 msg2[MAX_MESSAGE_LENGTH];
+    u8 cmsg2[MAX_MESSAGE_LENGTH];
+    u8 hmsg2[MAX_MESSAGE_LENGTH];
     u8 ad[MAX_ASSOCIATED_DATA_LENGTH];
     u8 cct[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES];
     u8 hct[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES];
-    u64 cclen, hclen, mlen2;
+    u64 cclen, hclen, cmlen2, hmlen2;
     s32 count = 1;
     s32 func_ret, ret_val = KAT_SUCCESS;
     u64 c_state[5], h_state[5];
@@ -110,10 +111,9 @@ int generate_test_vectors() {
 
             crypto_aead_encrypt_c(cct, &cclen, msg, mlen, ad, adlen, NULL, nonce, key, c_state);
             fprint_bstr(fp, "CT = ", cct, cclen);
-            crypto_aead_encrypt_h(hct, &hclen, msg, mlen, ad, adlen, NULL, nonce, key, h_state);
-            fprintf(fp, "\n");
 
             #if CHECK == STATE
+                crypto_aead_encrypt_h(hct, &hclen, msg, mlen, ad, adlen, NULL, nonce, key, h_state);
                 if(memcmp(c_state, h_state, sizeof(state_t))){
                     fprintf(stdout, "STATE ERROR: in cycle %d:\n", count);
     				fprint_bstr(stdout, "CST = ", c_state, sizeof(c_state));
@@ -123,29 +123,47 @@ int generate_test_vectors() {
                 	fprintf(stdout, "cycle %d: state check OK\n", count);
                 }
             #endif
-
-            #if CHECK <= DECRYPT
-                if ((func_ret = crypto_aead_decrypt(msg2, &mlen2, NULL, cct, cclen, ad,
+            if ((func_ret = crypto_aead_decrypt_c(cmsg2, &cmlen2, NULL, cct, cclen, ad,
+                                                adlen, nonce, key, h_state)) != 0) {
+                fprintf(fp, "C crypto_aead_decrypt_c returned <%d>\n", func_ret);
+                fprintf(stdout, "C DECRYPT ERROR: in cycle %d:\n", count);
+                ret_val = KAT_CRYPTO_FAILURE;
+                break;
+            }else{
+              	fprintf(stdout, "C cycle %d: decrypt check OK\n", count);
+            }
+            #if CHECK == DECRYPT
+                if ((func_ret = crypto_aead_decrypt_h(hmsg2, &hmlen2, NULL, cct, cclen, ad,
                                                     adlen, nonce, key, h_state)) != 0) {
-                    fprintf(fp, "crypto_aead_decrypt returned <%d>\n", func_ret);
-                    fprintf(stdout, "DECRYPT ERROR: in cycle %d:\n", count);
+                    fprintf(fp, "H crypto_aead_decrypt_h returned <%d>\n", func_ret);
+                    fprintf(stdout, "H DECRYPT ERROR: in cycle %d:\n", count);
                     ret_val = KAT_CRYPTO_FAILURE;
                     break;
                 }else{
-                	fprintf(stdout, "cycle %d: decrypt check OK\n", count);
+                	fprintf(stdout, "H cycle %d: decrypt check OK\n", count);
+                }
+                if(cmlen2 != hmlen2) {
+                    fprintf(stdout, "H ERROR BAD LEN: in cycle %d\n",conut);
+                    ret_val = KAT_CRYPTO_FAILURE;
+                    break;
+                }
+                if(memcmp(cmsg2, hmsg2, cmlen2)){
+                    fprintf(stdout, "H ERROR: BAD HLS DECRYPT: in cycle %d\n", count);
+                    ret_val = KAT_CRYPTO_FAILURE;
+                    break;
                 }
             #endif
 
             #if CHECK <= FULL
-                if (mlen != mlen2) {
+                if (mlen != cmlen2) {
                     fprintf(fp,
                             "crypto_aead_decrypt returned bad 'mlen': Got <%llu>, expected <%llu>\n",
-                            (u64)mlen2, (u64)mlen);
+                            (u64)cmlen2, (u64)mlen);
                     fprintf(stdout, "MSG OUTPUT ERROR (length): in cycle %d:\n", count);
                     ret_val = KAT_CRYPTO_FAILURE;
                     break;
                 }
-                if (memcmp(msg, msg2, mlen)) {
+                if (memcmp(msg, cmsg2, mlen)) {
                     fprintf(fp, "crypto_aead_decrypt did not recover the plaintext\n");
                     fprintf(stdout, "MSG OUTPUT ERROR (content): in cycle %d:\n", count);
                     ret_val = KAT_CRYPTO_FAILURE;
@@ -154,6 +172,7 @@ int generate_test_vectors() {
                 	fprintf(stdout, "cycle %d: msg output check OK\n", count);
                 }
             #endif
+            fprintf(fp, "\n");
         }
     }
     fclose(fp);

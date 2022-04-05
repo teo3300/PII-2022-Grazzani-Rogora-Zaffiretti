@@ -1,0 +1,119 @@
+{
+	"version": "1.0",
+	"modules": {
+		"crypto_aead_decrypt_c": {
+			"proto_instances": {
+				"/AESL_inst_crypto_aead_decrypt_c_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_crypto_aead_decrypt_1_fu_52/grp_LOADBYTES_1_fu_480/grp_LOADBYTES_1_fu_480_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_crypto_aead_decrypt_1_fu_52/grp_LOADBYTES_1_fu_488/grp_LOADBYTES_1_fu_488_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_crypto_aead_decrypt_1_fu_52/grp_LOADBYTES_2_fu_545/grp_LOADBYTES_2_fu_545_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_crypto_aead_decrypt_1_fu_52/grp_LOADBYTES_3_fu_555/grp_LOADBYTES_3_fu_555_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_crypto_aead_decrypt_1_fu_52/grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12_fu_594/grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12_fu_594_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_crypto_aead_decrypt_1_fu_52/grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11_fu_582/grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11_fu_582_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_crypto_aead_decrypt_1_fu_52/grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12_fu_588/grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12_fu_588_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_crypto_aead_decrypt_1_fu_52/grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1_fu_565/grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1_fu_565_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_crypto_aead_decrypt_1_fu_52/grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1_fu_574/grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1_fu_574_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_crypto_aead_decrypt_1_fu_52/grp_crypto_aead_decrypt_1_fu_52_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				}
+			}
+		}
+	}
+}

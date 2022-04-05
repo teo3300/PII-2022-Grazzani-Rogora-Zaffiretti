@@ -1,10 +1,10 @@
 
 
 ================================================================
-== Synthesis Summary Report of 'crypto_aead_encrypt_h'
+== Synthesis Summary Report of 'crypto_aead_decrypt_c'
 ================================================================
 + General Information: 
-    * Date:           Tue Apr  5 16:05:02 2022
+    * Date:           Tue Apr  5 21:50:57 2022
     * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
     * Project:        PII-2022-Grazzani-Rogora-Zaffiretti
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,30 +15,36 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-----------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
-    |                       Modules                       |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |    |           |           |     |
-    |                       & Loops                       |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
-    +-----------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
-    |+ crypto_aead_encrypt_h                              |  Timing|  -1.20|        -|        -|         -|        -|     -|        no|     -|   -|  3918 (1%)|  9229 (9%)|    -|
-    | + crypto_aead_encrypt_1                             |  Timing|  -1.20|        -|        -|         -|        -|     -|        no|     -|   -|  3915 (1%)|  9216 (9%)|    -|
-    |  + LOADBYTES_1                                      |       -|   3.44|       10|  100.000|         -|       10|     -|        no|     -|   -|   74 (~0%)|  355 (~0%)|    -|
-    |   o VITIS_LOOP_22_1                                 |       -|   7.30|        8|   80.000|         2|        1|     8|       yes|     -|   -|          -|          -|    -|
-    |  + LOADBYTES_1                                      |       -|   3.44|       10|  100.000|         -|       10|     -|        no|     -|   -|   74 (~0%)|  355 (~0%)|    -|
-    |   o VITIS_LOOP_22_1                                 |       -|   7.30|        8|   80.000|         2|        1|     8|       yes|     -|   -|          -|          -|    -|
-    |  + ROUND                                            |       -|   4.59|        0|    0.000|         -|        0|     -|        no|     -|   -|          -|  2112 (2%)|    -|
-    |  + ROUND                                            |       -|   4.59|        0|    0.000|         -|        0|     -|        no|     -|   -|          -|  2112 (2%)|    -|
-    |  + crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1   |       -|   2.08|        -|        -|         -|        -|     -|        no|     -|   -|   34 (~0%)|  319 (~0%)|    -|
-    |   o VITIS_LOOP_28_1                                 |       -|   7.30|        -|        -|         1|        1|     -|       yes|     -|   -|          -|          -|    -|
-    |  + crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11  |       -|   2.40|       10|  100.000|         -|       10|     -|        no|     -|   -|    6 (~0%)|  259 (~0%)|    -|
-    |   o VITIS_LOOP_28_1                                 |       -|   7.30|        8|   80.000|         1|        1|     8|       yes|     -|   -|          -|          -|    -|
-    |  + crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12  |       -|   2.40|       10|  100.000|         -|       10|     -|        no|     -|   -|    6 (~0%)|  264 (~0%)|    -|
-    |   o VITIS_LOOP_28_1                                 |       -|   7.30|        8|   80.000|         1|        1|     8|       yes|     -|   -|          -|          -|    -|
-    |  o VITIS_LOOP_77_3                                  |       -|   7.30|        -|        -|         -|        -|     -|        no|     -|   -|          -|          -|    -|
-    |   + LOADBYTES_2                                     |       -|   2.95|        -|        -|         -|        -|     -|        no|     -|   -|  131 (~0%)|  415 (~0%)|    -|
-    |    o VITIS_LOOP_22_1                                |       -|   7.30|        -|        -|         2|        1|     -|       yes|     -|   -|          -|          -|    -|
-    |  o VITIS_LOOP_104_7                                 |       -|   7.30|        -|        -|         -|        -|     -|        no|     -|   -|          -|          -|    -|
-    |   o VITIS_LOOP_28_1                                 |       -|   7.30|        8|   80.000|         1|        -|     8|        no|     -|   -|          -|          -|    -|
-    +-----------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    +------------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-------------+-----+
+    |                        Modules                       |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |    |           |             |     |
+    |                        & Loops                       |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |     LUT     | URAM|
+    +------------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-------------+-----+
+    |+ crypto_aead_decrypt_c                               |  Timing|  -1.20|        -|        -|         -|        -|     -|        no|     -|   -|  4821 (2%)|  10487 (10%)|    -|
+    | + crypto_aead_decrypt_1                              |  Timing|  -1.20|        -|        -|         -|        -|     -|        no|     -|   -|  4818 (2%)|  10472 (10%)|    -|
+    |  + LOADBYTES_1                                       |       -|   3.44|       10|  100.000|         -|       10|     -|        no|     -|   -|   74 (~0%)|    355 (~0%)|    -|
+    |   o VITIS_LOOP_22_1                                  |       -|   7.30|        8|   80.000|         2|        1|     8|       yes|     -|   -|          -|            -|    -|
+    |  + LOADBYTES_1                                       |       -|   3.44|       10|  100.000|         -|       10|     -|        no|     -|   -|   74 (~0%)|    355 (~0%)|    -|
+    |   o VITIS_LOOP_22_1                                  |       -|   7.30|        8|   80.000|         2|        1|     8|       yes|     -|   -|          -|            -|    -|
+    |  + ROUND                                             |       -|   4.59|        0|    0.000|         -|        0|     -|        no|     -|   -|          -|    2112 (2%)|    -|
+    |  + ROUND                                             |       -|   4.59|        0|    0.000|         -|        0|     -|        no|     -|   -|          -|    2112 (2%)|    -|
+    |  + crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1    |       -|   2.08|        -|        -|         -|        -|     -|        no|     -|   -|   33 (~0%)|    316 (~0%)|    -|
+    |   o VITIS_LOOP_28_1                                  |       -|   7.30|        -|        -|         1|        1|     -|       yes|     -|   -|          -|            -|    -|
+    |  + crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1    |       -|   2.95|        -|        -|         -|        -|     -|        no|     -|   -|   98 (~0%)|    442 (~0%)|    -|
+    |   o VITIS_LOOP_33_1                                  |       -|   7.30|        -|        -|         1|        1|     -|       yes|     -|   -|          -|            -|    -|
+    |  + crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11   |       -|   2.40|       10|  100.000|         -|       10|     -|        no|     -|   -|    6 (~0%)|    245 (~0%)|    -|
+    |   o VITIS_LOOP_28_1                                  |       -|   7.30|        8|   80.000|         1|        1|     8|       yes|     -|   -|          -|            -|    -|
+    |  + crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12   |       -|   2.40|       10|  100.000|         -|       10|     -|        no|     -|   -|    6 (~0%)|    250 (~0%)|    -|
+    |   o VITIS_LOOP_28_1                                  |       -|   7.30|        8|   80.000|         1|        1|     8|       yes|     -|   -|          -|            -|    -|
+    |  + crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12  |       -|   4.22|       19|  190.000|         -|       19|     -|        no|     -|   -|   42 (~0%)|    100 (~0%)|    -|
+    |   o VITIS_LOOP_282_12                                |       -|   7.30|       17|  170.000|         2|        1|    16|       yes|     -|   -|          -|            -|    -|
+    |  o VITIS_LOOP_210_3                                  |       -|   7.30|        -|        -|         -|        -|     -|        no|     -|   -|          -|            -|    -|
+    |   + LOADBYTES_2                                      |       -|   2.95|        -|        -|         -|        -|     -|        no|     -|   -|  131 (~0%)|    415 (~0%)|    -|
+    |    o VITIS_LOOP_22_1                                 |       -|   7.30|        -|        -|         2|        1|     -|       yes|     -|   -|          -|            -|    -|
+    |  o VITIS_LOOP_238_7                                  |       -|   7.30|        -|        -|         -|        -|     -|        no|     -|   -|          -|            -|    -|
+    |   + LOADBYTES_3                                      |       -|   2.95|        -|        -|         -|        -|     -|        no|     -|   -|  131 (~0%)|    416 (~0%)|    -|
+    |    o VITIS_LOOP_22_1                                 |       -|   7.30|        -|        -|         2|        1|     -|       yes|     -|   -|          -|            -|    -|
+    |   o VITIS_LOOP_28_1                                  |       -|   7.30|        8|   80.000|         1|        -|     8|        no|     -|   -|          -|            -|    -|
+    +------------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-------------+-----+
 
 
 ================================================================
@@ -51,19 +57,13 @@
 | ad_address0   | 5        |
 | ad_q0         | 8        |
 | c_address0    | 6        |
-| c_d0          | 8        |
+| c_q0          | 8        |
 | k_address0    | 4        |
 | k_q0          | 8        |
 | m_address0    | 5        |
-| m_q0          | 8        |
+| m_d0          | 8        |
 | npub_address0 | 4        |
 | npub_q0       | 8        |
-| st_address0   | 3        |
-| st_address1   | 3        |
-| st_d0         | 64       |
-| st_d1         | 64       |
-| st_q0         | 64       |
-| st_q1         | 64       |
 +---------------+----------+
 
 * REGISTER
@@ -91,57 +91,46 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+----------+-----------+-------------------------+
-| Argument | Direction | Datatype                |
-+----------+-----------+-------------------------+
-| c        | out       | unsigned char*          |
-| clen     | out       | pointer                 |
-| m        | in        | pointer                 |
-| mlen     | in        | long long unsigned int  |
-| ad       | in        | pointer                 |
-| adlen    | in        | long long unsigned int  |
-| nsec     | unused    | pointer                 |
-| npub     | in        | pointer                 |
-| k        | in        | pointer                 |
-| st       | unused    | long long unsigned int* |
-| return   | out       | int                     |
-+----------+-----------+-------------------------+
++----------+-----------+------------------------+
+| Argument | Direction | Datatype               |
++----------+-----------+------------------------+
+| m        | out       | unsigned char*         |
+| mlen     | out       | pointer                |
+| nsec     | unused    | pointer                |
+| c        | in        | pointer                |
+| clen     | in        | long long unsigned int |
+| ad       | in        | pointer                |
+| adlen    | in        | long long unsigned int |
+| npub     | in        | pointer                |
+| k        | in        | pointer                |
+| return   | out       | int                    |
++----------+-----------+------------------------+
 
 * SW-to-HW Mapping
 +----------+---------------+---------+----------+
 | Argument | HW Interface  | HW Type | HW Usage |
 +----------+---------------+---------+----------+
-| c        | c_address0    | port    | offset   |
-| c        | c_ce0         | port    |          |
-| c        | c_we0         | port    |          |
-| c        | c_d0          | port    |          |
-| clen     | clen          | port    |          |
-| clen     | clen_ap_vld   | port    |          |
 | m        | m_address0    | port    | offset   |
 | m        | m_ce0         | port    |          |
-| m        | m_q0          | port    |          |
+| m        | m_we0         | port    |          |
+| m        | m_d0          | port    |          |
 | mlen     | mlen          | port    |          |
+| mlen     | mlen_ap_vld   | port    |          |
+| nsec     | nsec          | port    |          |
+| c        | c_address0    | port    | offset   |
+| c        | c_ce0         | port    |          |
+| c        | c_q0          | port    |          |
+| clen     | clen          | port    |          |
 | ad       | ad_address0   | port    | offset   |
 | ad       | ad_ce0        | port    |          |
 | ad       | ad_q0         | port    |          |
 | adlen    | adlen         | port    |          |
-| nsec     | nsec          | port    |          |
 | npub     | npub_address0 | port    | offset   |
 | npub     | npub_ce0      | port    |          |
 | npub     | npub_q0       | port    |          |
 | k        | k_address0    | port    | offset   |
 | k        | k_ce0         | port    |          |
 | k        | k_q0          | port    |          |
-| st       | st_address0   | port    | offset   |
-| st       | st_ce0        | port    |          |
-| st       | st_we0        | port    |          |
-| st       | st_d0         | port    |          |
-| st       | st_q0         | port    |          |
-| st       | st_address1   | port    | offset   |
-| st       | st_ce1        | port    |          |
-| st       | st_we1        | port    |          |
-| st       | st_d1         | port    |          |
-| st       | st_q1         | port    |          |
 | return   | ap_return     | port    |          |
 +----------+---------------+---------+----------+
 
@@ -156,54 +145,71 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+-----------------------------------------------------+-----+--------+------------+-----+--------+---------+
-| Name                                                | DSP | Pragma | Variable   | Op  | Impl   | Latency |
-+-----------------------------------------------------+-----+--------+------------+-----+--------+---------+
-| + crypto_aead_encrypt_h                             | 0   |        |            |     |        |         |
-|  + crypto_aead_encrypt_1                            | 0   |        |            |     |        |         |
-|    clen                                             | -   |        | add_ln48   | add | fabric | 0       |
-|    add_ln84_fu_781_p2                               | -   |        | add_ln84   | add | fabric | 0       |
-|    add_ln85_fu_787_p2                               | -   |        | add_ln85   | add | fabric | 0       |
-|    sub_ln89_fu_877_p2                               | -   |        | sub_ln89   | sub | fabric | 0       |
-|    add_ln28_1_fu_1054_p2                            | -   |        | add_ln28_1 | add | fabric | 0       |
-|    sub_ln28_fu_1072_p2                              | -   |        | sub_ln28   | sub | fabric | 0       |
-|    add_ln28_fu_1096_p2                              | -   |        | add_ln28   | add | fabric | 0       |
-|    add_ln113_fu_1107_p2                             | -   |        | add_ln113  | add | fabric | 0       |
-|    add_ln114_fu_1113_p2                             | -   |        | add_ln114  | add | fabric | 0       |
-|    sub_ln119_fu_1168_p2                             | -   |        | sub_ln119  | sub | fabric | 0       |
-|    add_ln28_4_fu_1217_p2                            | -   |        | add_ln28_4 | add | fabric | 0       |
-|   + LOADBYTES_1                                     | 0   |        |            |     |        |         |
-|     add_ln22_2_fu_90_p2                             | -   |        | add_ln22_2 | add | fabric | 0       |
-|     add_ln22_fu_96_p2                               | -   |        | add_ln22   | add | fabric | 0       |
-|     sub_ln22_fu_130_p2                              | -   |        | sub_ln22   | sub | fabric | 0       |
-|   + LOADBYTES_1                                     | 0   |        |            |     |        |         |
-|     add_ln22_2_fu_90_p2                             | -   |        | add_ln22_2 | add | fabric | 0       |
-|     add_ln22_fu_96_p2                               | -   |        | add_ln22   | add | fabric | 0       |
-|     sub_ln22_fu_130_p2                              | -   |        | sub_ln22   | sub | fabric | 0       |
-|   + LOADBYTES_2                                     | 0   |        |            |     |        |         |
-|     add_ln22_1_fu_88_p2                             | -   |        | add_ln22_1 | add | fabric | 0       |
-|     add_ln22_fu_98_p2                               | -   |        | add_ln22   | add | fabric | 0       |
-|     sub_ln22_fu_126_p2                              | -   |        | sub_ln22   | sub | fabric | 0       |
-|   + crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1  | 0   |        |            |     |        |         |
-|     add_ln28_3_fu_89_p2                             | -   |        | add_ln28_3 | add | fabric | 0       |
-|     sub_ln28_fu_105_p2                              | -   |        | sub_ln28   | sub | fabric | 0       |
-|     add_ln28_2_fu_126_p2                            | -   |        | add_ln28_2 | add | fabric | 0       |
-|   + crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11 | 0   |        |            |     |        |         |
-|     add_ln28_fu_99_p2                               | -   |        | add_ln28   | add | fabric | 0       |
-|     sub_ln28_fu_121_p2                              | -   |        | sub_ln28   | sub | fabric | 0       |
-|     add_ln28_2_fu_142_p2                            | -   |        | add_ln28_2 | add | tadder | 0       |
-|     add_ln28_3_fu_148_p2                            | -   |        | add_ln28_3 | add | tadder | 0       |
-|   + crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12 | 0   |        |            |     |        |         |
-|     add_ln28_fu_91_p2                               | -   |        | add_ln28   | add | fabric | 0       |
-|     sub_ln28_fu_109_p2                              | -   |        | sub_ln28   | sub | fabric | 0       |
-|     add_ln28_1_fu_140_p2                            | -   |        | add_ln28_1 | add | fabric | 0       |
-+-----------------------------------------------------+-----+--------+------------+-----+--------+---------+
++------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                                 | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + crypto_aead_decrypt_c                              | 0   |        |             |     |        |         |
+|  + crypto_aead_decrypt_1                             | 0   |        |             |     |        |         |
+|    mlen                                              | -   |        | add_ln181   | add | fabric | 0       |
+|    add_ln181_1_fu_738_p2                             | -   |        | add_ln181_1 | add | fabric | 0       |
+|    add_ln217_fu_864_p2                               | -   |        | add_ln217   | add | fabric | 0       |
+|    add_ln218_fu_870_p2                               | -   |        | add_ln218   | add | fabric | 0       |
+|    sub_ln222_fu_960_p2                               | -   |        | sub_ln222   | sub | fabric | 0       |
+|    add_ln28_1_fu_1152_p2                             | -   |        | add_ln28_1  | add | fabric | 0       |
+|    sub_ln28_fu_1170_p2                               | -   |        | sub_ln28    | sub | fabric | 0       |
+|    add_ln28_fu_1194_p2                               | -   |        | add_ln28    | add | fabric | 0       |
+|    add_ln244_fu_1205_p2                              | -   |        | add_ln244   | add | fabric | 0       |
+|    add_ln246_fu_1211_p2                              | -   |        | add_ln246   | add | fabric | 0       |
+|    add_ln238_fu_1081_p2                              | -   |        | add_ln238   | add | fabric | 0       |
+|    sub_ln253_fu_1275_p2                              | -   |        | sub_ln253   | sub | fabric | 0       |
+|    add_ln283_fu_1333_p2                              | -   |        | add_ln283   | add | fabric | 0       |
+|   + LOADBYTES_1                                      | 0   |        |             |     |        |         |
+|     add_ln22_3_fu_90_p2                              | -   |        | add_ln22_3  | add | fabric | 0       |
+|     add_ln22_fu_96_p2                                | -   |        | add_ln22    | add | fabric | 0       |
+|     sub_ln22_fu_130_p2                               | -   |        | sub_ln22    | sub | fabric | 0       |
+|   + LOADBYTES_1                                      | 0   |        |             |     |        |         |
+|     add_ln22_3_fu_90_p2                              | -   |        | add_ln22_3  | add | fabric | 0       |
+|     add_ln22_fu_96_p2                                | -   |        | add_ln22    | add | fabric | 0       |
+|     sub_ln22_fu_130_p2                               | -   |        | sub_ln22    | sub | fabric | 0       |
+|   + LOADBYTES_2                                      | 0   |        |             |     |        |         |
+|     add_ln22_2_fu_88_p2                              | -   |        | add_ln22_2  | add | fabric | 0       |
+|     add_ln22_fu_98_p2                                | -   |        | add_ln22    | add | fabric | 0       |
+|     sub_ln22_fu_126_p2                               | -   |        | sub_ln22    | sub | fabric | 0       |
+|   + LOADBYTES_3                                      | 0   |        |             |     |        |         |
+|     add_ln22_1_fu_88_p2                              | -   |        | add_ln22_1  | add | fabric | 0       |
+|     add_ln22_fu_98_p2                                | -   |        | add_ln22    | add | fabric | 0       |
+|     sub_ln22_fu_126_p2                               | -   |        | sub_ln22    | sub | fabric | 0       |
+|   + crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1   | 0   |        |             |     |        |         |
+|     add_ln28_fu_101_p2                               | -   |        | add_ln28    | add | fabric | 0       |
+|     sub_ln28_fu_123_p2                               | -   |        | sub_ln28    | sub | fabric | 0       |
+|     add_ln28_1_fu_144_p2                             | -   |        | add_ln28_1  | add | fabric | 0       |
+|   + crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1   | 0   |        |             |     |        |         |
+|     add_ln33_fu_91_p2                                | -   |        | add_ln33    | add | fabric | 0       |
+|     sub_ln33_fu_112_p2                               | -   |        | sub_ln33    | sub | fabric | 0       |
+|   + crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11  | 0   |        |             |     |        |         |
+|     add_ln28_fu_75_p2                                | -   |        | add_ln28    | add | fabric | 0       |
+|     sub_ln28_fu_98_p2                                | -   |        | sub_ln28    | sub | fabric | 0       |
+|   + crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12  | 0   |        |             |     |        |         |
+|     add_ln28_fu_75_p2                                | -   |        | add_ln28    | add | fabric | 0       |
+|     sub_ln28_fu_93_p2                                | -   |        | sub_ln28    | sub | fabric | 0       |
+|   + crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12 | 0   |        |             |     |        |         |
+|     add_ln282_2_fu_126_p2                            | -   |        | add_ln282_2 | add | fabric | 0       |
+|     add_ln282_fu_141_p2                              | -   |        | add_ln282   | add | tadder | 0       |
+|     add_ln282_1_fu_147_p2                            | -   |        | add_ln282_1 | add | tadder | 0       |
++------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-  No bind storage info in design
++--------------------------+------+------+--------+----------+---------+------+---------+
+| Name                     | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++--------------------------+------+------+--------+----------+---------+------+---------+
+| + crypto_aead_decrypt_c  | 0    | 0    |        |          |         |      |         |
+|  + crypto_aead_decrypt_1 | 0    | 0    |        |          |         |      |         |
+|    t_U                   | -    | -    |        | t        | ram_1p  | auto | 1       |
++--------------------------+------+------+--------+----------+---------+------+---------+
+
 
 ================================================================
 == User Pragma Report

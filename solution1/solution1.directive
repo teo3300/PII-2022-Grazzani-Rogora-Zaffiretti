@@ -1,8 +1,13 @@
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
     <sourceFile name="">
-        <directive functionName="crypto_aead_encrypt_h" label="" functionLabel="">
+        <directive functionName="crypto_aead_decrypt_c" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="crypto_aead_encrypt_h"/>
+                <option name="name" value="crypto_aead_decrypt_c"/>
+            </pragma>
+        </directive>
+        <directive functionName="crypto_aead_decrypt_c" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="crypto_aead_decrypt_c"/>
             </pragma>
         </directive>
     </sourceFile>

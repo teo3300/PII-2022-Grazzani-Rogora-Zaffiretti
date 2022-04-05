@@ -1,8 +1,16 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Tue Apr 05 16:05:27 +0200 2022
+INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Tue Apr 05 21:51:22 +0200 2022
 INFO: [HLS 200-10] In directory 'H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/original_genkat_aead.c:1:
+H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/original_genkat_aead.c:91:68: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+                "crypto_aead_decrypt returned bad 'mlen': Got <%" "I64u"
+                                                               ~~~~^
+H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/original_genkat_aead.c:92:35: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+                ">, expected <%" "I64u" ">\n",
+                              ~~~~^
+2 warnings generated.
 INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.709 seconds; peak allocated memory: 2.363 MB.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.707 seconds; peak allocated memory: 3.223 MB.

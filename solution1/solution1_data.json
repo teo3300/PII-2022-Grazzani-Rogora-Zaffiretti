@@ -1,8 +1,8 @@
 {
-  "Top": "crypto_aead_encrypt_h",
-  "RtlTop": "crypto_aead_encrypt_h",
+  "Top": "crypto_aead_decrypt_c",
+  "RtlTop": "crypto_aead_decrypt_c",
   "RtlPrefix": "",
-  "RtlSubPrefix": "crypto_aead_encrypt_h_",
+  "RtlSubPrefix": "crypto_aead_decrypt_c_",
   "SourceLanguage": "c",
   "HostMachineBits": "64",
   "FunctionProtocol": "ap_ctrl_hs",
@@ -15,68 +15,10 @@
     "Triple": "fpga64-xilinx-none"
   },
   "Args": {
-    "c": {
+    "m": {
       "index": "0",
       "direction": "out",
       "srcType": "unsigned char*",
-      "srcSize": "8",
-      "hwRefs": [
-        {
-          "type": "port",
-          "interface": "c_address0",
-          "name": "c_address0",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c_ce0",
-          "name": "c_ce0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c_we0",
-          "name": "c_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "c_d0",
-          "name": "c_d0",
-          "usage": "data",
-          "direction": "out"
-        }
-      ]
-    },
-    "clen": {
-      "index": "1",
-      "direction": "out",
-      "srcType": "*",
-      "srcSize": "64",
-      "hwRefs": [
-        {
-          "type": "port",
-          "interface": "clen",
-          "name": "clen",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "clen_ap_vld",
-          "name": "clen_ap_vld",
-          "usage": "control",
-          "direction": "out"
-        }
-      ]
-    },
-    "m": {
-      "index": "2",
-      "direction": "in",
-      "srcType": "*",
       "srcSize": "8",
       "hwRefs": [
         {
@@ -95,28 +37,99 @@
         },
         {
           "type": "port",
-          "interface": "m_q0",
-          "name": "m_q0",
+          "interface": "m_we0",
+          "name": "m_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "m_d0",
+          "name": "m_d0",
+          "usage": "data",
+          "direction": "out"
+        }
+      ]
+    },
+    "mlen": {
+      "index": "1",
+      "direction": "out",
+      "srcType": "*",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "mlen",
+          "name": "mlen",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "mlen_ap_vld",
+          "name": "mlen_ap_vld",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "nsec": {
+      "index": "2",
+      "direction": "unused",
+      "srcType": "*",
+      "srcSize": "8",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "nsec",
+          "name": "nsec",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "c": {
+      "index": "3",
+      "direction": "in",
+      "srcType": "*",
+      "srcSize": "8",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "c_address0",
+          "name": "c_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c_ce0",
+          "name": "c_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "c_q0",
+          "name": "c_q0",
           "usage": "data",
           "direction": "in"
         }
       ]
     },
-    "mlen": {
-      "index": "3",
+    "clen": {
+      "index": "4",
       "direction": "in",
       "srcType": "long long unsigned int",
       "srcSize": "64",
       "hwRefs": [{
           "type": "port",
-          "interface": "mlen",
-          "name": "mlen",
+          "interface": "clen",
+          "name": "clen",
           "usage": "data",
           "direction": "in"
         }]
     },
     "ad": {
-      "index": "4",
+      "index": "5",
       "direction": "in",
       "srcType": "*",
       "srcSize": "8",
@@ -145,7 +158,7 @@
       ]
     },
     "adlen": {
-      "index": "5",
+      "index": "6",
       "direction": "in",
       "srcType": "long long unsigned int",
       "srcSize": "64",
@@ -153,19 +166,6 @@
           "type": "port",
           "interface": "adlen",
           "name": "adlen",
-          "usage": "data",
-          "direction": "in"
-        }]
-    },
-    "nsec": {
-      "index": "6",
-      "direction": "unused",
-      "srcType": "*",
-      "srcSize": "8",
-      "hwRefs": [{
-          "type": "port",
-          "interface": "nsec",
-          "name": "nsec",
           "usage": "data",
           "direction": "in"
         }]
@@ -227,84 +227,6 @@
           "direction": "in"
         }
       ]
-    },
-    "st": {
-      "index": "9",
-      "direction": "unused",
-      "srcType": "long long unsigned int*",
-      "srcSize": "64",
-      "hwRefs": [
-        {
-          "type": "port",
-          "interface": "st_address0",
-          "name": "st_address0",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "st_ce0",
-          "name": "st_ce0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "st_we0",
-          "name": "st_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "st_d0",
-          "name": "st_d0",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "st_q0",
-          "name": "st_q0",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "st_address1",
-          "name": "st_address1",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "st_ce1",
-          "name": "st_ce1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "st_we1",
-          "name": "st_we1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "st_d1",
-          "name": "st_d1",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "st_q1",
-          "name": "st_q1",
-          "usage": "data",
-          "direction": "in"
-        }
-      ]
     }
   },
   "ReturnValue": {
@@ -321,13 +243,12 @@
   "HlsSolution": {
     "FlowTarget": "vivado",
     "DirectiveTcl": [
-      "set_directive_top crypto_aead_encrypt_h -name crypto_aead_encrypt_h",
-      "set_directive_top crypto_aead_encrypt_h -name crypto_aead_encrypt_h",
-      "set_directive_top crypto_aead_encrypt_h -name crypto_aead_encrypt_h"
+      "set_directive_top crypto_aead_decrypt_c -name crypto_aead_decrypt_c",
+      "set_directive_top crypto_aead_decrypt_c -name crypto_aead_decrypt_c"
     ],
     "ProfileOption": "0",
     "ProfileType": "none",
-    "KernelName": "crypto_aead_encrypt_h"
+    "KernelName": "crypto_aead_decrypt_c"
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
@@ -341,22 +262,34 @@
   "Ipx": {
     "Vendor": "xilinx.com",
     "Library": "hls",
-    "Name": "crypto_aead_encrypt_h",
+    "Name": "crypto_aead_decrypt_c",
     "Version": "1.0",
-    "DisplayName": "Crypto_aead_encrypt_h",
+    "DisplayName": "Crypto_aead_decrypt_c",
     "Revision": "",
     "Description": "An IP generated by Vitis HLS",
     "Taxonomy": "\/VITIS_HLS_IP",
     "AutoFamilySupport": "",
-    "ZipFile": "xilinx_com_hls_crypto_aead_encrypt_h_1_0.zip"
+    "ZipFile": "xilinx_com_hls_crypto_aead_decrypt_c_1_0.zip"
   },
   "Files": {
     "CSource": [
-      "..\/src-v3\/aead.c",
-      "..\/src-v3\/printstate.c"
+      "..\/src-v3\/printstate.c",
+      "..\/src-v3\/aead.c"
     ],
     "Vhdl": [
       "impl\/vhdl\/crypto_aead_decrypt.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_crypto_aead_decrypt_1.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_t_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_LOADBYTES_1.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_LOADBYTES_2.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_LOADBYTES_3.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_c_ROUND.vhd",
       "impl\/vhdl\/crypto_aead_decrypt_crypto_aead_decrypt_Pipeline_VITIS_LOOP_224_1.vhd",
       "impl\/vhdl\/crypto_aead_decrypt_crypto_aead_decrypt_Pipeline_VITIS_LOOP_224_11.vhd",
       "impl\/vhdl\/crypto_aead_decrypt_crypto_aead_decrypt_Pipeline_VITIS_LOOP_230_1.vhd",
@@ -365,16 +298,39 @@
       "impl\/vhdl\/crypto_aead_decrypt_crypto_aead_decrypt_Pipeline_VITIS_LOOP_235_1.vhd",
       "impl\/vhdl\/crypto_aead_decrypt_crypto_aead_decrypt_Pipeline_VITIS_LOOP_323_3.vhd",
       "impl\/vhdl\/crypto_aead_decrypt_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_crypto_aead_decrypt_1.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_t_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_LOADBYTES_1.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_LOADBYTES_2.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_LOADBYTES_3.vhd",
+      "impl\/vhdl\/crypto_aead_decrypt_h_ROUND.vhd",
       "impl\/vhdl\/crypto_aead_decrypt_LOADBYTES_1_1.vhd",
       "impl\/vhdl\/crypto_aead_decrypt_ROUND_5_6.vhd",
       "impl\/vhdl\/crypto_aead_decrypt_t_RAM_AUTO_1R1W.vhd",
       "impl\/vhdl\/crypto_aead_encrypt.vhd",
+      "impl\/vhdl\/crypto_aead_encrypt_c.vhd",
+      "impl\/vhdl\/crypto_aead_encrypt_c_crypto_aead_encrypt_1.vhd",
+      "impl\/vhdl\/crypto_aead_encrypt_c_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1.vhd",
+      "impl\/vhdl\/crypto_aead_encrypt_c_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11.vhd",
+      "impl\/vhdl\/crypto_aead_encrypt_c_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12.vhd",
+      "impl\/vhdl\/crypto_aead_encrypt_c_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/crypto_aead_encrypt_c_LOADBYTES_1.vhd",
+      "impl\/vhdl\/crypto_aead_encrypt_c_LOADBYTES_2.vhd",
+      "impl\/vhdl\/crypto_aead_encrypt_c_ROUND.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_crypto_aead_encrypt_Pipeline_VITIS_LOOP_224_1.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_crypto_aead_encrypt_Pipeline_VITIS_LOOP_224_11.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_1.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_12.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_13.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/crypto_aead_encrypt_h.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_h_crypto_aead_encrypt_1.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_h_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_14_1.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_h_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1.vhd",
@@ -398,10 +354,22 @@
       "impl\/vhdl\/crypto_aead_encrypt_h_s_RAM_AUTO_1R1W.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_LOADBYTES_1.vhd",
       "impl\/vhdl\/crypto_aead_encrypt_ROUND_6.vhd",
-      "impl\/vhdl\/crypto_aead_encrypt_h.vhd"
+      "impl\/vhdl\/crypto_aead_decrypt_c.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/crypto_aead_decrypt.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_crypto_aead_decrypt_1.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_crypto_aead_decrypt_1_t_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_LOADBYTES_1.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_LOADBYTES_2.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_LOADBYTES_3.v",
+      "impl\/verilog\/crypto_aead_decrypt_c_ROUND.v",
       "impl\/verilog\/crypto_aead_decrypt_crypto_aead_decrypt_Pipeline_VITIS_LOOP_224_1.v",
       "impl\/verilog\/crypto_aead_decrypt_crypto_aead_decrypt_Pipeline_VITIS_LOOP_224_11.v",
       "impl\/verilog\/crypto_aead_decrypt_crypto_aead_decrypt_Pipeline_VITIS_LOOP_230_1.v",
@@ -410,16 +378,39 @@
       "impl\/verilog\/crypto_aead_decrypt_crypto_aead_decrypt_Pipeline_VITIS_LOOP_235_1.v",
       "impl\/verilog\/crypto_aead_decrypt_crypto_aead_decrypt_Pipeline_VITIS_LOOP_323_3.v",
       "impl\/verilog\/crypto_aead_decrypt_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/crypto_aead_decrypt_h.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_crypto_aead_decrypt_1.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_crypto_aead_decrypt_1_t_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_LOADBYTES_1.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_LOADBYTES_2.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_LOADBYTES_3.v",
+      "impl\/verilog\/crypto_aead_decrypt_h_ROUND.v",
       "impl\/verilog\/crypto_aead_decrypt_LOADBYTES_1_1.v",
       "impl\/verilog\/crypto_aead_decrypt_ROUND_5_6.v",
       "impl\/verilog\/crypto_aead_decrypt_t_RAM_AUTO_1R1W.v",
       "impl\/verilog\/crypto_aead_encrypt.v",
+      "impl\/verilog\/crypto_aead_encrypt_c.v",
+      "impl\/verilog\/crypto_aead_encrypt_c_crypto_aead_encrypt_1.v",
+      "impl\/verilog\/crypto_aead_encrypt_c_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1.v",
+      "impl\/verilog\/crypto_aead_encrypt_c_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11.v",
+      "impl\/verilog\/crypto_aead_encrypt_c_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12.v",
+      "impl\/verilog\/crypto_aead_encrypt_c_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/crypto_aead_encrypt_c_LOADBYTES_1.v",
+      "impl\/verilog\/crypto_aead_encrypt_c_LOADBYTES_2.v",
+      "impl\/verilog\/crypto_aead_encrypt_c_ROUND.v",
       "impl\/verilog\/crypto_aead_encrypt_crypto_aead_encrypt_Pipeline_VITIS_LOOP_224_1.v",
       "impl\/verilog\/crypto_aead_encrypt_crypto_aead_encrypt_Pipeline_VITIS_LOOP_224_11.v",
       "impl\/verilog\/crypto_aead_encrypt_crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_1.v",
       "impl\/verilog\/crypto_aead_encrypt_crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_12.v",
       "impl\/verilog\/crypto_aead_encrypt_crypto_aead_encrypt_Pipeline_VITIS_LOOP_230_13.v",
       "impl\/verilog\/crypto_aead_encrypt_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/crypto_aead_encrypt_h.v",
       "impl\/verilog\/crypto_aead_encrypt_h_crypto_aead_encrypt_1.v",
       "impl\/verilog\/crypto_aead_encrypt_h_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_14_1.v",
       "impl\/verilog\/crypto_aead_encrypt_h_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1.v",
@@ -443,7 +434,7 @@
       "impl\/verilog\/crypto_aead_encrypt_h_s_RAM_AUTO_1R1W.v",
       "impl\/verilog\/crypto_aead_encrypt_LOADBYTES_1.v",
       "impl\/verilog\/crypto_aead_encrypt_ROUND_6.v",
-      "impl\/verilog\/crypto_aead_encrypt_h.v"
+      "impl\/verilog\/crypto_aead_decrypt_c.v"
     ],
     "IpMisc": ["impl\/misc\/logo.png"],
     "CsynthXml": "syn\/report\/csynth.xml",
@@ -451,7 +442,12 @@
     "KernelXml": ".autopilot\/db\/kernel.internal.xml",
     "Xo": "",
     "XoHlsDir": "",
-    "ProtoInst": [".debug\/crypto_aead_encrypt_h.protoinst"]
+    "ProtoInst": [
+      ".debug\/crypto_aead_decrypt_c.protoinst",
+      ".debug\/crypto_aead_decrypt_h.protoinst",
+      ".debug\/crypto_aead_encrypt_c.protoinst",
+      ".debug\/crypto_aead_encrypt_h.protoinst"
+    ]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -501,51 +497,6 @@
       "portMap": {"ap_return": "DATA"},
       "ports": ["ap_return"]
     },
-    "c_address0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "6",
-      "portMap": {"c_address0": "DATA"},
-      "ports": ["c_address0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "c"
-        }]
-    },
-    "c_d0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "8",
-      "portMap": {"c_d0": "DATA"},
-      "ports": ["c_d0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "c"
-        }]
-    },
-    "clen": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_vld",
-      "mode": "master",
-      "dataWidth": "64",
-      "portMap": {"clen": "DATA"},
-      "ports": ["clen"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "clen"
-        }]
-    },
     "m_address0": {
       "type": "data",
       "busTypeName": "data",
@@ -561,14 +512,14 @@
           "argName": "m"
         }]
     },
-    "m_q0": {
+    "m_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
-      "mode": "slave",
+      "mode": "master",
       "dataWidth": "8",
-      "portMap": {"m_q0": "DATA"},
-      "ports": ["m_q0"],
+      "portMap": {"m_d0": "DATA"},
+      "ports": ["m_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
@@ -579,8 +530,8 @@
     "mlen": {
       "type": "data",
       "busTypeName": "data",
-      "protocol": "ap_none",
-      "mode": "slave",
+      "protocol": "ap_vld",
+      "mode": "master",
       "dataWidth": "64",
       "portMap": {"mlen": "DATA"},
       "ports": ["mlen"],
@@ -589,6 +540,66 @@
           "mode": "ap_none",
           "register_option": "0",
           "argName": "mlen"
+        }]
+    },
+    "nsec": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "8",
+      "portMap": {"nsec": "DATA"},
+      "ports": ["nsec"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "nsec"
+        }]
+    },
+    "c_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "6",
+      "portMap": {"c_address0": "DATA"},
+      "ports": ["c_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "c"
+        }]
+    },
+    "c_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "8",
+      "portMap": {"c_q0": "DATA"},
+      "ports": ["c_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "c"
+        }]
+    },
+    "clen": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "64",
+      "portMap": {"clen": "DATA"},
+      "ports": ["clen"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "clen"
         }]
     },
     "ad_address0": {
@@ -634,21 +645,6 @@
           "mode": "ap_none",
           "register_option": "0",
           "argName": "adlen"
-        }]
-    },
-    "nsec": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_none",
-      "mode": "slave",
-      "dataWidth": "8",
-      "portMap": {"nsec": "DATA"},
-      "ports": ["nsec"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_none",
-          "register_option": "0",
-          "argName": "nsec"
         }]
     },
     "npub_address0": {
@@ -710,96 +706,6 @@
           "register_option": "0",
           "argName": "k"
         }]
-    },
-    "st_address0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "3",
-      "portMap": {"st_address0": "DATA"},
-      "ports": ["st_address0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "st"
-        }]
-    },
-    "st_d0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "64",
-      "portMap": {"st_d0": "DATA"},
-      "ports": ["st_d0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "st"
-        }]
-    },
-    "st_q0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "slave",
-      "dataWidth": "64",
-      "portMap": {"st_q0": "DATA"},
-      "ports": ["st_q0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "st"
-        }]
-    },
-    "st_address1": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "3",
-      "portMap": {"st_address1": "DATA"},
-      "ports": ["st_address1"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "st"
-        }]
-    },
-    "st_d1": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "64",
-      "portMap": {"st_d1": "DATA"},
-      "ports": ["st_d1"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "st"
-        }]
-    },
-    "st_q1": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "slave",
-      "dataWidth": "64",
-      "portMap": {"st_q1": "DATA"},
-      "ports": ["st_q1"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "st"
-        }]
     }
   },
   "RtlPorts": {
@@ -841,30 +747,6 @@
       "dir": "out",
       "width": "32"
     },
-    "c_address0": {
-      "dir": "out",
-      "width": "6"
-    },
-    "c_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "c_we0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "c_d0": {
-      "dir": "out",
-      "width": "8"
-    },
-    "clen": {
-      "dir": "out",
-      "width": "64"
-    },
-    "clen_ap_vld": {
-      "dir": "out",
-      "width": "1"
-    },
     "m_address0": {
       "dir": "out",
       "width": "5"
@@ -873,11 +755,39 @@
       "dir": "out",
       "width": "1"
     },
-    "m_q0": {
-      "dir": "in",
+    "m_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_d0": {
+      "dir": "out",
       "width": "8"
     },
     "mlen": {
+      "dir": "out",
+      "width": "64"
+    },
+    "mlen_ap_vld": {
+      "dir": "out",
+      "width": "1"
+    },
+    "nsec": {
+      "dir": "in",
+      "width": "8"
+    },
+    "c_address0": {
+      "dir": "out",
+      "width": "6"
+    },
+    "c_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "c_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "clen": {
       "dir": "in",
       "width": "64"
     },
@@ -896,10 +806,6 @@
     "adlen": {
       "dir": "in",
       "width": "64"
-    },
-    "nsec": {
-      "dir": "in",
-      "width": "8"
     },
     "npub_address0": {
       "dir": "out",
@@ -924,86 +830,58 @@
     "k_q0": {
       "dir": "in",
       "width": "8"
-    },
-    "st_address0": {
-      "dir": "out",
-      "width": "3"
-    },
-    "st_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "st_we0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "st_d0": {
-      "dir": "out",
-      "width": "64"
-    },
-    "st_q0": {
-      "dir": "in",
-      "width": "64"
-    },
-    "st_address1": {
-      "dir": "out",
-      "width": "3"
-    },
-    "st_ce1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "st_we1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "st_d1": {
-      "dir": "out",
-      "width": "64"
-    },
-    "st_q1": {
-      "dir": "in",
-      "width": "64"
     }
   },
   "ModuleInfo": {
     "Hierarchy": {
-      "ModuleName": "crypto_aead_encrypt_h",
+      "ModuleName": "crypto_aead_decrypt_c",
       "Instances": [{
-          "ModuleName": "crypto_aead_encrypt_1",
-          "InstanceName": "grp_crypto_aead_encrypt_1_fu_54",
+          "ModuleName": "crypto_aead_decrypt_1",
+          "InstanceName": "grp_crypto_aead_decrypt_1_fu_52",
           "Instances": [
             {
               "ModuleName": "LOADBYTES_1",
-              "InstanceName": "grp_LOADBYTES_1_fu_422"
+              "InstanceName": "grp_LOADBYTES_1_fu_480"
             },
             {
               "ModuleName": "LOADBYTES_1",
-              "InstanceName": "grp_LOADBYTES_1_fu_430"
+              "InstanceName": "grp_LOADBYTES_1_fu_488"
             },
             {
               "ModuleName": "ROUND",
-              "InstanceName": "grp_ROUND_fu_440"
+              "InstanceName": "grp_ROUND_fu_498"
             },
             {
               "ModuleName": "ROUND",
-              "InstanceName": "grp_ROUND_fu_455"
+              "InstanceName": "grp_ROUND_fu_513"
             },
             {
               "ModuleName": "LOADBYTES_2",
-              "InstanceName": "grp_LOADBYTES_2_fu_486"
+              "InstanceName": "grp_LOADBYTES_2_fu_545"
             },
             {
-              "ModuleName": "crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1",
-              "InstanceName": "grp_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1_fu_497"
+              "ModuleName": "LOADBYTES_3",
+              "InstanceName": "grp_LOADBYTES_3_fu_555"
             },
             {
-              "ModuleName": "crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11",
-              "InstanceName": "grp_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11_fu_507"
+              "ModuleName": "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1",
+              "InstanceName": "grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1_fu_565"
             },
             {
-              "ModuleName": "crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12",
-              "InstanceName": "grp_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12_fu_517"
+              "ModuleName": "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1",
+              "InstanceName": "grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1_fu_574"
+            },
+            {
+              "ModuleName": "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11",
+              "InstanceName": "grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11_fu_582"
+            },
+            {
+              "ModuleName": "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12",
+              "InstanceName": "grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12_fu_588"
+            },
+            {
+              "ModuleName": "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12",
+              "InstanceName": "grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12_fu_594"
             }
           ]
         }]
@@ -1030,35 +908,56 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1": {
+      "LOADBYTES_3": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11": {
+      "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12": {
+      "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "crypto_aead_encrypt_1": {
+      "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "crypto_aead_decrypt_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "crypto_aead_encrypt_h": {
+      "crypto_aead_decrypt_c": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "0",
@@ -1177,7 +1076,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1": {
+      "LOADBYTES_3": {
         "Latency": {
           "LatencyBest": "",
           "LatencyAvg": "",
@@ -1189,20 +1088,63 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
+          "Estimate": "4.348"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_22_1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "131",
+          "AVAIL_FF": "202800",
+          "UTIL_FF": "~0",
+          "LUT": "416",
+          "AVAIL_LUT": "101400",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "650",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "600",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1": {
+        "Latency": {
+          "LatencyBest": "3",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineIIMin": "3",
+          "PipelineIIMax": "-1",
+          "PipelineII": "3 ~ -1",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
           "Estimate": "5.224"
         },
         "Loops": [{
             "Name": "VITIS_LOOP_28_1",
             "TripCount": "",
-            "Latency": "",
+            "LatencyMin": "1",
+            "LatencyMax": "?",
+            "Latency": "1 ~ ?",
             "PipelineII": "1",
             "PipelineDepth": "1"
           }],
         "Area": {
-          "FF": "34",
+          "FF": "33",
           "AVAIL_FF": "202800",
           "UTIL_FF": "~0",
-          "LUT": "319",
+          "LUT": "316",
           "AVAIL_LUT": "101400",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -1216,7 +1158,50 @@
           "UTIL_URAM": "0"
         }
       },
-      "crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11": {
+      "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1": {
+        "Latency": {
+          "LatencyBest": "3",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineIIMin": "3",
+          "PipelineIIMax": "-1",
+          "PipelineII": "3 ~ -1",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "4.348"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_33_1",
+            "TripCount": "",
+            "LatencyMin": "1",
+            "LatencyMax": "?",
+            "Latency": "1 ~ ?",
+            "PipelineII": "1",
+            "PipelineDepth": "1"
+          }],
+        "Area": {
+          "FF": "98",
+          "AVAIL_FF": "202800",
+          "UTIL_FF": "~0",
+          "LUT": "442",
+          "AVAIL_LUT": "101400",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "650",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "600",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11": {
         "Latency": {
           "LatencyBest": "10",
           "LatencyAvg": "10",
@@ -1241,7 +1226,7 @@
           "FF": "6",
           "AVAIL_FF": "202800",
           "UTIL_FF": "~0",
-          "LUT": "259",
+          "LUT": "245",
           "AVAIL_LUT": "101400",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -1255,7 +1240,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12": {
+      "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12": {
         "Latency": {
           "LatencyBest": "10",
           "LatencyAvg": "10",
@@ -1280,7 +1265,7 @@
           "FF": "6",
           "AVAIL_FF": "202800",
           "UTIL_FF": "~0",
-          "LUT": "264",
+          "LUT": "250",
           "AVAIL_LUT": "101400",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -1294,7 +1279,46 @@
           "UTIL_URAM": "0"
         }
       },
-      "crypto_aead_encrypt_1": {
+      "crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12": {
+        "Latency": {
+          "LatencyBest": "19",
+          "LatencyAvg": "19",
+          "LatencyWorst": "19",
+          "PipelineII": "19",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.075"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_282_12",
+            "TripCount": "16",
+            "Latency": "17",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "42",
+          "AVAIL_FF": "202800",
+          "UTIL_FF": "~0",
+          "LUT": "100",
+          "AVAIL_LUT": "101400",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "650",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "600",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "crypto_aead_decrypt_1": {
         "Latency": {
           "LatencyBest": "",
           "LatencyAvg": "",
@@ -1310,14 +1334,14 @@
         },
         "Loops": [
           {
-            "Name": "VITIS_LOOP_77_3",
+            "Name": "VITIS_LOOP_210_3",
             "TripCount": "",
             "Latency": "",
             "PipelineII": "",
             "PipelineDepth": ""
           },
           {
-            "Name": "VITIS_LOOP_104_7",
+            "Name": "VITIS_LOOP_238_7",
             "TripCount": "",
             "Latency": "",
             "PipelineII": "",
@@ -1332,24 +1356,24 @@
           }
         ],
         "Area": {
-          "FF": "3915",
-          "AVAIL_FF": "202800",
-          "UTIL_FF": "1",
-          "LUT": "9216",
-          "AVAIL_LUT": "101400",
-          "UTIL_LUT": "9",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "650",
           "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "600",
-          "UTIL_DSP": "0",
+          "FF": "4818",
+          "AVAIL_FF": "202800",
+          "UTIL_FF": "2",
+          "LUT": "10472",
+          "AVAIL_LUT": "101400",
+          "UTIL_LUT": "10",
           "URAM": "0",
           "AVAIL_URAM": "0",
-          "UTIL_URAM": "0"
+          "UTIL_URAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "600",
+          "UTIL_DSP": "0"
         }
       },
-      "crypto_aead_encrypt_h": {
+      "crypto_aead_decrypt_c": {
         "Latency": {
           "LatencyBest": "",
           "LatencyAvg": "",
@@ -1364,21 +1388,21 @@
           "Estimate": "8.502"
         },
         "Area": {
-          "FF": "3918",
-          "AVAIL_FF": "202800",
-          "UTIL_FF": "1",
-          "LUT": "9229",
-          "AVAIL_LUT": "101400",
-          "UTIL_LUT": "9",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "650",
           "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "600",
-          "UTIL_DSP": "0",
+          "FF": "4821",
+          "AVAIL_FF": "202800",
+          "UTIL_FF": "2",
+          "LUT": "10487",
+          "AVAIL_LUT": "101400",
+          "UTIL_LUT": "10",
           "URAM": "0",
           "AVAIL_URAM": "0",
-          "UTIL_URAM": "0"
+          "UTIL_URAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "600",
+          "UTIL_DSP": "0"
         }
       }
     }
@@ -1386,7 +1410,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-04-05 16:05:02 +0200",
+    "Time": "2022-04-05 21:50:57 +0200",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.2"
   }

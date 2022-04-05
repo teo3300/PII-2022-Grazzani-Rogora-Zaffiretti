@@ -23,8 +23,8 @@ module AESL_automem_c (
 
 //------------------------Parameter----------------------
 localparam
-    TV_IN  = "../tv/cdatafile/c.crypto_aead_encrypt_h.autotvin_c.dat", 
-    TV_OUT = "../tv/rtldatafile/rtl.crypto_aead_encrypt_h.autotvout_c.dat"; 
+    TV_IN  = "../tv/cdatafile/c.crypto_aead_decrypt_c.autotvin_c.dat", 
+    TV_OUT = "../tv/rtldatafile/rtl.crypto_aead_decrypt_c.autotvout_c.dat"; 
 //------------------------Local signal-------------------
 parameter DATA_WIDTH = 32'd 8;
 parameter ADDR_WIDTH = 32'd 6;
@@ -111,26 +111,26 @@ end
 // Read data from array to RTL
 always @ (posedge clk or rst) begin
     if(rst === 1) begin
-        dout0[0*8+7:0*8] = 0;
+        dout0 <= 0;
     end
     else begin
-        if((we0[0] == 0) && (ce0 == 1) && (ce1 == 1) && (we1[0] == 1) && (address0 == address1))
-            dout0[0*8+7:0*8] = #DLY din1[0*8+7:0*8];
-        else if(ce0 == 1)
-            dout0[0*8+7:0*8] = #DLY mem[address0][0*8+7:0*8];
+	  if((we0[0] == 0) && (ce0 == 1) && (ce1 == 1) && (we1[0] == 1) && (address0 == address1))
+	      dout0[0*8+7:0*8] <= #DLY din1[0*8+7:0*8];
+	  else if (ce0 == 1)
+	      dout0[0*8+7:0*8] <= #DLY mem[address0][0*8+7:0*8];
         else ;
     end
 end
 
 always @ (posedge clk or rst) begin
     if(rst === 1) begin
-        dout1[0*8+7:0*8] = 0;
+        dout1 <= 0;
     end
     else begin
-        if((we0[0] == 1) && (ce0 == 1) && (ce1 == 1) && (we1[0] == 0) && (address0 == address1))
-            dout1[0*8+7:0*8] = #DLY din0[0*8+7:0*8];
-        else if(ce1 == 1)
-            dout1[0*8+7:0*8] = #DLY mem[address1][0*8+7:0*8];
+	  if((we0[0] == 1) && (ce0 == 1) && (ce1 == 1) && (we1[0] == 0) && (address0 == address1))
+            dout1[0*8+7:0*8] <= #DLY din0[0*8+7:0*8];
+	  else if (ce1 == 1)
+            dout1[0*8+7:0*8] <= #DLY mem[address1][0*8+7:0*8];
         else ;
     end
 end

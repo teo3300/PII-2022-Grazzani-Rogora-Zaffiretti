@@ -6,7 +6,7 @@
 #include "word.h"
 #include "types.h"
 
-#define STATE_CHECK 8
+#define STATE_CHECK -1
 
 #define F_QUIT do{ copyState(s,st); return 0; }while(0);
 
@@ -16,32 +16,34 @@ void copyState(volatile u64 a[5], volatile u64 b[5]){
     }
 }
 
-int crypto_aead_encrypt(u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES], 	volatile u64* clen,
+int crypto_aead_encrypt(
+        u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES], 	volatile u64* clen,
 		volatile u8 m[MAX_MESSAGE_LENGTH], 				   	u64  mlen,
 		volatile u8 ad[MAX_ASSOCIATED_DATA_LENGTH], 	   	u64  adlen,
 		volatile u8 nsec[CRYPTO_NSECBYTES],					volatile  u8 npub[CRYPTO_NPUBBYTES],
-		volatile u8 k[CRYPTO_KEYBYTES], 					u64 st[5]);
+		volatile u8 k[CRYPTO_KEYBYTES]);//, 					u64 st[5]);
 
-int crypto_aead_encrypt_c(u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES], 	volatile u64* clen,
+int crypto_aead_encrypt_c(
+        u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES], 	volatile u64* clen,
 		volatile u8 m[MAX_MESSAGE_LENGTH], 				   	u64  mlen,
 		volatile u8 ad[MAX_ASSOCIATED_DATA_LENGTH], 	   	u64  adlen,
 		volatile u8 nsec[CRYPTO_NSECBYTES],					volatile  u8 npub[CRYPTO_NPUBBYTES],
-		volatile u8 k[CRYPTO_KEYBYTES], 					u64 st[5]){
-	return crypto_aead_encrypt(c, clen, m, mlen, ad, adlen, nsec, npub, k, st);
-}
-int crypto_aead_encrypt_h(u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES], 	volatile u64* clen,
+		volatile u8 k[CRYPTO_KEYBYTES]){//, 					u64 st[5]){
+	return crypto_aead_encrypt(c, clen, m, mlen, ad, adlen, nsec, npub, k);}//, st);}
+int crypto_aead_encrypt_h(
+        u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES], 	volatile u64* clen,
 		volatile u8 m[MAX_MESSAGE_LENGTH], 				   	u64  mlen,
 		volatile u8 ad[MAX_ASSOCIATED_DATA_LENGTH], 	   	u64  adlen,
 		volatile u8 nsec[CRYPTO_NSECBYTES],					volatile  u8 npub[CRYPTO_NPUBBYTES],
-		volatile u8 k[CRYPTO_KEYBYTES], 					u64 st[5]){
-	return crypto_aead_encrypt(c, clen, m, mlen, ad, adlen, nsec, npub, k, st);
-}
+		volatile u8 k[CRYPTO_KEYBYTES]){//, 					u64 st[5]){
+	return crypto_aead_encrypt(c, clen, m, mlen, ad, adlen, nsec, npub, k);}//, st);
 
-int crypto_aead_encrypt(u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES], 	volatile u64* clen,
+int crypto_aead_encrypt(
+        u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES], 	volatile u64* clen,
 		volatile u8 m[MAX_MESSAGE_LENGTH], 				   	u64  mlen,
 		volatile u8 ad[MAX_ASSOCIATED_DATA_LENGTH], 	   	u64  adlen,
 		volatile u8 nsec[CRYPTO_NSECBYTES],					volatile  u8 npub[CRYPTO_NPUBBYTES],
-		volatile u8 k[CRYPTO_KEYBYTES], 					u64 st[5]) {
+		volatile u8 k[CRYPTO_KEYBYTES]){//, 					u64 st[5]) {
     (void)nsec;
 
     /* set ciphertext size */
@@ -144,12 +146,33 @@ int crypto_aead_encrypt(u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES], 	volatile u64*
 
     return 0;
 }
+int crypto_aead_decrypt(
+        u8 m[MAX_MESSAGE_LENGTH], volatile u64* mlen,
+        volatile u8 nsec[CRYPTO_NSECBYTES], volatile u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES],
+        u64 clen, volatile u8 ad[MAX_ASSOCIATED_DATA_LENGTH],
+        u64 adlen, volatile u8 npub[CRYPTO_NPUBBYTES],
+        volatile u8 k[CRYPTO_KEYBYTES]);//, u64 st[5]);
+int crypto_aead_decrypt_c(
+        u8 m[MAX_MESSAGE_LENGTH], volatile u64* mlen,
+        volatile u8 nsec[CRYPTO_NSECBYTES], volatile u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES],
+        u64 clen, volatile u8 ad[MAX_ASSOCIATED_DATA_LENGTH],
+        u64 adlen, volatile u8 npub[CRYPTO_NPUBBYTES],
+        volatile u8 k[CRYPTO_KEYBYTES]){//, u64 st[5]){
+    return crypto_aead_decrypt(m,mlen,nsec,c,clen,ad,adlen,npub,k);}//,st);}
+int crypto_aead_decrypt_h(
+        u8 m[MAX_MESSAGE_LENGTH], volatile u64* mlen,
+        volatile u8 nsec[CRYPTO_NSECBYTES], volatile u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES],
+        u64 clen, volatile u8 ad[MAX_ASSOCIATED_DATA_LENGTH],
+        u64 adlen, volatile u8 npub[CRYPTO_NPUBBYTES],
+        volatile u8 k[CRYPTO_KEYBYTES]){//, u64 st[5]){
+    return crypto_aead_decrypt(m,mlen,nsec,c,clen,ad,adlen,npub,k);}//,st);}
 
-int crypto_aead_decrypt(unsigned char* m, unsigned long long* mlen,
-                        unsigned char* nsec, const unsigned char* c,
-                        unsigned long long clen, const unsigned char* ad,
-                        unsigned long long adlen, const unsigned char* npub,
-                        const unsigned char* k, u64 st[5]) {
+int crypto_aead_decrypt(
+        u8 m[MAX_MESSAGE_LENGTH], volatile u64* mlen,
+        volatile u8 nsec[CRYPTO_NSECBYTES], volatile u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES],
+        u64 clen, volatile u8 ad[MAX_ASSOCIATED_DATA_LENGTH],
+        u64 adlen, volatile u8 npub[CRYPTO_NPUBBYTES],
+        volatile u8 k[CRYPTO_KEYBYTES]){//, u64 st[5]) {
     (void)nsec;
 
     if (clen < CRYPTO_ABYTES) return -1;

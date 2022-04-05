@@ -61,14 +61,14 @@ all : $(TARGET)
 
 AUTOCC := cmd //c apcc.bat
 
-$(ObjDir)/genkat_aead.c_pre.c.tb.o : genkat_aead.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) genkat_aead.c_pre.c.tb.c" $(AVE_DIR_DLOG)
-	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
-
-$(ObjDir)/aead.c_pre.c.tb.o : aead.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) aead.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+$(ObjDir)/original_genkat_aead.c_pre.c.tb.o : original_genkat_aead.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) original_genkat_aead.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
 $(ObjDir)/printstate.c_pre.c.tb.o : printstate.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling (apcc) printstate.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/aead.c_pre.c.tb.o : aead.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) aead.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \

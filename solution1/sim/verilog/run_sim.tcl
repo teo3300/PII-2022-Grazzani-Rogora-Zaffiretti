@@ -31,12 +31,12 @@ if {$ret == 1} {
 	return -code error -errorcode $::errorCode
 }
 
-if {[file isfile crypto_aead_encrypt_h.autotvin.dat]} {
-	file delete -force crypto_aead_encrypt_h.autotvin.dat
+if {[file isfile crypto_aead_decrypt_c.autotvin.dat]} {
+	file delete -force crypto_aead_decrypt_c.autotvin.dat
 }
 
-if {[file isfile crypto_aead_encrypt_h.autotvout.dat]} {
-	file delete -force crypto_aead_encrypt_h.autotvout.dat
+if {[file isfile crypto_aead_decrypt_c.autotvout.dat]} {
+	file delete -force crypto_aead_decrypt_c.autotvout.dat
 }
 
 sc_sim_check $ret $err "temp0.log"

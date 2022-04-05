@@ -80,13 +80,13 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "c.crypto_aead_encrypt_h.autotvin_c.dat"
-         "c.crypto_aead_encrypt_h.autotvin_m.dat"
-         "c.crypto_aead_encrypt_h.autotvin_mlen.dat"
-         "c.crypto_aead_encrypt_h.autotvin_ad.dat"
-         "c.crypto_aead_encrypt_h.autotvin_adlen.dat"
-         "c.crypto_aead_encrypt_h.autotvin_npub.dat"
-         "c.crypto_aead_encrypt_h.autotvin_k.dat"
+         "c.crypto_aead_decrypt_c.autotvin_m.dat"
+         "c.crypto_aead_decrypt_c.autotvin_c.dat"
+         "c.crypto_aead_decrypt_c.autotvin_clen.dat"
+         "c.crypto_aead_decrypt_c.autotvin_ad.dat"
+         "c.crypto_aead_decrypt_c.autotvin_adlen.dat"
+         "c.crypto_aead_decrypt_c.autotvin_npub.dat"
+         "c.crypto_aead_decrypt_c.autotvin_k.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {
@@ -106,9 +106,9 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "rtl.crypto_aead_encrypt_h.autotvout_c.dat"
-         "rtl.crypto_aead_encrypt_h.autotvout_clen.dat"
-         "rtl.crypto_aead_encrypt_h.autotvout_ap_return.dat"
+         "rtl.crypto_aead_decrypt_c.autotvout_m.dat"
+         "rtl.crypto_aead_decrypt_c.autotvout_mlen.dat"
+         "rtl.crypto_aead_decrypt_c.autotvout_ap_return.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {

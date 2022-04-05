@@ -6,7 +6,7 @@
         <unit>ns</unit>
         <ProductFamily>kintex7</ProductFamily>
         <Part>xc7k160t-fbv484-2</Part>
-        <TopModelName>crypto_aead_encrypt_h</TopModelName>
+        <TopModelName>crypto_aead_decrypt_c</TopModelName>
         <TargetClockPeriod>10.00</TargetClockPeriod>
         <ClockUncertainty>2.70</ClockUncertainty>
         <FlowTarget>vivado</FlowTarget>
@@ -31,11 +31,11 @@
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <FF>3918</FF>
-            <LUT>9229</LUT>
             <BRAM_18K>0</BRAM_18K>
-            <DSP>0</DSP>
+            <FF>4821</FF>
+            <LUT>10487</LUT>
             <URAM>0</URAM>
+            <DSP>0</DSP>
         </Resources>
         <AvailableResources>
             <BRAM_18K>650</BRAM_18K>
@@ -48,7 +48,7 @@
     <InterfaceSummary>
         <RtlPorts>
             <name>ap_local_block</name>
-            <Object>crypto_aead_encrypt_h</Object>
+            <Object>crypto_aead_decrypt_c</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -59,7 +59,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_local_deadlock</name>
-            <Object>crypto_aead_encrypt_h</Object>
+            <Object>crypto_aead_decrypt_c</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -70,7 +70,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_clk</name>
-            <Object>crypto_aead_encrypt_h</Object>
+            <Object>crypto_aead_decrypt_c</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -81,7 +81,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_rst</name>
-            <Object>crypto_aead_encrypt_h</Object>
+            <Object>crypto_aead_decrypt_c</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -92,7 +92,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_start</name>
-            <Object>crypto_aead_encrypt_h</Object>
+            <Object>crypto_aead_decrypt_c</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -103,7 +103,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_done</name>
-            <Object>crypto_aead_encrypt_h</Object>
+            <Object>crypto_aead_decrypt_c</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -114,7 +114,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_idle</name>
-            <Object>crypto_aead_encrypt_h</Object>
+            <Object>crypto_aead_decrypt_c</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -125,7 +125,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_ready</name>
-            <Object>crypto_aead_encrypt_h</Object>
+            <Object>crypto_aead_decrypt_c</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -136,7 +136,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_return</name>
-            <Object>crypto_aead_encrypt_h</Object>
+            <Object>crypto_aead_decrypt_c</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -144,78 +144,6 @@
             <Dir>out</Dir>
             <Bits>32</Bits>
             <Attribute>data</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>c_address0</name>
-            <Object>c</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>6</Bits>
-            <Attribute>address</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>c_ce0</name>
-            <Object>c</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>c_we0</name>
-            <Object>c</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>c_d0</name>
-            <Object>c</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>8</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>clen</name>
-            <Object>clen</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_vld</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>64</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>clen_ap_vld</name>
-            <Object>clen</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_vld</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
             <name>m_address0</name>
@@ -242,8 +170,92 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>m_q0</name>
+            <name>m_we0</name>
             <Object>m</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_d0</name>
+            <Object>m</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mlen</name>
+            <Object>mlen</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mlen_ap_vld</name>
+            <Object>mlen</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>nsec</name>
+            <Object>nsec</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>c_address0</name>
+            <Object>c</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>c_ce0</name>
+            <Object>c</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>c_q0</name>
+            <Object>c</Object>
             <Type>array</Type>
             <Scope/>
             <IOProtocol>ap_memory</IOProtocol>
@@ -254,8 +266,8 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
-            <name>mlen</name>
-            <Object>mlen</Object>
+            <name>clen</name>
+            <Object>clen</Object>
             <Type>scalar</Type>
             <Scope/>
             <IOProtocol>ap_none</IOProtocol>
@@ -310,18 +322,6 @@
             <IOConfig/>
             <Dir>in</Dir>
             <Bits>64</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>nsec</name>
-            <Object>nsec</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_none</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>8</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -397,193 +397,94 @@
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
-        <RtlPorts>
-            <name>st_address0</name>
-            <Object>st</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>3</Bits>
-            <Attribute>address</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>st_ce0</name>
-            <Object>st</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>st_we0</name>
-            <Object>st</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>st_d0</name>
-            <Object>st</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>64</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>st_q0</name>
-            <Object>st</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>64</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>st_address1</name>
-            <Object>st</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>3</Bits>
-            <Attribute>address</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>st_ce1</name>
-            <Object>st</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>st_we1</name>
-            <Object>st</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>st_d1</name>
-            <Object>st</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>64</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>st_q1</name>
-            <Object>st</Object>
-            <Type>array</Type>
-            <Scope/>
-            <IOProtocol>ap_memory</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>64</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="4">
-            <ModuleName>crypto_aead_encrypt_h</ModuleName>
+            <ModuleName>crypto_aead_decrypt_c</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_crypto_aead_encrypt_1_fu_54</InstName>
-                    <ModuleName>crypto_aead_encrypt_1</ModuleName>
+                    <InstName>grp_crypto_aead_decrypt_1_fu_52</InstName>
+                    <ModuleName>crypto_aead_decrypt_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>54</ID>
+                    <ID>52</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>grp_LOADBYTES_1_fu_422</InstName>
+                            <InstName>grp_LOADBYTES_1_fu_480</InstName>
                             <ModuleName>LOADBYTES_1</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>422</ID>
-                            <BindInstances>add_ln22_2_fu_90_p2 add_ln22_fu_96_p2 sub_ln22_fu_130_p2</BindInstances>
+                            <ID>480</ID>
+                            <BindInstances>add_ln22_3_fu_90_p2 add_ln22_fu_96_p2 sub_ln22_fu_130_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_LOADBYTES_1_fu_430</InstName>
+                            <InstName>grp_LOADBYTES_1_fu_488</InstName>
                             <ModuleName>LOADBYTES_1</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>430</ID>
-                            <BindInstances>add_ln22_2_fu_90_p2 add_ln22_fu_96_p2 sub_ln22_fu_130_p2</BindInstances>
+                            <ID>488</ID>
+                            <BindInstances>add_ln22_3_fu_90_p2 add_ln22_fu_96_p2 sub_ln22_fu_130_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_ROUND_fu_440</InstName>
+                            <InstName>grp_ROUND_fu_498</InstName>
                             <ModuleName>ROUND</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>440</ID>
+                            <ID>498</ID>
                         </Instance>
                         <Instance>
-                            <InstName>grp_ROUND_fu_455</InstName>
+                            <InstName>grp_ROUND_fu_513</InstName>
                             <ModuleName>ROUND</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>455</ID>
+                            <ID>513</ID>
                         </Instance>
                         <Instance>
-                            <InstName>grp_LOADBYTES_2_fu_486</InstName>
+                            <InstName>grp_LOADBYTES_2_fu_545</InstName>
                             <ModuleName>LOADBYTES_2</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>486</ID>
+                            <ID>545</ID>
+                            <BindInstances>add_ln22_2_fu_88_p2 add_ln22_fu_98_p2 sub_ln22_fu_126_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_LOADBYTES_3_fu_555</InstName>
+                            <ModuleName>LOADBYTES_3</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>555</ID>
                             <BindInstances>add_ln22_1_fu_88_p2 add_ln22_fu_98_p2 sub_ln22_fu_126_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1_fu_497</InstName>
-                            <ModuleName>crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1</ModuleName>
+                            <InstName>grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1_fu_565</InstName>
+                            <ModuleName>crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>497</ID>
-                            <BindInstances>add_ln28_3_fu_89_p2 sub_ln28_fu_105_p2 add_ln28_2_fu_126_p2</BindInstances>
+                            <ID>565</ID>
+                            <BindInstances>add_ln28_fu_101_p2 sub_ln28_fu_123_p2 add_ln28_1_fu_144_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11_fu_507</InstName>
-                            <ModuleName>crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11</ModuleName>
+                            <InstName>grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1_fu_574</InstName>
+                            <ModuleName>crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>507</ID>
-                            <BindInstances>add_ln28_fu_99_p2 sub_ln28_fu_121_p2 add_ln28_2_fu_142_p2 add_ln28_3_fu_148_p2</BindInstances>
+                            <ID>574</ID>
+                            <BindInstances>add_ln33_fu_91_p2 sub_ln33_fu_112_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12_fu_517</InstName>
-                            <ModuleName>crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12</ModuleName>
+                            <InstName>grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11_fu_582</InstName>
+                            <ModuleName>crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>517</ID>
-                            <BindInstances>add_ln28_fu_91_p2 sub_ln28_fu_109_p2 add_ln28_1_fu_140_p2</BindInstances>
+                            <ID>582</ID>
+                            <BindInstances>add_ln28_fu_75_p2 sub_ln28_fu_98_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12_fu_588</InstName>
+                            <ModuleName>crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>588</ID>
+                            <BindInstances>add_ln28_fu_75_p2 sub_ln28_fu_93_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12_fu_594</InstName>
+                            <ModuleName>crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>594</ID>
+                            <BindInstances>add_ln282_2_fu_126_p2 add_ln282_fu_141_p2 add_ln282_1_fu_147_p2</BindInstances>
                         </Instance>
                     </InstancesList>
-                    <BindInstances>clen add_ln84_fu_781_p2 add_ln85_fu_787_p2 sub_ln89_fu_877_p2 add_ln28_1_fu_1054_p2 sub_ln28_fu_1072_p2 add_ln28_fu_1096_p2 add_ln113_fu_1107_p2 add_ln114_fu_1113_p2 sub_ln119_fu_1168_p2 add_ln28_4_fu_1217_p2</BindInstances>
+                    <BindInstances>t_U mlen add_ln181_1_fu_738_p2 add_ln217_fu_864_p2 add_ln218_fu_870_p2 sub_ln222_fu_960_p2 add_ln28_1_fu_1152_p2 sub_ln28_fu_1170_p2 add_ln28_fu_1194_p2 add_ln244_fu_1205_p2 add_ln246_fu_1211_p2 add_ln238_fu_1081_p2 sub_ln253_fu_1275_p2 add_ln283_fu_1333_p2</BindInstances>
                 </Instance>
             </InstancesList>
         </TopModule>
@@ -643,7 +544,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_2_fu_90_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:22" URAM="0" VARIABLE="add_ln22_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_3_fu_90_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:22" URAM="0" VARIABLE="add_ln22_3"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_fu_96_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:22" URAM="0" VARIABLE="add_ln22"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln22_fu_130_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:22" URAM="0" VARIABLE="sub_ln22"/>
             </BindNodes>
@@ -741,13 +642,72 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_2_fu_88_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:22" URAM="0" VARIABLE="add_ln22_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_fu_98_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:22" URAM="0" VARIABLE="add_ln22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln22_fu_126_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:22" URAM="0" VARIABLE="sub_ln22"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>LOADBYTES_3</Name>
+            <Loops>
+                <VITIS_LOOP_22_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>4.348</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_22_1>
+                        <Name>VITIS_LOOP_22_1</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_22_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>131</FF>
+                    <AVAIL_FF>202800</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>416</LUT>
+                    <AVAIL_LUT>101400</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>650</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>600</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_1_fu_88_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:22" URAM="0" VARIABLE="add_ln22_1"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln22_fu_98_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:22" URAM="0" VARIABLE="add_ln22"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln22_fu_126_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:22" URAM="0" VARIABLE="sub_ln22"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1</Name>
+            <Name>crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_1</Name>
             <Loops>
                 <VITIS_LOOP_28_1/>
             </Loops>
@@ -758,21 +718,21 @@
                     <EstimatedClockPeriod>5.224</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
                     <Average-caseLatency>undef</Average-caseLatency>
                     <Worst-caseLatency>undef</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>30.000 ns</Best-caseRealTimeLatency>
                     <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
                     <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineInitiationInterval>3 ~ -1</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_28_1>
                         <Name>VITIS_LOOP_28_1</Name>
                         <TripCount>undef</TripCount>
-                        <Latency>undef</Latency>
-                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <Latency>1 ~ ?</Latency>
+                        <AbsoluteTimeLatency>10.000 ns ~ ?</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>1</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -782,10 +742,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>34</FF>
+                    <FF>33</FF>
                     <AVAIL_FF>202800</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>319</LUT>
+                    <LUT>316</LUT>
                     <AVAIL_LUT>101400</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -800,13 +760,71 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_3_fu_89_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_fu_105_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="sub_ln28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_2_fu_126_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_101_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_fu_123_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="sub_ln28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_1_fu_144_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28_1"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11</Name>
+            <Name>crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_33_1</Name>
+            <Loops>
+                <VITIS_LOOP_33_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>4.348</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>30.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3 ~ -1</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_33_1>
+                        <Name>VITIS_LOOP_33_1</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>1 ~ ?</Latency>
+                        <AbsoluteTimeLatency>10.000 ns ~ ?</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_33_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>98</FF>
+                    <AVAIL_FF>202800</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>442</LUT>
+                    <AVAIL_LUT>101400</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>650</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>600</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln33_fu_91_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:33" URAM="0" VARIABLE="add_ln33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_33_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln33_fu_112_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:33" URAM="0" VARIABLE="sub_ln33"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_11</Name>
             <Loops>
                 <VITIS_LOOP_28_1/>
             </Loops>
@@ -844,7 +862,7 @@
                     <FF>6</FF>
                     <AVAIL_FF>202800</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>259</LUT>
+                    <LUT>245</LUT>
                     <AVAIL_LUT>101400</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -859,14 +877,12 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_99_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_fu_121_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="sub_ln28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_2_fu_142_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_3_fu_148_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_75_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_fu_98_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="sub_ln28"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12</Name>
+            <Name>crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_28_12</Name>
             <Loops>
                 <VITIS_LOOP_28_1/>
             </Loops>
@@ -904,7 +920,7 @@
                     <FF>6</FF>
                     <AVAIL_FF>202800</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>264</LUT>
+                    <LUT>250</LUT>
                     <AVAIL_LUT>101400</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -919,18 +935,76 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_91_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_fu_109_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="sub_ln28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_1_fu_140_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_75_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_fu_93_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="sub_ln28"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>crypto_aead_encrypt_1</Name>
+            <Name>crypto_aead_decrypt_1_Pipeline_VITIS_LOOP_282_12</Name>
             <Loops>
-                <VITIS_LOOP_77_3/>
-                <VITIS_LOOP_104_7>
+                <VITIS_LOOP_282_12/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>3.075</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>19</Best-caseLatency>
+                    <Average-caseLatency>19</Average-caseLatency>
+                    <Worst-caseLatency>19</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.190 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.190 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.190 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>19</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_282_12>
+                        <Name>VITIS_LOOP_282_12</Name>
+                        <TripCount>16</TripCount>
+                        <Latency>17</Latency>
+                        <AbsoluteTimeLatency>0.170 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_282_12>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>42</FF>
+                    <AVAIL_FF>202800</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>100</LUT>
+                    <AVAIL_LUT>101400</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>650</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>600</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_282_12" OPTYPE="add" PRAGMA="" RTLNAME="add_ln282_2_fu_126_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:282" URAM="0" VARIABLE="add_ln282_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="VITIS_LOOP_282_12" OPTYPE="add" PRAGMA="" RTLNAME="add_ln282_fu_141_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:282" URAM="0" VARIABLE="add_ln282"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="VITIS_LOOP_282_12" OPTYPE="add" PRAGMA="" RTLNAME="add_ln282_1_fu_147_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:282" URAM="0" VARIABLE="add_ln282_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>crypto_aead_decrypt_1</Name>
+            <Loops>
+                <VITIS_LOOP_210_3/>
+                <VITIS_LOOP_238_7>
                     <VITIS_LOOP_28_1/>
-                </VITIS_LOOP_104_7>
+                </VITIS_LOOP_238_7>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -949,8 +1023,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_77_3>
-                        <Name>VITIS_LOOP_77_3</Name>
+                    <VITIS_LOOP_210_3>
+                        <Name>VITIS_LOOP_210_3</Name>
                         <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
                         <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -958,18 +1032,20 @@
                         <PipelineDepth>undef</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_LOADBYTES_2_fu_486</Instance>
+                            <Instance>grp_LOADBYTES_2_fu_545</Instance>
                         </InstanceList>
-                    </VITIS_LOOP_77_3>
-                    <VITIS_LOOP_104_7>
-                        <Name>VITIS_LOOP_104_7</Name>
+                    </VITIS_LOOP_210_3>
+                    <VITIS_LOOP_238_7>
+                        <Name>VITIS_LOOP_238_7</Name>
                         <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
                         <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
                         <IterationLatency>undef</IterationLatency>
                         <PipelineDepth>undef</PipelineDepth>
                         <PipelineType>no</PipelineType>
-                        <InstanceList/>
+                        <InstanceList>
+                            <Instance>grp_LOADBYTES_3_fu_555</Instance>
+                        </InstanceList>
                         <VITIS_LOOP_28_1>
                             <Name>VITIS_LOOP_28_1</Name>
                             <TripCount>8</TripCount>
@@ -980,44 +1056,47 @@
                             <PipelineType>no</PipelineType>
                             <InstanceList/>
                         </VITIS_LOOP_28_1>
-                    </VITIS_LOOP_104_7>
+                    </VITIS_LOOP_238_7>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>3915</FF>
-                    <AVAIL_FF>202800</AVAIL_FF>
-                    <UTIL_FF>1</UTIL_FF>
-                    <LUT>9216</LUT>
-                    <AVAIL_LUT>101400</AVAIL_LUT>
-                    <UTIL_LUT>9</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>650</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>600</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>4818</FF>
+                    <AVAIL_FF>202800</AVAIL_FF>
+                    <UTIL_FF>2</UTIL_FF>
+                    <LUT>10472</LUT>
+                    <AVAIL_LUT>101400</AVAIL_LUT>
+                    <UTIL_LUT>10</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>600</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="clen" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:48" URAM="0" VARIABLE="add_ln48"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_77_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln84_fu_781_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:84" URAM="0" VARIABLE="add_ln84"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_77_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln85_fu_787_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:85" URAM="0" VARIABLE="add_ln85"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln89_fu_877_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:89" URAM="0" VARIABLE="sub_ln89"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_1_fu_1054_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_fu_1072_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="sub_ln28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_1096_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_104_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln113_fu_1107_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:113" URAM="0" VARIABLE="add_ln113"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_104_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln114_fu_1113_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:114" URAM="0" VARIABLE="add_ln114"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln119_fu_1168_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:119" URAM="0" VARIABLE="sub_ln119"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_4_fu_1217_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28_4"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="t_U" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:276" URAM="0" VARIABLE="t"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mlen" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:181" URAM="0" VARIABLE="add_ln181"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln181_1_fu_738_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:181" URAM="0" VARIABLE="add_ln181_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_210_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln217_fu_864_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:217" URAM="0" VARIABLE="add_ln217"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_210_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln218_fu_870_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:218" URAM="0" VARIABLE="add_ln218"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln222_fu_960_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:222" URAM="0" VARIABLE="sub_ln222"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_1_fu_1152_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln28_fu_1170_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="sub_ln28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_28_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_1194_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28" URAM="0" VARIABLE="add_ln28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_238_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln244_fu_1205_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:244" URAM="0" VARIABLE="add_ln244"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_238_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln246_fu_1211_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:246" URAM="0" VARIABLE="add_ln246"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln238_fu_1081_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:238" URAM="0" VARIABLE="add_ln238"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln253_fu_1275_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:253" URAM="0" VARIABLE="sub_ln253"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln283_fu_1333_p2" SOURCE="PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:283" URAM="0" VARIABLE="add_ln283"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>crypto_aead_encrypt_h</Name>
+            <Name>crypto_aead_decrypt_c</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
@@ -1037,21 +1116,21 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>3918</FF>
-                    <AVAIL_FF>202800</AVAIL_FF>
-                    <UTIL_FF>1</UTIL_FF>
-                    <LUT>9229</LUT>
-                    <AVAIL_LUT>101400</AVAIL_LUT>
-                    <UTIL_LUT>9</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>650</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>600</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>4821</FF>
+                    <AVAIL_FF>202800</AVAIL_FF>
+                    <UTIL_FF>2</UTIL_FF>
+                    <LUT>10487</LUT>
+                    <AVAIL_LUT>101400</AVAIL_LUT>
+                    <UTIL_LUT>10</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>600</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
                 </Resources>
             </AreaEstimates>
         </Module>
@@ -1059,47 +1138,47 @@
     <FIFOInformation/>
     <UserConfigCommands/>
     <Args>
-        <Arg ArgName="c" index="0" direction="out" srcType="unsigned char*" srcSize="8">
-            <hwRefs>
-                <hwRef type="port" interface="c_address0" name="c_address0" usage="address" direction="out"/>
-                <hwRef type="port" interface="c_ce0" name="c_ce0" usage="control" direction="out"/>
-                <hwRef type="port" interface="c_we0" name="c_we0" usage="control" direction="out"/>
-                <hwRef type="port" interface="c_d0" name="c_d0" usage="data" direction="out"/>
-            </hwRefs>
-        </Arg>
-        <Arg ArgName="clen" index="1" direction="out" srcType="*" srcSize="64">
-            <hwRefs>
-                <hwRef type="port" interface="clen" name="clen" usage="data" direction="out"/>
-                <hwRef type="port" interface="clen_ap_vld" name="clen_ap_vld" usage="control" direction="out"/>
-            </hwRefs>
-        </Arg>
-        <Arg ArgName="m" index="2" direction="in" srcType="*" srcSize="8">
+        <Arg ArgName="m" index="0" direction="out" srcType="unsigned char*" srcSize="8">
             <hwRefs>
                 <hwRef type="port" interface="m_address0" name="m_address0" usage="address" direction="out"/>
                 <hwRef type="port" interface="m_ce0" name="m_ce0" usage="control" direction="out"/>
-                <hwRef type="port" interface="m_q0" name="m_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="m_we0" name="m_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="m_d0" name="m_d0" usage="data" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="mlen" index="3" direction="in" srcType="long long unsigned int" srcSize="64">
+        <Arg ArgName="mlen" index="1" direction="out" srcType="*" srcSize="64">
             <hwRefs>
-                <hwRef type="port" interface="mlen" name="mlen" usage="data" direction="in"/>
+                <hwRef type="port" interface="mlen" name="mlen" usage="data" direction="out"/>
+                <hwRef type="port" interface="mlen_ap_vld" name="mlen_ap_vld" usage="control" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="ad" index="4" direction="in" srcType="*" srcSize="8">
+        <Arg ArgName="nsec" index="2" direction="unused" srcType="*" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="nsec" name="nsec" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="c" index="3" direction="in" srcType="*" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="c_address0" name="c_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="c_ce0" name="c_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="c_q0" name="c_q0" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="clen" index="4" direction="in" srcType="long long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="clen" name="clen" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="ad" index="5" direction="in" srcType="*" srcSize="8">
             <hwRefs>
                 <hwRef type="port" interface="ad_address0" name="ad_address0" usage="address" direction="out"/>
                 <hwRef type="port" interface="ad_ce0" name="ad_ce0" usage="control" direction="out"/>
                 <hwRef type="port" interface="ad_q0" name="ad_q0" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="adlen" index="5" direction="in" srcType="long long unsigned int" srcSize="64">
+        <Arg ArgName="adlen" index="6" direction="in" srcType="long long unsigned int" srcSize="64">
             <hwRefs>
                 <hwRef type="port" interface="adlen" name="adlen" usage="data" direction="in"/>
-            </hwRefs>
-        </Arg>
-        <Arg ArgName="nsec" index="6" direction="unused" srcType="*" srcSize="8">
-            <hwRefs>
-                <hwRef type="port" interface="nsec" name="nsec" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
         <Arg ArgName="npub" index="7" direction="in" srcType="*" srcSize="8">
@@ -1114,20 +1193,6 @@
                 <hwRef type="port" interface="k_address0" name="k_address0" usage="address" direction="out"/>
                 <hwRef type="port" interface="k_ce0" name="k_ce0" usage="control" direction="out"/>
                 <hwRef type="port" interface="k_q0" name="k_q0" usage="data" direction="in"/>
-            </hwRefs>
-        </Arg>
-        <Arg ArgName="st" index="9" direction="unused" srcType="long long unsigned int*" srcSize="64">
-            <hwRefs>
-                <hwRef type="port" interface="st_address0" name="st_address0" usage="address" direction="out"/>
-                <hwRef type="port" interface="st_ce0" name="st_ce0" usage="control" direction="out"/>
-                <hwRef type="port" interface="st_we0" name="st_we0" usage="control" direction="out"/>
-                <hwRef type="port" interface="st_d0" name="st_d0" usage="data" direction="out"/>
-                <hwRef type="port" interface="st_q0" name="st_q0" usage="data" direction="in"/>
-                <hwRef type="port" interface="st_address1" name="st_address1" usage="address" direction="out"/>
-                <hwRef type="port" interface="st_ce1" name="st_ce1" usage="control" direction="out"/>
-                <hwRef type="port" interface="st_we1" name="st_we1" usage="control" direction="out"/>
-                <hwRef type="port" interface="st_d1" name="st_d1" usage="data" direction="out"/>
-                <hwRef type="port" interface="st_q1" name="st_q1" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
     </Args>
@@ -1179,39 +1244,6 @@
                 <port>ap_return</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="c_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
-            <portMaps>
-                <portMap portMapName="c_address0">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>c_address0</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="c"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="c_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="8">
-            <portMaps>
-                <portMap portMapName="c_d0">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>c_d0</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="c"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="clen" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
-            <portMaps>
-                <portMap portMapName="clen">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>clen</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="clen"/>
-            </constraints>
-        </Interface>
         <Interface InterfaceName="m_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="5">
             <portMaps>
                 <portMap portMapName="m_address0">DATA</portMap>
@@ -1223,18 +1255,18 @@
                 <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="m"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="m_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="8">
+        <Interface InterfaceName="m_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="8">
             <portMaps>
-                <portMap portMapName="m_q0">DATA</portMap>
+                <portMap portMapName="m_d0">DATA</portMap>
             </portMaps>
             <ports>
-                <port>m_q0</port>
+                <port>m_d0</port>
             </ports>
             <constraints>
                 <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="m"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="mlen" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+        <Interface InterfaceName="mlen" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
             <portMaps>
                 <portMap portMapName="mlen">DATA</portMap>
             </portMaps>
@@ -1243,6 +1275,50 @@
             </ports>
             <constraints>
                 <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="mlen"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="nsec" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="nsec">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>nsec</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="nsec"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="c_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="c_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>c_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="c"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="c_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="c_q0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>c_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="c"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="clen" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="clen">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>clen</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="clen"/>
             </constraints>
         </Interface>
         <Interface InterfaceName="ad_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="5">
@@ -1276,17 +1352,6 @@
             </ports>
             <constraints>
                 <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="adlen"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="nsec" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
-            <portMaps>
-                <portMap portMapName="nsec">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>nsec</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="nsec"/>
             </constraints>
         </Interface>
         <Interface InterfaceName="npub_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="4">
@@ -1333,72 +1398,6 @@
                 <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="k"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="st_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="3">
-            <portMaps>
-                <portMap portMapName="st_address0">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>st_address0</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="st"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="st_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="64">
-            <portMaps>
-                <portMap portMapName="st_d0">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>st_d0</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="st"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="st_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
-            <portMaps>
-                <portMap portMapName="st_q0">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>st_q0</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="st"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="st_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="3">
-            <portMaps>
-                <portMap portMapName="st_address1">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>st_address1</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="st"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="st_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="64">
-            <portMaps>
-                <portMap portMapName="st_d1">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>st_d1</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="st"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="st_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="64">
-            <portMaps>
-                <portMap portMapName="st_q1">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>st_q1</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="st"/>
-            </constraints>
-        </Interface>
     </Interfaces>
     <ReportHWInterface>
         <section name="HW Interfaces" level="0">
@@ -1408,19 +1407,13 @@
                     <column name="ad_address0">5</column>
                     <column name="ad_q0">8</column>
                     <column name="c_address0">6</column>
-                    <column name="c_d0">8</column>
+                    <column name="c_q0">8</column>
                     <column name="k_address0">4</column>
                     <column name="k_q0">8</column>
                     <column name="m_address0">5</column>
-                    <column name="m_q0">8</column>
+                    <column name="m_d0">8</column>
                     <column name="npub_address0">4</column>
                     <column name="npub_q0">8</column>
-                    <column name="st_address0">3</column>
-                    <column name="st_address1">3</column>
-                    <column name="st_d0">64</column>
-                    <column name="st_d1">64</column>
-                    <column name="st_q0">64</column>
-                    <column name="st_q1">64</column>
                 </table>
             </item>
             <item name="REGISTER">
@@ -1448,53 +1441,42 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="c">out, unsigned char*</column>
-                    <column name="clen">out, pointer</column>
-                    <column name="m">in, pointer</column>
-                    <column name="mlen">in, long long unsigned int</column>
+                    <column name="m">out, unsigned char*</column>
+                    <column name="mlen">out, pointer</column>
+                    <column name="nsec">unused, pointer</column>
+                    <column name="c">in, pointer</column>
+                    <column name="clen">in, long long unsigned int</column>
                     <column name="ad">in, pointer</column>
                     <column name="adlen">in, long long unsigned int</column>
-                    <column name="nsec">unused, pointer</column>
                     <column name="npub">in, pointer</column>
                     <column name="k">in, pointer</column>
-                    <column name="st">unused, long long unsigned int*</column>
                     <column name="return">out, int</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
                 <table isCollapsed="1">
                     <keys size="4">Argument, HW Interface, HW Type, HW Usage</keys>
-                    <column name="c">c_address0, port, offset</column>
-                    <column name="c">c_ce0, port, </column>
-                    <column name="c">c_we0, port, </column>
-                    <column name="c">c_d0, port, </column>
-                    <column name="clen">clen, port, </column>
-                    <column name="clen">clen_ap_vld, port, </column>
                     <column name="m">m_address0, port, offset</column>
                     <column name="m">m_ce0, port, </column>
-                    <column name="m">m_q0, port, </column>
+                    <column name="m">m_we0, port, </column>
+                    <column name="m">m_d0, port, </column>
                     <column name="mlen">mlen, port, </column>
+                    <column name="mlen">mlen_ap_vld, port, </column>
+                    <column name="nsec">nsec, port, </column>
+                    <column name="c">c_address0, port, offset</column>
+                    <column name="c">c_ce0, port, </column>
+                    <column name="c">c_q0, port, </column>
+                    <column name="clen">clen, port, </column>
                     <column name="ad">ad_address0, port, offset</column>
                     <column name="ad">ad_ce0, port, </column>
                     <column name="ad">ad_q0, port, </column>
                     <column name="adlen">adlen, port, </column>
-                    <column name="nsec">nsec, port, </column>
                     <column name="npub">npub_address0, port, offset</column>
                     <column name="npub">npub_ce0, port, </column>
                     <column name="npub">npub_q0, port, </column>
                     <column name="k">k_address0, port, offset</column>
                     <column name="k">k_ce0, port, </column>
                     <column name="k">k_q0, port, </column>
-                    <column name="st">st_address0, port, offset</column>
-                    <column name="st">st_ce0, port, </column>
-                    <column name="st">st_we0, port, </column>
-                    <column name="st">st_d0, port, </column>
-                    <column name="st">st_q0, port, </column>
-                    <column name="st">st_address1, port, offset</column>
-                    <column name="st">st_ce1, port, </column>
-                    <column name="st">st_we1, port, </column>
-                    <column name="st">st_d1, port, </column>
-                    <column name="st">st_q1, port, </column>
                     <column name="return">ap_return, port, </column>
                 </table>
             </item>

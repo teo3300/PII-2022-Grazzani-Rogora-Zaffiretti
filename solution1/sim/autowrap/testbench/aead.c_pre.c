@@ -23,22 +23,31 @@ typedef unsigned long long int state_t[5];
 
 
 
-int crypto_aead_encrypt_c(unsigned char c[32 + 16], volatile unsigned long long int* clen,
-      volatile unsigned char m[32], unsigned long long int mlen,
-      volatile unsigned char ad[32], unsigned long long int adlen,
-      volatile unsigned char nsec[0], volatile unsigned char npub[16],
-      volatile unsigned char k[16], unsigned long long int st[5]);
-int crypto_aead_encrypt_h(unsigned char c[32 + 16], volatile unsigned long long int* clen,
-      volatile unsigned char m[32], unsigned long long int mlen,
-      volatile unsigned char ad[32], unsigned long long int adlen,
-      volatile unsigned char nsec[0], volatile unsigned char npub[16],
-      volatile unsigned char k[16], unsigned long long int st[5]);
+int crypto_aead_encrypt_c(
+        unsigned char c[32 + 16], volatile unsigned long long int* clen,
+        volatile unsigned char m[32], unsigned long long int mlen,
+        volatile unsigned char ad[32], unsigned long long int adlen,
+        volatile unsigned char nsec[0], volatile unsigned char npub[16],
+        volatile unsigned char k[16]);
+int crypto_aead_encrypt_h(
+        unsigned char c[32 + 16], volatile unsigned long long int* clen,
+        volatile unsigned char m[32], unsigned long long int mlen,
+        volatile unsigned char ad[32], unsigned long long int adlen,
+        volatile unsigned char nsec[0], volatile unsigned char npub[16],
+        volatile unsigned char k[16]);
 
-int crypto_aead_decrypt(unsigned char* m, unsigned long long* mlen,
-                        unsigned char* nsec, const unsigned char* c,
-                        unsigned long long clen, const unsigned char* ad,
-                        unsigned long long adlen, const unsigned char* npub,
-                        const unsigned char* k, unsigned long long int st[5]);
+int crypto_aead_decrypt_c(
+        unsigned char m[32], volatile unsigned long long int* mlen,
+        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
+        unsigned long long int clen, volatile unsigned char ad[32],
+        unsigned long long int adlen, volatile unsigned char npub[16],
+        volatile unsigned char k[16]);
+int crypto_aead_decrypt_h(
+        unsigned char m[32], volatile unsigned long long int* mlen,
+        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
+        unsigned long long int clen, volatile unsigned char ad[32],
+        unsigned long long int adlen, volatile unsigned char npub[16],
+        volatile unsigned char k[16]);
 # 4 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c" 2
 # 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/permutations.h" 1
 
@@ -372,32 +381,34 @@ void copyState(volatile unsigned long long int a[5], volatile unsigned long long
     }
 }
 
-int crypto_aead_encrypt(unsigned char c[32 + 16], volatile unsigned long long int* clen,
+int crypto_aead_encrypt(
+        unsigned char c[32 + 16], volatile unsigned long long int* clen,
   volatile unsigned char m[32], unsigned long long int mlen,
   volatile unsigned char ad[32], unsigned long long int adlen,
   volatile unsigned char nsec[0], volatile unsigned char npub[16],
-  volatile unsigned char k[16], unsigned long long int st[5]);
+  volatile unsigned char k[16]);
 
-int crypto_aead_encrypt_c(unsigned char c[32 + 16], volatile unsigned long long int* clen,
+int crypto_aead_encrypt_c(
+        unsigned char c[32 + 16], volatile unsigned long long int* clen,
   volatile unsigned char m[32], unsigned long long int mlen,
   volatile unsigned char ad[32], unsigned long long int adlen,
   volatile unsigned char nsec[0], volatile unsigned char npub[16],
-  volatile unsigned char k[16], unsigned long long int st[5]){
- return crypto_aead_encrypt(c, clen, m, mlen, ad, adlen, nsec, npub, k, st);
-}
-int crypto_aead_encrypt_h(unsigned char c[32 + 16], volatile unsigned long long int* clen,
+  volatile unsigned char k[16]){
+ return crypto_aead_encrypt(c, clen, m, mlen, ad, adlen, nsec, npub, k);}
+int crypto_aead_encrypt_h(
+        unsigned char c[32 + 16], volatile unsigned long long int* clen,
   volatile unsigned char m[32], unsigned long long int mlen,
   volatile unsigned char ad[32], unsigned long long int adlen,
   volatile unsigned char nsec[0], volatile unsigned char npub[16],
-  volatile unsigned char k[16], unsigned long long int st[5]){
- return crypto_aead_encrypt(c, clen, m, mlen, ad, adlen, nsec, npub, k, st);
-}
+  volatile unsigned char k[16]){
+ return crypto_aead_encrypt(c, clen, m, mlen, ad, adlen, nsec, npub, k);}
 
-int crypto_aead_encrypt(unsigned char c[32 + 16], volatile unsigned long long int* clen,
+int crypto_aead_encrypt(
+        unsigned char c[32 + 16], volatile unsigned long long int* clen,
   volatile unsigned char m[32], unsigned long long int mlen,
   volatile unsigned char ad[32], unsigned long long int adlen,
   volatile unsigned char nsec[0], volatile unsigned char npub[16],
-  volatile unsigned char k[16], unsigned long long int st[5]) {
+  volatile unsigned char k[16]){
     (void)nsec;
 
 
@@ -500,12 +511,33 @@ int crypto_aead_encrypt(unsigned char c[32 + 16], volatile unsigned long long in
 
     return 0;
 }
+int crypto_aead_decrypt(
+        unsigned char m[32], volatile unsigned long long int* mlen,
+        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
+        unsigned long long int clen, volatile unsigned char ad[32],
+        unsigned long long int adlen, volatile unsigned char npub[16],
+        volatile unsigned char k[16]);
+int crypto_aead_decrypt_c(
+        unsigned char m[32], volatile unsigned long long int* mlen,
+        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
+        unsigned long long int clen, volatile unsigned char ad[32],
+        unsigned long long int adlen, volatile unsigned char npub[16],
+        volatile unsigned char k[16]){
+    return crypto_aead_decrypt(m,mlen,nsec,c,clen,ad,adlen,npub,k);}
+int crypto_aead_decrypt_h(
+        unsigned char m[32], volatile unsigned long long int* mlen,
+        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
+        unsigned long long int clen, volatile unsigned char ad[32],
+        unsigned long long int adlen, volatile unsigned char npub[16],
+        volatile unsigned char k[16]){
+    return crypto_aead_decrypt(m,mlen,nsec,c,clen,ad,adlen,npub,k);}
 
-int crypto_aead_decrypt(unsigned char* m, unsigned long long* mlen,
-                        unsigned char* nsec, const unsigned char* c,
-                        unsigned long long clen, const unsigned char* ad,
-                        unsigned long long adlen, const unsigned char* npub,
-                        const unsigned char* k, unsigned long long int st[5]) {
+int crypto_aead_decrypt(
+        unsigned char m[32], volatile unsigned long long int* mlen,
+        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
+        unsigned long long int clen, volatile unsigned char ad[32],
+        unsigned long long int adlen, volatile unsigned char npub[16],
+        volatile unsigned char k[16]){
     (void)nsec;
 
     if (clen < 16) return -1;
