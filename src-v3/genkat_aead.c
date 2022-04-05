@@ -35,17 +35,14 @@
 #define _CRT_SECURE_NO_WARNINGS
 #endif
 
-#include <inttypes.h>
 #include <stdio.h>
 #include <string.h>
-
-#ifndef CHECK
-#define CHECK FULL
-#endif
 
 #define STATE 2
 #define DECRYPT 1
 #define FULL 0
+
+#define CHECK STATE
 
 #include "api.h"
 #include "crypto_aead.h"
@@ -56,18 +53,16 @@
 #define KAT_CRYPTO_FAILURE -4
 
 #define MAX_FILE_NAME 256
-#define MAX_MESSAGE_LENGTH 32
-#define MAX_ASSOCIATED_DATA_LENGTH 32
 
-void init_buffer(unsigned char *buffer, unsigned long long numbytes);
+void init_buffer(u8 *buffer, u64 numbytes);
 
-void fprint_bstr(FILE *fp, const char *label, const unsigned char *data,
-                 unsigned long long length);
+void fprint_bstr(FILE *fp, const char *label, const u8 *data,
+                 u64 length);
 
 int generate_test_vectors();
 
 int main() {
-    int ret = generate_test_vectors();
+    s32 ret = generate_test_vectors();
     if (ret != KAT_SUCCESS) {
         fprintf(stderr, "test vector generation failed with code %d\n", ret);
     }
@@ -77,24 +72,24 @@ int main() {
 int generate_test_vectors() {
     FILE *fp;
     char fileName[MAX_FILE_NAME];
-    unsigned char key[CRYPTO_KEYBYTES];
-    unsigned char nonce[CRYPTO_NPUBBYTES];
-    unsigned char msg[MAX_MESSAGE_LENGTH];
-    unsigned char msg2[MAX_MESSAGE_LENGTH];
-    unsigned char ad[MAX_ASSOCIATED_DATA_LENGTH];
-    unsigned char cct[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES];
-    unsigned char hct[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES];
-    unsigned long long cclen, hclen, mlen2;
-    int count = 1;
-    int func_ret, ret_val = KAT_SUCCESS;
-    state_t c_state, h_state;
+    u8 key[CRYPTO_KEYBYTES];
+    u8 nonce[CRYPTO_NPUBBYTES];
+    u8 msg[MAX_MESSAGE_LENGTH];
+    u8 msg2[MAX_MESSAGE_LENGTH];
+    u8 ad[MAX_ASSOCIATED_DATA_LENGTH];
+    u8 cct[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES];
+    u8 hct[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES];
+    u64 cclen, hclen, mlen2;
+    s32 count = 1;
+    s32 func_ret, ret_val = KAT_SUCCESS;
+    u64 c_state[5], h_state[5];
 
     init_buffer(key, sizeof(key));
     init_buffer(nonce, sizeof(nonce));
     init_buffer(msg, sizeof(msg));
     init_buffer(ad, sizeof(ad));
-    init_buffer((unsigned char*) c_state, sizeof(state_t));
-    init_buffer((unsigned char*) h_state, sizeof(state_t));
+    init_buffer((u8*) c_state, sizeof(state_t));
+    init_buffer((u8*) h_state, sizeof(state_t));
 
     sprintf(fileName, "LWC_AEAD_KAT_%d_%d.txt", (CRYPTO_KEYBYTES * 8),
             (CRYPTO_NPUBBYTES * 8));
@@ -103,9 +98,9 @@ int generate_test_vectors() {
         return KAT_FILE_OPEN_ERROR;
     }
 
-    for (unsigned long long mlen = 0;
+    for (u64 mlen = 0;
        (mlen <= MAX_MESSAGE_LENGTH) && (ret_val == KAT_SUCCESS); mlen++) {
-        for (unsigned long long adlen = 0; adlen <= MAX_ASSOCIATED_DATA_LENGTH;
+        for (u64 adlen = 0; adlen <= MAX_ASSOCIATED_DATA_LENGTH;
             adlen++) {
             fprintf(fp, "Count = %d\n", count++);
             fprint_bstr(fp, "Key = ", key, CRYPTO_KEYBYTES);
@@ -118,37 +113,45 @@ int generate_test_vectors() {
             crypto_aead_encrypt_h(hct, &hclen, msg, mlen, ad, adlen, NULL, nonce, key, h_state);
             fprintf(fp, "\n");
 
-            #if CHECK <= STATE
+            #if CHECK == STATE
                 if(memcmp(c_state, h_state, sizeof(state_t))){
-                    fprintf(stdout, "ERROR: in cycle %d:\n", count);
-                    fprint_bstr(stdout, "CST = ", (const unsigned char*)c_state, sizeof(state_t));
-                    fprint_bstr(stdout, "HST = ", (const unsigned char*)h_state, sizeof(state_t));
+                    fprintf(stdout, "STATE ERROR: in cycle %d:\n", count);
+    				fprint_bstr(stdout, "CST = ", c_state, sizeof(c_state));
+    				fprint_bstr(stdout, "HST = ", h_state, sizeof(h_state));
                     ret_val = KAT_CRYPTO_FAILURE;
+                }else{
+                	fprintf(stdout, "cycle %d: state check OK\n", count);
                 }
             #endif
 
             #if CHECK <= DECRYPT
-                if ((func_ret = crypto_aead_decrypt(msg2, &mlen2, NULL, hct, hclen, ad,
+                if ((func_ret = crypto_aead_decrypt(msg2, &mlen2, NULL, cct, cclen, ad,
                                                     adlen, nonce, key, h_state)) != 0) {
                     fprintf(fp, "crypto_aead_decrypt returned <%d>\n", func_ret);
+                    fprintf(stdout, "DECRYPT ERROR: in cycle %d:\n", count);
                     ret_val = KAT_CRYPTO_FAILURE;
                     break;
+                }else{
+                	fprintf(stdout, "cycle %d: decrypt check OK\n", count);
                 }
             #endif
 
             #if CHECK <= FULL
                 if (mlen != mlen2) {
                     fprintf(fp,
-                            "crypto_aead_decrypt returned bad 'mlen': Got <%" PRIu64
-                            ">, expected <%" PRIu64 ">\n",
-                            (uint64_t)mlen2, (uint64_t)mlen);
+                            "crypto_aead_decrypt returned bad 'mlen': Got <%llu>, expected <%llu>\n",
+                            (u64)mlen2, (u64)mlen);
+                    fprintf(stdout, "MSG OUTPUT ERROR (length): in cycle %d:\n", count);
                     ret_val = KAT_CRYPTO_FAILURE;
                     break;
                 }
                 if (memcmp(msg, msg2, mlen)) {
                     fprintf(fp, "crypto_aead_decrypt did not recover the plaintext\n");
+                    fprintf(stdout, "MSG OUTPUT ERROR (content): in cycle %d:\n", count);
                     ret_val = KAT_CRYPTO_FAILURE;
                     break;
+                }else{
+                	fprintf(stdout, "cycle %d: msg output check OK\n", count);
                 }
             #endif
         }
@@ -157,14 +160,14 @@ int generate_test_vectors() {
     return ret_val;
 }
 
-void fprint_bstr(FILE *fp, const char *label, const unsigned char *data,
-                 unsigned long long length) {
+void fprint_bstr(FILE *fp, const char *label, const u8 *data,
+                 u64 length) {
     fprintf(fp, "%s", label);
-    for (unsigned long long i = 0; i < length; i++) fprintf(fp, "%02X", data[i]);
+    for (u64 i = 0; i < length; i++) fprintf(fp, "%02X", data[i]);
     fprintf(fp, "\n");
 }
 
-void init_buffer(unsigned char *buffer, unsigned long long numbytes) {
-    for (unsigned long long i = 0; i < numbytes; i++)
-        buffer[i] = (unsigned char)i;
+void init_buffer(u8 *buffer, u64 numbytes) {
+    for (u64 i = 0; i < numbytes; i++)
+        buffer[i] = (u8)i;
 }

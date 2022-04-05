@@ -3,14 +3,13 @@
         <value string="false"/>
     </checksum>
     <downStreamTool>
-        <DownStreamTool name=""/>
+        <DownStreamTool name="vivado"/>
     </downStreamTool>
     <synthesis askAgain="true"/>
     <config/>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
-            <Platform>xilinx/virtexuplus/virtexuplus</Platform>
-            <Platform>xilinx/virtexuplus/virtexuplus_fpv7</Platform>
+            <Platform>xilinx/kintex7/kintex7</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -48,10 +47,10 @@
         <Format formatName="xo"/>
     </ExportDesign>
     <Simulation argv="">
-        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" enableDataflowProfiling="false" enableFifoSizing="false" name="cosim" optimizeCompile="false" random_stall="false" reduce_diskspace="false" setup="true" toolName="auto" waveDebug="false" ldflags="" mflags="" compiledLibrary="">
+        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" enableDataflowProfiling="false" enableFifoSizing="false" name="cosim" optimizeCompile="false" random_stall="false" reduce_diskspace="false" setup="false" toolName="auto" waveDebug="false" ldflags="" mflags="" compiledLibrary="">
             <Rtl active="false" name="systemc"/>
-            <Rtl active="false" name="verilog"/>
-            <Rtl active="true" name="vhdl"/>
+            <Rtl active="true" name="verilog"/>
+            <Rtl active="false" name="vhdl"/>
         </SimFlow>
     </Simulation>
     <name>
@@ -62,13 +61,13 @@
     </project>
     <flowTarget value="vivado"/>
     <targetInfo>
-        <TargetInfo value="xcvu35p:-fsvh2104:-1-e"/>
+        <TargetInfo value="xc7k160t:-fbv484:-2"/>
     </targetInfo>
     <libraryList>
-        <library value="xilinx/virtexuplus/virtexuplus" name="DefaultPlatform"/>
+        <library value="xilinx/kintex7/kintex7" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock default="false" name="default" uncertainty="0.5" period="100"/>
+        <clock name="default" default="false" period="10"/>
     </clockList>
 </solution>
 

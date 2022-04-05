@@ -1,0 +1,44 @@
+   Build using "C:/Xilinx/Vitis_HLS/2021.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_load_test_h.cpp
+   Compiling (apcc) test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Tue Apr 05 14:55:36 +0200 2022
+INFO: [HLS 200-10] In directory 'H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/test_loadbytes/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+In file included from H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-base_func/test.c:1:
+H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-base_func/test.c:43:74: warning: format specifies type 'int' but the argument has type 'unsigned long long' [-Wformat]
+    init_buffer(key, 16); fprintf((&__iob_func()[1]), "Size of type %s: %d\n", "key", sizeof(key));;
+                                                                        ~^            ~~~~~~~~~~~
+                                                                        %lld
+H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-base_func/test.c:44:76: warning: format specifies type 'int' but the argument has type 'unsigned long long' [-Wformat]
+    init_buffer(nonce, 16); fprintf((&__iob_func()[1]), "Size of type %s: %d\n", "nonce", sizeof(nonce));;
+                                                                          ~^              ~~~~~~~~~~~~~
+                                                                          %lld
+H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-base_func/test.c:49:34: warning: passing 'char [7]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+ fprint_bstr((&__iob_func()[2]), "CST = ", (unsigned char*)c_state, sizeof(c_state));
+                                 ^~~~~~~~
+H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-base_func/test.c:15:43: note: passing argument to parameter 'label' here
+void fprint_bstr(FILE *fp, unsigned char *label, unsigned char *data,
+                                          ^
+H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-base_func/test.c:50:34: warning: passing 'char [7]' to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+ fprint_bstr((&__iob_func()[2]), "HST = ", (unsigned char*)h_state, sizeof(h_state));
+                                 ^~~~~~~~
+H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-base_func/test.c:15:43: note: passing argument to parameter 'label' here
+void fprint_bstr(FILE *fp, unsigned char *label, unsigned char *data,
+                                          ^
+4 warnings generated.
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.802 seconds; peak allocated memory: 1.973 MB.
+   Compiling (apcc) load_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Tue Apr 05 14:55:41 +0200 2022
+INFO: [HLS 200-10] In directory 'H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/test_loadbytes/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.694 seconds; peak allocated memory: 2.207 MB.
+   Compiling apatb_load_test_h_ir.ll
+   Generating cosim.tv.exe

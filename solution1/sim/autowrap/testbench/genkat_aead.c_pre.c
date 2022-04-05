@@ -1,17 +1,34 @@
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src/tests/genkat_aead.c"
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src/tests/genkat_aead.c" 1
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c"
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src/tests/genkat_aead.c" 2
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c" 2
+# 33 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c"
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/ascon.h" 1
+
+
+
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/types.h" 1
+# 5 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/ascon.h" 2
+
+typedef unsigned long long int state_t[5];
+# 34 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c" 2
 
 
 
 
-# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\inttypes.h" 1 3
-# 11 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\inttypes.h" 3
+# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
+
+
+
+
+
+
+
+
 # 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
 # 10 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 # 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 1 3
@@ -155,125 +172,6 @@ const char *__mingw_get_crt_info (void);
 
 
 #pragma pack(pop)
-# 11 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\inttypes.h" 2 3
-
-# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 1 3 4
-# 33 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 3 4
-# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 1 3 4
-# 28 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 3 4
-# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 4
-# 28 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 2 3 4
-
-
-
-
-# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
-# 31 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 3 4
-typedef __typeof__(((int*)0)-((int*)0)) ptrdiff_t;
-
-
-
-typedef __typeof__(sizeof(int)) size_t;
-
-
-
-
-typedef unsigned short wchar_t;
-# 32 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdint.h" 2 3 4
-
-
-
-typedef signed char int8_t;
-typedef unsigned char uint8_t;
-typedef short int16_t;
-typedef unsigned short uint16_t;
-typedef int int32_t;
-typedef unsigned uint32_t;
-__extension__ typedef long long int64_t;
-__extension__ typedef unsigned long long uint64_t;
-
-
-typedef signed char int_least8_t;
-typedef unsigned char uint_least8_t;
-typedef short int_least16_t;
-typedef unsigned short uint_least16_t;
-typedef int int_least32_t;
-typedef unsigned uint_least32_t;
-__extension__ typedef long long int_least64_t;
-__extension__ typedef unsigned long long uint_least64_t;
-
-
-
-
-
-typedef signed char int_fast8_t;
-typedef unsigned char uint_fast8_t;
-typedef short int_fast16_t;
-typedef unsigned short uint_fast16_t;
-typedef int int_fast32_t;
-typedef unsigned int uint_fast32_t;
-__extension__ typedef long long int_fast64_t;
-__extension__ typedef unsigned long long uint_fast64_t;
-
-
-__extension__ typedef long long intmax_t;
-__extension__ typedef unsigned long long uintmax_t;
-# 33 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
-# 12 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\inttypes.h" 2 3
-
-
-# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stddef.h" 1 3 4
-# 14 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\inttypes.h" 2 3
-
-
-
-
-
-
-typedef struct {
- intmax_t quot;
- intmax_t rem;
- } imaxdiv_t;
-
-
-
-# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_push.h" 1 3
-# 26 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\inttypes.h" 2 3
-# 279 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\inttypes.h" 3
-intmax_t __cdecl imaxabs (intmax_t j);
-
-
-
-
-imaxdiv_t __cdecl imaxdiv (intmax_t numer, intmax_t denom);
-
-
-
-intmax_t __cdecl strtoimax (const char* __restrict__ nptr,
-                            char** __restrict__ endptr, int base);
-uintmax_t __cdecl strtoumax (const char* __restrict__ nptr,
-        char** __restrict__ endptr, int base);
-
-intmax_t __cdecl wcstoimax (const wchar_t* __restrict__ nptr,
-                            wchar_t** __restrict__ endptr, int base);
-uintmax_t __cdecl wcstoumax (const wchar_t* __restrict__ nptr,
-        wchar_t** __restrict__ endptr, int base);
-
-
-
-# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
-# 299 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\inttypes.h" 2 3
-# 6 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src/tests/genkat_aead.c" 2
-# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
-
-
-
-
-
-
-
-
-# 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
 # 9 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
 
 
@@ -622,7 +520,7 @@ uintmax_t __cdecl wcstoumax (const wchar_t* __restrict__ nptr,
 
 # 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 # 511 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 7 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src/tests/genkat_aead.c" 2
+# 39 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c" 2
 # 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 
 
@@ -787,110 +685,130 @@ uintmax_t __cdecl wcstoumax (const wchar_t* __restrict__ nptr,
 # 1 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 # 9 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
 # 175 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 8 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src/tests/genkat_aead.c" 2
-# 17 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src/tests/genkat_aead.c"
-extern int crypto_aead_encrypt(unsigned char *c, unsigned long long *clen,
-                        const unsigned char *m, unsigned long long mlen,
-                        const unsigned char *ad, unsigned long long adlen,
-                        const unsigned char *nsec, const unsigned char *npub,
-                        const unsigned char *k);
+# 40 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c" 2
 
 
-extern int crypto_aead_decrypt(unsigned char *m, unsigned long long *mlen,
-                        unsigned char *nsec, const unsigned char *c,
-                        unsigned long long clen, const unsigned char *ad,
-                        unsigned long long adlen, const unsigned char *npub,
-                        const unsigned char *k);
-# 39 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src/tests/genkat_aead.c"
-void init_buffer(unsigned char *buffer, unsigned long long numbytes);
+
+
+
+
+
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/api.h" 1
+# 48 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c" 2
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/crypto_aead.h" 1
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/api.h" 1
+# 2 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/crypto_aead.h" 2
+
+
+
+int crypto_aead_encrypt_c(unsigned char c[32 + 16], volatile unsigned long long int* clen,
+      volatile unsigned char m[32], unsigned long long int mlen,
+      volatile unsigned char ad[32], unsigned long long int adlen,
+      volatile unsigned char nsec[0], volatile unsigned char npub[16],
+      volatile unsigned char k[16], unsigned long long int st[5]);
+int crypto_aead_encrypt_h(unsigned char c[32 + 16], volatile unsigned long long int* clen,
+      volatile unsigned char m[32], unsigned long long int mlen,
+      volatile unsigned char ad[32], unsigned long long int adlen,
+      volatile unsigned char nsec[0], volatile unsigned char npub[16],
+      volatile unsigned char k[16], unsigned long long int st[5]);
+
+int crypto_aead_decrypt(unsigned char* m, unsigned long long* mlen,
+                        unsigned char* nsec, const unsigned char* c,
+                        unsigned long long clen, const unsigned char* ad,
+                        unsigned long long adlen, const unsigned char* npub,
+                        const unsigned char* k, unsigned long long int st[5]);
+# 49 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c" 2
+
+
+
+
+
+
+
+
+void init_buffer(unsigned char *buffer, unsigned long long int numbytes);
 
 void fprint_bstr(FILE *fp, const char *label, const unsigned char *data,
-                 unsigned long long length);
+                 unsigned long long int length);
 
 int generate_test_vectors();
 
 int main() {
-  int ret = generate_test_vectors();
-  if (ret != 0) {
-    fprintf((&__iob_func()[2]), "test vector generation failed with code %d\n", ret);
-  }
-  return ret;
+    signed int ret = generate_test_vectors();
+    if (ret != 0) {
+        fprintf((&__iob_func()[2]), "test vector generation failed with code %d\n", ret);
+    }
+    return ret;
 }
 
 int generate_test_vectors() {
-  FILE *fp;
-  char fileName[256];
-  unsigned char key[16];
-  unsigned char nonce[16];
-  unsigned char msg[32];
-  unsigned char msg2[32];
-  unsigned char ad[32];
-  unsigned char ct[32 + 16];
-  unsigned long long clen, mlen2;
-  int count = 1;
-  int func_ret, ret_val = 0;
+    FILE *fp;
+    char fileName[256];
+    unsigned char key[16];
+    unsigned char nonce[16];
+    unsigned char msg[32];
+    unsigned char msg2[32];
+    unsigned char ad[32];
+    unsigned char cct[32 + 16];
+    unsigned char hct[32 + 16];
+    unsigned long long int cclen, hclen, mlen2;
+    signed int count = 1;
+    signed int func_ret, ret_val = 0;
+    unsigned long long int c_state[5], h_state[5];
 
-  init_buffer(key, sizeof(key));
-  init_buffer(nonce, sizeof(nonce));
-  init_buffer(msg, sizeof(msg));
-  init_buffer(ad, sizeof(ad));
-  sprintf(fileName, "LWC_AEAD_KAT_%d_%d.txt", (16 * 8),
-          (16 * 8));
-  if ((fp = fopen(fileName, "w")) == ((void*)0)) {
-    fprintf((&__iob_func()[2]), "Couldn't open <%s> for write\n", fileName);
-    return -1;
-  }
+    init_buffer(key, sizeof(key));
+    init_buffer(nonce, sizeof(nonce));
+    init_buffer(msg, sizeof(msg));
+    init_buffer(ad, sizeof(ad));
+    init_buffer((unsigned char*) c_state, sizeof(state_t));
+    init_buffer((unsigned char*) h_state, sizeof(state_t));
 
-  for (unsigned long long mlen = 0;
-       (mlen <= 32) && (ret_val == 0); mlen++) {
-    for (unsigned long long adlen = 0; adlen <= 32;
-         adlen++) {
-      fprintf(fp, "Count = %d\n", count++);
-      fprint_bstr(fp, "Key = ", key, 16);
-      fprint_bstr(fp, "Nonce = ", nonce, 16);
-      fprint_bstr(fp, "PT = ", msg, mlen);
-      fprint_bstr(fp, "AD = ", ad, adlen);
-      if ((func_ret = crypto_aead_encrypt(ct, &clen, msg, mlen, ad, adlen, ((void*)0),
-                                          nonce, key)) != 0) {
-        fprintf(fp, "crypto_aead_encrypt returned <%d>\n", func_ret);
-        ret_val = -4;
-        break;
-      }
-      fprint_bstr(fp, "CT = ", ct, clen);
-      fprintf(fp, "\n");
-      if ((func_ret = crypto_aead_decrypt(msg2, &mlen2, ((void*)0), ct, clen, ad,
-                                          adlen, nonce, key)) != 0) {
-        fprintf(fp, "crypto_aead_decrypt returned <%d>\n", func_ret);
-        ret_val = -4;
-        break;
-      }
-      if (mlen != mlen2) {
-        fprintf(fp,
-                "crypto_aead_decrypt returned bad 'mlen': Got <%" "I64u"
-                ">, expected <%" "I64u" ">\n",
-                (uint64_t)mlen2, (uint64_t)mlen);
-        ret_val = -4;
-        break;
-      }
-      if (memcmp(msg, msg2, mlen)) {
-        fprintf(fp, "crypto_aead_decrypt did not recover the plaintext\n");
-        ret_val = -4;
-        break;
-      }
+    sprintf(fileName, "LWC_AEAD_KAT_%d_%d.txt", (16 * 8),
+            (16 * 8));
+    if ((fp = fopen(fileName, "w")) == ((void *)0)) {
+        fprintf((&__iob_func()[2]), "Couldn't open <%s> for write\n", fileName);
+        return -1;
     }
-  }
-  fclose(fp);
-  return ret_val;
+
+    for (unsigned long long int mlen = 0;
+       (mlen <= 32) && (ret_val == 0); mlen++) {
+        for (unsigned long long int adlen = 0; adlen <= 32;
+            adlen++) {
+            fprintf(fp, "Count = %d\n", count++);
+            fprint_bstr(fp, "Key = ", key, 16);
+            fprint_bstr(fp, "Nonce = ", nonce, 16);
+            fprint_bstr(fp, "PT = ", msg, mlen);
+            fprint_bstr(fp, "AD = ", ad, adlen);
+
+            crypto_aead_encrypt_c(cct, &cclen, msg, mlen, ad, adlen, ((void *)0), nonce, key, c_state);
+            fprint_bstr(fp, "CT = ", cct, cclen);
+            crypto_aead_encrypt_h(hct, &hclen, msg, mlen, ad, adlen, ((void *)0), nonce, key, h_state);
+            fprintf(fp, "\n");
+# 128 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c"
+                if ((func_ret = crypto_aead_decrypt(msg2, &mlen2, ((void *)0), cct, cclen, ad,
+                                                    adlen, nonce, key, h_state)) != 0) {
+                    fprintf(fp, "crypto_aead_decrypt returned <%d>\n", func_ret);
+                    fprintf((&__iob_func()[1]), "DECRYPT ERROR: in cycle %d:\n", count);
+                    ret_val = -4;
+                    break;
+                }else{
+                 fprintf((&__iob_func()[1]), "cycle %d: decrypt check OK\n", count);
+                }
+# 157 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/genkat_aead.c"
+        }
+    }
+    fclose(fp);
+    return ret_val;
 }
 
 void fprint_bstr(FILE *fp, const char *label, const unsigned char *data,
-                 unsigned long long length) {
- fprintf(fp, "%s", label);
- for (unsigned long long i = 0; i < length; i++) fprintf(fp, "%02X", data[i]);
- fprintf(fp, "\n");
+                 unsigned long long int length) {
+    fprintf(fp, "%s", label);
+    for (unsigned long long int i = 0; i < length; i++) fprintf(fp, "%02X", data[i]);
+    fprintf(fp, "\n");
 }
 
-void init_buffer(unsigned char *buffer, unsigned long long numbytes) {
-  for (unsigned long long i = 0; i < numbytes; i++)
-    buffer[i] = (unsigned char)i;
+void init_buffer(unsigned char *buffer, unsigned long long int numbytes) {
+    for (unsigned long long int i = 0; i < numbytes; i++)
+        buffer[i] = (unsigned char)i;
 }

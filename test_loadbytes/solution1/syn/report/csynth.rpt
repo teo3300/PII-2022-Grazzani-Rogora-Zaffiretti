@@ -1,0 +1,132 @@
+
+
+================================================================
+== Synthesis Summary Report of 'load_test_h'
+================================================================
++ General Information: 
+    * Date:           Tue Apr  5 14:55:22 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        test_loadbytes
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: kintex7
+    * Target device:  xc7k160t-fbv484-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |                  Modules                 | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |    |           |           |     |
+    |                  & Loops                 | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ load_test_h                             |     -|  3.44|       24|  240.000|         -|       25|     -|        no|     -|   -|  305 (~0%)|  1467 (1%)|    -|
+    | + load_test_h_Pipeline_VITIS_LOOP_11_1   |     -|  3.44|       10|  100.000|         -|       10|     -|        no|     -|   -|   74 (~0%)|  329 (~0%)|    -|
+    |  o VITIS_LOOP_11_1                       |     -|  7.30|        8|   80.000|         2|        1|     8|       yes|     -|   -|          -|          -|    -|
+    | + load_test_h_Pipeline_VITIS_LOOP_11_12  |     -|  3.44|       10|  100.000|         -|       10|     -|        no|     -|   -|   74 (~0%)|  329 (~0%)|    -|
+    |  o VITIS_LOOP_11_1                       |     -|  7.30|        8|   80.000|         2|        1|     8|       yes|     -|   -|          -|          -|    -|
+    | + load_test_h_Pipeline_VITIS_LOOP_11_11  |     -|  3.44|       10|  100.000|         -|       10|     -|        no|     -|   -|   74 (~0%)|  334 (~0%)|    -|
+    |  o VITIS_LOOP_11_1                       |     -|  7.30|        8|   80.000|         2|        1|     8|       yes|     -|   -|          -|          -|    -|
+    | + load_test_h_Pipeline_VITIS_LOOP_11_13  |     -|  3.44|       10|  100.000|         -|       10|     -|        no|     -|   -|   74 (~0%)|  334 (~0%)|    -|
+    |  o VITIS_LOOP_11_1                       |     -|  7.30|        8|   80.000|         2|        1|     8|       yes|     -|   -|          -|          -|    -|
+    +------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++-------------+----------+
+| Interface   | Bitwidth |
++-------------+----------+
+| k_address0  | 4        |
+| k_q0        | 8        |
+| n_address0  | 4        |
+| n_q0        | 8        |
+| st_address0 | 3        |
+| st_address1 | 3        |
+| st_d0       | 64       |
+| st_d1       | 64       |
++-------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| k        | in        | pointer  |
+| n        | in        | pointer  |
+| st       | out       | pointer  |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| k        | k_address0   | port    | offset   |
+| k        | k_ce0        | port    |          |
+| k        | k_q0         | port    |          |
+| n        | n_address0   | port    | offset   |
+| n        | n_ce0        | port    |          |
+| n        | n_q0         | port    |          |
+| st       | st_address0  | port    | offset   |
+| st       | st_ce0       | port    |          |
+| st       | st_we0       | port    |          |
+| st       | st_d0        | port    |          |
+| st       | st_address1  | port    | offset   |
+| st       | st_ce1       | port    |          |
+| st       | st_we1       | port    |          |
+| st       | st_d1        | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------+-----+--------+----------+-----+--------+---------+
+| Name                                     | DSP | Pragma | Variable | Op  | Impl   | Latency |
++------------------------------------------+-----+--------+----------+-----+--------+---------+
+| + load_test_h                            | 0   |        |          |     |        |         |
+|  + load_test_h_Pipeline_VITIS_LOOP_11_1  | 0   |        |          |     |        |         |
+|    i_7_fu_91_p2                          | -   |        | i_7      | add | fabric | 0       |
+|    sub_ln11_fu_125_p2                    | -   |        | sub_ln11 | sub | fabric | 0       |
+|  + load_test_h_Pipeline_VITIS_LOOP_11_12 | 0   |        |          |     |        |         |
+|    i_4_fu_91_p2                          | -   |        | i_4      | add | fabric | 0       |
+|    sub_ln11_fu_125_p2                    | -   |        | sub_ln11 | sub | fabric | 0       |
+|  + load_test_h_Pipeline_VITIS_LOOP_11_11 | 0   |        |          |     |        |         |
+|    i_5_fu_91_p2                          | -   |        | i_5      | add | fabric | 0       |
+|    sub_ln11_fu_131_p2                    | -   |        | sub_ln11 | sub | fabric | 0       |
+|  + load_test_h_Pipeline_VITIS_LOOP_11_13 | 0   |        |          |     |        |         |
+|    i_2_fu_91_p2                          | -   |        | i_2      | add | fabric | 0       |
+|    sub_ln11_fu_131_p2                    | -   |        | sub_ln11 | sub | fabric | 0       |
++------------------------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+  No pragmas found
+

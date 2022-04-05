@@ -1,0 +1,40 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis_HLS/2021.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_crypto_aead_encrypt_h.cpp
+   Compiling (apcc) printstate.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Tue Apr 05 16:05:18 +0200 2022
+INFO: [HLS 200-10] In directory 'H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.721 seconds; peak allocated memory: 2.809 MB.
+   Compiling (apcc) aead.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Tue Apr 05 16:05:22 +0200 2022
+INFO: [HLS 200-10] In directory 'H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.856 seconds; peak allocated memory: 2.207 MB.
+   Compiling (apcc) genkat_aead.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Tue Apr 05 16:05:27 +0200 2022
+INFO: [HLS 200-10] In directory 'H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.709 seconds; peak allocated memory: 2.363 MB.
+   Compiling apatb_crypto_aead_encrypt_h_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...

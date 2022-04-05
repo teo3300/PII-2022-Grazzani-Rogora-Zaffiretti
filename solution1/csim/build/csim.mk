@@ -6,8 +6,6 @@ CSIM_DESIGN = 1
 
 __SIM_FPO__ = 1
 
-__HLS_FPO_v6_1__ = 1
-
 __SIM_MATHHLS__ = 1
 
 __SIM_FFT__ = 1
@@ -18,7 +16,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../src/tests/genkat_aead.c ../../../src/crypto_aead/ascon128v12/ref/decrypt.c ../../../src/crypto_aead/ascon128v12/ref/encrypt.c ../../../src/crypto_aead/ascon128v12/ref/printstate.c
+HLS_SOURCES = ../../../src-v3/genkat_aead.c ../../../src-v3/printstate.c ../../../src-v3/aead.c
 
 override TARGET := csim.exe
 
@@ -47,15 +45,13 @@ IFLAG += -D__VITIS_HLS__
 
 IFLAG += -D__SIM_FPO__
 
-IFLAG += -D__HLS_FPO_v6_1__
-
 IFLAG += -D__SIM_FFT__
 
 IFLAG += -D__SIM_FIR__
 
 IFLAG += -D__SIM_DDS__
 
-IFLAG += -D__DSP48E2__
+IFLAG += -D__DSP48E1__
 IFLAG += -Wno-unknown-pragmas 
 IFLAG += -g
 IFLAG += -DNT
@@ -75,26 +71,20 @@ all: $(TARGET)
 
 AUTOCC := cmd //c apcc.bat  
 
-$(ObjDir)/genkat_aead.o: ../../../src/tests/genkat_aead.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../src/tests/genkat_aead.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/genkat_aead.o: ../../../src-v3/genkat_aead.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../src-v3/genkat_aead.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD -DNDEBUG -Wno-unknown-pragmas -DNDEBUG -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/genkat_aead.d
 
-$(ObjDir)/decrypt.o: ../../../src/crypto_aead/ascon128v12/ref/decrypt.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../src/crypto_aead/ascon128v12/ref/decrypt.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/decrypt.d
-
-$(ObjDir)/encrypt.o: ../../../src/crypto_aead/ascon128v12/ref/encrypt.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../src/crypto_aead/ascon128v12/ref/encrypt.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/encrypt.d
-
-$(ObjDir)/printstate.o: ../../../src/crypto_aead/ascon128v12/ref/printstate.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../src/crypto_aead/ascon128v12/ref/printstate.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/printstate.o: ../../../src-v3/printstate.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../src-v3/printstate.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/printstate.d
+
+$(ObjDir)/aead.o: ../../../src-v3/aead.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../src-v3/aead.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -DNDEBUG -DNDEBUG  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/aead.d

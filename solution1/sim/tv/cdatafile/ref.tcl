@@ -1,13 +1,14 @@
 set depth_list {
-{c 1}
+{c 48}
 {clen 1}
-{m 1}
+{m 32}
 {mlen 1}
-{ad 1}
+{ad 32}
 {adlen 1}
 {nsec 1}
-{npub 1}
-{k 1}
+{npub 16}
+{k 16}
+{st 5}
 {ap_return 1}
 }
-set trans_num 1
+set trans_num 1089

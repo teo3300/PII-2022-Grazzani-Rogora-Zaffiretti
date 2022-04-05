@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'load_test_h'
+================================================================
+* Date:           Tue Apr  5 14:55:22 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        test_loadbytes
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: kintex7
+* Target device:  xc7k160t-fbv484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.858 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       24|       24|  0.240 us|  0.240 us|   25|   25|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                  |                                       |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                     Instance                     |                 Module                |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_load_test_h_Pipeline_VITIS_LOOP_11_1_fu_113   |load_test_h_Pipeline_VITIS_LOOP_11_1   |       10|       10|  0.100 us|  0.100 us|   10|   10|       no|
+        |grp_load_test_h_Pipeline_VITIS_LOOP_11_12_fu_120  |load_test_h_Pipeline_VITIS_LOOP_11_12  |       10|       10|  0.100 us|  0.100 us|   10|   10|       no|
+        |grp_load_test_h_Pipeline_VITIS_LOOP_11_11_fu_127  |load_test_h_Pipeline_VITIS_LOOP_11_11  |       10|       10|  0.100 us|  0.100 us|   10|   10|       no|
+        |grp_load_test_h_Pipeline_VITIS_LOOP_11_13_fu_134  |load_test_h_Pipeline_VITIS_LOOP_11_13  |       10|       10|  0.100 us|  0.100 us|   10|   10|       no|
+        +--------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|       4|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|     296|    1326|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|     137|    -|
+|Register         |        -|    -|       9|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|     305|    1467|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |      650|  600|  202800|  101400|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|       1|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+    |                     Instance                     |                 Module                | BRAM_18K| DSP| FF | LUT | URAM|
+    +--------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+    |grp_load_test_h_Pipeline_VITIS_LOOP_11_1_fu_113   |load_test_h_Pipeline_VITIS_LOOP_11_1   |        0|   0|  74|  329|    0|
+    |grp_load_test_h_Pipeline_VITIS_LOOP_11_11_fu_127  |load_test_h_Pipeline_VITIS_LOOP_11_11  |        0|   0|  74|  334|    0|
+    |grp_load_test_h_Pipeline_VITIS_LOOP_11_12_fu_120  |load_test_h_Pipeline_VITIS_LOOP_11_12  |        0|   0|  74|  329|    0|
+    |grp_load_test_h_Pipeline_VITIS_LOOP_11_13_fu_134  |load_test_h_Pipeline_VITIS_LOOP_11_13  |        0|   0|  74|  334|    0|
+    +--------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+    |Total                                             |                                       |        0|   0| 296| 1326|    0|
+    +--------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state2_on_subcall_done  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state4_on_subcall_done  |        or|   0|  0|   2|           1|           1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |Total                            |          |   0|  0|   4|           2|           2|
+    +---------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------+----+-----------+-----+-----------+
+    |     Name    | LUT| Input Size| Bits| Total Bits|
+    +-------------+----+-----------+-----+-----------+
+    |ap_NS_fsm    |  25|          6|    1|          6|
+    |k_address0   |  13|          3|    4|         12|
+    |k_ce0        |  13|          3|    1|          3|
+    |n_address0   |  13|          3|    4|         12|
+    |n_ce0        |  13|          3|    1|          3|
+    |st_address0  |  17|          4|    3|         12|
+    |st_address1  |  13|          3|    3|          9|
+    |st_d0        |  17|          4|   64|        256|
+    |st_d1        |  13|          3|   64|        192|
+    +-------------+----+-----------+-----+-----------+
+    |Total        | 137|         32|  145|        505|
+    +-------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |                              Name                             | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                      |  5|   0|    5|          0|
+    |grp_load_test_h_Pipeline_VITIS_LOOP_11_11_fu_127_ap_start_reg  |  1|   0|    1|          0|
+    |grp_load_test_h_Pipeline_VITIS_LOOP_11_12_fu_120_ap_start_reg  |  1|   0|    1|          0|
+    |grp_load_test_h_Pipeline_VITIS_LOOP_11_13_fu_134_ap_start_reg  |  1|   0|    1|          0|
+    |grp_load_test_h_Pipeline_VITIS_LOOP_11_1_fu_113_ap_start_reg   |  1|   0|    1|          0|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                          |  9|   0|    9|          0|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_local_block     |  out|    1|  ap_ctrl_hs|   load_test_h|  return value|
+|ap_local_deadlock  |  out|    1|  ap_ctrl_hs|   load_test_h|  return value|
+|ap_clk             |   in|    1|  ap_ctrl_hs|   load_test_h|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|   load_test_h|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|   load_test_h|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|   load_test_h|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|   load_test_h|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|   load_test_h|  return value|
+|k_address0         |  out|    4|   ap_memory|             k|         array|
+|k_ce0              |  out|    1|   ap_memory|             k|         array|
+|k_q0               |   in|    8|   ap_memory|             k|         array|
+|n_address0         |  out|    4|   ap_memory|             n|         array|
+|n_ce0              |  out|    1|   ap_memory|             n|         array|
+|n_q0               |   in|    8|   ap_memory|             n|         array|
+|st_address0        |  out|    3|   ap_memory|            st|         array|
+|st_ce0             |  out|    1|   ap_memory|            st|         array|
+|st_we0             |  out|    1|   ap_memory|            st|         array|
+|st_d0              |  out|   64|   ap_memory|            st|         array|
+|st_address1        |  out|    3|   ap_memory|            st|         array|
+|st_ce1             |  out|    1|   ap_memory|            st|         array|
+|st_we1             |  out|    1|   ap_memory|            st|         array|
+|st_d1              |  out|   64|   ap_memory|            st|         array|
++-------------------+-----+-----+------------+--------------+--------------+
+

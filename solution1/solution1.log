@@ -1907,3 +1907,1346 @@ INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
 INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 27.028 seconds; current allocated memory: 0.270 MB.
 INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 28.578 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 10.623 seconds; current allocated memory: 0.250 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 11.772 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.047 seconds; current allocated memory: 0.242 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 6.152 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.103 seconds; current allocated memory: 0.242 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 6.175 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.091 seconds; current allocated memory: 0.234 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 6.195 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.013 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Analyzing design file 'PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/printstate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.134 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'LOADBYTES' into 'crypto_aead_encrypt_h' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:130:0)
+INFO: [HLS 214-178] Inlining function 'copyState' into 'crypto_aead_encrypt_h' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:130:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.23 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.016 seconds; current allocated memory: 1.084 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:20) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:20) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:20) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:20) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_13_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:13) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:144:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:145:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:146:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:147:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:148:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'crypto_aead_encrypt_h' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_13_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_1' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_12' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_13' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.072 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_14' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_13_1' pipeline 'VITIS_LOOP_13_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_13_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/c' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/clen' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/m' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/mlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/ad' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/adlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/nsec' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/npub' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/k' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/st' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'crypto_aead_encrypt_h' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/adlen' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/nsec' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.133 seconds; current allocated memory: 1.084 GB.
+INFO: [RTMG 210-278] Implementing memory 'crypto_aead_encrypt_h_s_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.335 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.084 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for crypto_aead_encrypt_h.
+INFO: [VLOG 209-307] Generating Verilog RTL for crypto_aead_encrypt_h.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 259.17 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 7.358 seconds; current allocated memory: 0.336 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 8.476 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+ERROR: [COSIM 212-360] Aborting co-simulation: C TB simulation failed.
+ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 20.195 seconds; current allocated memory: 2.551 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 21.312 seconds; peak allocated memory: 1.086 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 17.451 seconds; current allocated memory: 0.250 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 18.545 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 11.656 seconds; current allocated memory: 0.258 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 12.749 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 11.581 seconds; current allocated memory: 0.258 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 12.665 seconds; peak allocated memory: 1.085 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 22.556 seconds; current allocated memory: 0.250 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 23.645 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 11.853 seconds; current allocated memory: 0.242 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 12.923 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.013 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Analyzing design file 'PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/printstate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.141 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'LOADBYTES' into 'crypto_aead_encrypt_h' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:130:0)
+INFO: [HLS 214-178] Inlining function 'copyState' into 'crypto_aead_encrypt_h' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:130:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.276 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.015 seconds; current allocated memory: 1.085 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:20) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:20) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:20) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:20) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_13_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:13) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:144:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:145:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:146:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:147:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:148:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'crypto_aead_encrypt_h' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_13_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.085 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_1' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_12' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_13' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_14' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_21_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.072 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_13_1' pipeline 'VITIS_LOOP_13_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_13_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/c' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/clen' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/m' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/mlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/ad' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/adlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/nsec' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/npub' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/k' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/st' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'crypto_aead_encrypt_h' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/adlen' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/nsec' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.126 seconds; current allocated memory: 1.085 GB.
+INFO: [RTMG 210-278] Implementing memory 'crypto_aead_encrypt_h_s_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.296 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.085 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for crypto_aead_encrypt_h.
+INFO: [VLOG 209-307] Generating Verilog RTL for crypto_aead_encrypt_h.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 259.17 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 7.288 seconds; current allocated memory: 0.348 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 8.392 seconds; peak allocated memory: 1.085 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160tfbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+ERROR: [COSIM 212-360] Aborting co-simulation: C TB simulation failed.
+ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 20.116 seconds; current allocated memory: 2.305 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 21.219 seconds; peak allocated memory: 1.086 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160t-fbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name crypto_aead_encrypt_h crypto_aead_encrypt_h 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 1.011 GB.
+INFO: [HLS 200-10] Analyzing design file 'PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/printstate.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.162 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'LOADBYTES' into 'crypto_aead_encrypt' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:44:0)
+INFO: [HLS 214-178] Inlining function 'copyState' into 'crypto_aead_encrypt' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:44:0)
+INFO: [HLS 214-178] Inlining function 'crypto_aead_encrypt' into 'crypto_aead_encrypt_h' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:36:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.197 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.014 seconds; current allocated memory: 1.084 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_22_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:21) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_22_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:21) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_22_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:21) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_22_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:21) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_14_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:14) in function 'crypto_aead_encrypt_h' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:58:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:59:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:60:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:61:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:62:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'crypto_aead_encrypt_h' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_14_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_14_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_14_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.039 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_1' pipeline 'VITIS_LOOP_22_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_11' pipeline 'VITIS_LOOP_22_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_12' pipeline 'VITIS_LOOP_22_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_13' pipeline 'VITIS_LOOP_22_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_22_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_14_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_14_1' pipeline 'VITIS_LOOP_14_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h_Pipeline_VITIS_LOOP_14_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/c' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/clen' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/m' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/mlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/ad' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/adlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/nsec' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/npub' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/k' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/st' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'crypto_aead_encrypt_h' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/c_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/c_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/c_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/c_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/c_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/c_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/c_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/c_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/c_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/m_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/m_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/m_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/m_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/m_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/m_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/m_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/m_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/m_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/ad_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/ad_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/ad_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/ad_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/ad_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/ad_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/ad_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/ad_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/ad_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/adlen' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/nsec' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.466 seconds; current allocated memory: 1.084 GB.
+INFO: [RTMG 210-278] Implementing memory 'crypto_aead_encrypt_h_s_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.384 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.662 seconds; current allocated memory: 1.084 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for crypto_aead_encrypt_h.
+INFO: [VLOG 209-307] Generating Verilog RTL for crypto_aead_encrypt_h.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 259.17 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 8.05 seconds; current allocated memory: 85.039 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 9.196 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160t-fbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name crypto_aead_encrypt_h crypto_aead_encrypt_h 
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 30.251 seconds; current allocated memory: 12.262 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 31.319 seconds; peak allocated memory: 1.087 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160t-fbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name crypto_aead_encrypt_h crypto_aead_encrypt_h 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.011 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Analyzing design file 'PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/printstate.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.082 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'ROR' into 'ROUND' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/round.h:11:0)
+INFO: [HLS 214-178] Inlining function 'P12' into 'crypto_aead_encrypt' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:44:0)
+INFO: [HLS 214-178] Inlining function 'P6' into 'crypto_aead_encrypt' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:44:0)
+INFO: [HLS 214-178] Inlining function 'STOREBYTES' into 'crypto_aead_encrypt' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:44:0)
+INFO: [HLS 214-178] Inlining function 'copyState' into 'crypto_aead_encrypt' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:44:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28:57)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.247 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 1.084 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_22_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:21) in function 'LOADBYTES.2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_22_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:21) in function 'LOADBYTES.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28) in function 'crypto_aead_encrypt.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_14_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:14) in function 'crypto_aead_encrypt.1' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:58:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:59:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:60:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:61:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:62:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:68:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:69:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:78:14)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:89:14)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:97:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:105:14)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:119:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:127:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:128:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:134:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:135:10)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/round.h:33:8)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/round.h:34:8)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/round.h:35:8)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/round.h:36:8)
+INFO: [HLS 200-472] Inferring partial write operation for 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/round.h:37:8)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.168 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'crypto_aead_encrypt_h' ...
+WARNING: [SYN 201-103] Legalizing function name 'LOADBYTES.1' to 'LOADBYTES_1'.
+WARNING: [SYN 201-103] Legalizing function name 'LOADBYTES.2' to 'LOADBYTES_2'.
+WARNING: [SYN 201-103] Legalizing function name 'crypto_aead_encrypt.1_Pipeline_VITIS_LOOP_28_1' to 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1'.
+WARNING: [SYN 201-103] Legalizing function name 'crypto_aead_encrypt.1_Pipeline_VITIS_LOOP_14_1' to 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_14_1'.
+WARNING: [SYN 201-103] Legalizing function name 'crypto_aead_encrypt.1' to 'crypto_aead_encrypt_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'LOADBYTES_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ROUND' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'LOADBYTES_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_14_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_14_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_14_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.047 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.176 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.315 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'LOADBYTES_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'LOADBYTES_1' pipeline 'VITIS_LOOP_22_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'LOADBYTES_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ROUND' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ROUND'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'LOADBYTES_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'LOADBYTES_2' pipeline 'VITIS_LOOP_22_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'LOADBYTES_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.223 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_14_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_14_1' pipeline 'VITIS_LOOP_14_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_14_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/c' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/clen' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/m' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/mlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/ad' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/adlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/nsec' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/npub' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/k' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/st' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'crypto_aead_encrypt_h' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/nsec' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.552 seconds; current allocated memory: 1.084 GB.
+INFO: [RTMG 210-278] Implementing memory 'crypto_aead_encrypt_h_crypto_aead_encrypt_1_s_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.456 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.435 seconds; current allocated memory: 1.084 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for crypto_aead_encrypt_h.
+INFO: [VLOG 209-307] Generating Verilog RTL for crypto_aead_encrypt_h.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 148.16 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 9.313 seconds; current allocated memory: 0.680 MB.
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 1 seconds. Total elapsed time: 10.428 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160t-fbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name crypto_aead_encrypt_h crypto_aead_encrypt_h 
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 47.172 seconds; current allocated memory: 15.879 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 48.228 seconds; peak allocated memory: 1.086 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbv484-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7k160t-fbv484-2 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name crypto_aead_encrypt_h crypto_aead_encrypt_h 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.008 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Analyzing design file 'PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c' ... 
+WARNING: [HLS 207-5287] unused parameter 'st' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:44:56)
+WARNING: [HLS 207-5287] unused parameter 'st' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:152:72)
+INFO: [HLS 200-10] Analyzing design file 'PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/printstate.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.105 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'ROR' into 'ROUND' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/round.h:11:0)
+INFO: [HLS 214-178] Inlining function 'P12' into 'crypto_aead_encrypt' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:44:0)
+INFO: [HLS 214-178] Inlining function 'P6' into 'crypto_aead_encrypt' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:44:0)
+INFO: [HLS 214-178] Inlining function 'STOREBYTES' into 'crypto_aead_encrypt' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:44:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28:57)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.182 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 1.084 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_22_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:21) in function 'LOADBYTES.2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_22_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:21) in function 'LOADBYTES.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28) in function 'crypto_aead_encrypt.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28) in function 'crypto_aead_encrypt.1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:28) in function 'crypto_aead_encrypt.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 's' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:57) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'crypto_aead_encrypt.1' (PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h:12:43)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'crypto_aead_encrypt_h' ...
+WARNING: [SYN 201-103] Legalizing function name 'LOADBYTES.1' to 'LOADBYTES_1'.
+WARNING: [SYN 201-103] Legalizing function name 'LOADBYTES.2' to 'LOADBYTES_2'.
+WARNING: [SYN 201-103] Legalizing function name 'crypto_aead_encrypt.1_Pipeline_VITIS_LOOP_28_1' to 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1'.
+WARNING: [SYN 201-103] Legalizing function name 'crypto_aead_encrypt.1_Pipeline_VITIS_LOOP_28_11' to 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11'.
+WARNING: [SYN 201-103] Legalizing function name 'crypto_aead_encrypt.1_Pipeline_VITIS_LOOP_28_12' to 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12'.
+WARNING: [SYN 201-103] Legalizing function name 'crypto_aead_encrypt.1' to 'crypto_aead_encrypt_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'LOADBYTES_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ROUND' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'LOADBYTES_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.028 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (8.50217ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [HLS 200-1016] The critical path in module 'crypto_aead_encrypt_1' consists of the following:	'call' operation ('ROUND_ret41', PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/permutations.h:23) to 'ROUND' [445]  (4.25 ns)
+	'xor' operation ('s[3]', PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:134) [448]  (0.542 ns)
+	'call' operation ('_ln134', PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c:134) to 'crypto_aead_encrypt.1_Pipeline_VITIS_LOOP_28_11' [449]  (3.71 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.582 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.235 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_aead_encrypt_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.298 seconds; current allocated memory: 1.084 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'LOADBYTES_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'LOADBYTES_1' pipeline 'VITIS_LOOP_22_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'LOADBYTES_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ROUND' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ROUND'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'LOADBYTES_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'LOADBYTES_2' pipeline 'VITIS_LOOP_22_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'LOADBYTES_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.213 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_1_Pipeline_VITIS_LOOP_28_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_aead_encrypt_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/c' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/clen' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/m' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/mlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/ad' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/adlen' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/nsec' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/npub' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/k' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_aead_encrypt_h/st' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'crypto_aead_encrypt_h' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/nsec' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/st_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/st_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/st_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/st_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/st_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/st_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/st_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/st_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/st_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/st_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/st_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/st_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/st_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/st_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/st_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/st_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'crypto_aead_encrypt_h/st_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'crypto_aead_encrypt_h/st_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_aead_encrypt_h'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.779 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.532 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.47 seconds; current allocated memory: 1.084 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for crypto_aead_encrypt_h.
+INFO: [VLOG 209-307] Generating Verilog RTL for crypto_aead_encrypt_h.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 117.62 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5 seconds. CPU system time: 1 seconds. Elapsed time: 10.235 seconds; current allocated memory: 0.602 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 11.359 seconds; peak allocated memory: 1.084 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================

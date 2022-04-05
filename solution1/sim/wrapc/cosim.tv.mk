@@ -43,7 +43,8 @@ IFLAG += -D__SIM_FPO__
 IFLAG += -D__SIM_FFT__
 IFLAG += -D__SIM_FIR__
 IFLAG += -D__SIM_DDS__
-IFLAG += -D__DSP48E2__
+IFLAG += -D__DSP48E1__
+IFLAG += -DUSE_BINARY_TV_FILE
 IFLAG += -DNT
 IFLAG += -Wno-unknown-pragmas
 LFLAG += -L "${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools/systemc/lib" -lsystemc -lpthread
@@ -65,14 +66,10 @@ $(ObjDir)/genkat_aead.c_pre.c.tb.o : genkat_aead.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling (apcc) genkat_aead.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
+$(ObjDir)/aead.c_pre.c.tb.o : aead.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) aead.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
 $(ObjDir)/printstate.c_pre.c.tb.o : printstate.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling (apcc) printstate.c_pre.c.tb.c" $(AVE_DIR_DLOG)
-	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
-
-$(ObjDir)/encrypt.c_pre.c.tb.o : encrypt.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) encrypt.c_pre.c.tb.c" $(AVE_DIR_DLOG)
-	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
-
-$(ObjDir)/decrypt.c_pre.c.tb.o : decrypt.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) decrypt.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \

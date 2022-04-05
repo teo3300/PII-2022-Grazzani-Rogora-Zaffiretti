@@ -4,12 +4,12 @@
 #include "ascon.h"
 #include "printstate.h"
 
-static inline uint64_t ROR(uint64_t x, int n) {
+static inline u64 ROR(u64 x, int n) {
   return x >> n | x << (-n & 63);
 }
 
-static inline void ROUND(state_t s, uint8_t C) {
-  state_t t;
+static inline void ROUND(u64 s[5], u8 C) {
+  u64 t[5];
   /* addition of round constant */
   s[2] ^= C;
   /* printstate(" round constant", s); */
