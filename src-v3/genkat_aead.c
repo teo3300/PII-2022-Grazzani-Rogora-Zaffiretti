@@ -40,9 +40,10 @@
 
 #define STATE 2
 #define DECRYPT 1
-#define FULL 0
+#define FULL 10
+#define ENCRYPT 3
 
-#define CHECK FULL
+#define CHECK ENCRYPT
 
 #include "api.h"
 #include "crypto_aead.h"
@@ -109,7 +110,7 @@ int generate_test_vectors() {
             fprint_bstr(fp, "PT = ", msg, mlen);
             fprint_bstr(fp, "AD = ", ad, adlen);
 
-            crypto_aead_encrypt_c(cct, &cclen, msg, mlen, ad, adlen, NULL, nonce, key, c_state);
+            crypto_aead_encrypt_c(cct, &cclen, msg, mlen, ad, adlen, NULL, nonce, key/*, c_state*/);
             fprint_bstr(fp, "CT = ", cct, cclen);
 
             #if CHECK == STATE
@@ -123,8 +124,19 @@ int generate_test_vectors() {
                 	fprintf(stdout, "cycle %d: state check OK\n", count);
                 }
             #endif
+            #if CHECK==ENCRYPT
+            crypto_aead_encrypt_h(hct, &hclen, msg, mlen, ad, adlen, NULL, nonce, key/*, h_state*/);
+                if(memcmp(cct, hct, sizeof(cct))){
+                    fprintf(stdout, "ENCRYPT ERROR: in cycle %d:\n", count);
+    				fprint_bstr(stdout, "cct = ", cct, sizeof(cct));
+    				fprint_bstr(stdout, "hct = ", hct, sizeof(hct));
+                    ret_val = KAT_CRYPTO_FAILURE;
+                }else{
+                	fprintf(stdout, "cycle %d: state check OK\n", count);
+                }
+            #endif
             if ((func_ret = crypto_aead_decrypt_c(cmsg2, &cmlen2, NULL, cct, cclen, ad,
-                                                adlen, nonce, key, h_state)) != 0) {
+                                                adlen, nonce, key/*, h_state*/)) != 0) {
                 fprintf(fp, "C crypto_aead_decrypt_c returned <%d>\n", func_ret);
                 fprintf(stdout, "C DECRYPT ERROR: in cycle %d:\n", count);
                 ret_val = KAT_CRYPTO_FAILURE;
