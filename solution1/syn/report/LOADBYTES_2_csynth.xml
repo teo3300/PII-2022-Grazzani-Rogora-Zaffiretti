@@ -9,8 +9,8 @@
 <ProductFamily>kintex7</ProductFamily>
 <Part>xc7k160t-fbv484-2</Part>
 <TopModelName>LOADBYTES_2</TopModelName>
-<TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>2.70</ClockUncertainty>
+<TargetClockPeriod>30.00</TargetClockPeriod>
+<ClockUncertainty>8.10</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -32,7 +32,7 @@
 <Interval-max>undef</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_22_1>
+<VITIS_LOOP_18_1>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -40,7 +40,7 @@
 <PipelineDepth>2</PipelineDepth>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_22_1>
+</VITIS_LOOP_18_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 

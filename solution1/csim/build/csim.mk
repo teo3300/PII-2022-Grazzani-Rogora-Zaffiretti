@@ -16,7 +16,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../src-v3/genkat_aead.c ../../../src-v3/printstate.c ../../../src-v3/aead.c
+HLS_SOURCES = ../../../code_optimization/genkat_aead.c ../../../code_optimization/aead.c
 
 override TARGET := csim.exe
 
@@ -52,8 +52,8 @@ IFLAG += -D__SIM_FIR__
 IFLAG += -D__SIM_DDS__
 
 IFLAG += -D__DSP48E1__
-IFLAG += -Wno-unknown-pragmas 
-IFLAG += -g
+IFLAG += -O3 -Wno-unknown-pragmas 
+AP_ENABLE_OPTIMIZED := 1
 IFLAG += -DNT
 LFLAG += -Wl,--enable-auto-import 
 DFLAG += -DAUTOCC
@@ -71,20 +71,14 @@ all: $(TARGET)
 
 AUTOCC := cmd //c apcc.bat  
 
-$(ObjDir)/genkat_aead.o: ../../../src-v3/genkat_aead.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../src-v3/genkat_aead.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD -DNDEBUG -Wno-unknown-pragmas -DNDEBUG -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/genkat_aead.o: ../../../code_optimization/genkat_aead.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../code_optimization/genkat_aead.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -DNDEBUG -O3 -Wno-unknown-pragmas -DNDEBUG -O3 -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/genkat_aead.d
 
-$(ObjDir)/printstate.o: ../../../src-v3/printstate.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../src-v3/printstate.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/printstate.d
-
-$(ObjDir)/aead.o: ../../../src-v3/aead.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../src-v3/aead.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD -DNDEBUG -DNDEBUG  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/aead.o: ../../../code_optimization/aead.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../code_optimization/aead.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD -DNDEBUG -O3 -DNDEBUG -O3  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/aead.d

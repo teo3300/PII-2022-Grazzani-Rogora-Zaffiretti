@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="crypto_aead_encrypt" xd:componentRef="crypto_aead_encrypt" xd:initiationInterval="x" xd:clockPeriod="30" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:returnValue xd:interfaceRef="ap_return" xd:busTypeRef="register" xd:dataWidth="32"/>
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="*(c)" xd:originalName="c" xd:direction="out" xd:interfaceRef="c_d0" xd:busTypeRef="ap_memory" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(clen)" xd:originalName="clen" xd:direction="out" xd:interfaceRef="clen" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(m)" xd:originalName="m" xd:direction="in" xd:interfaceRef="m_q0" xd:busTypeRef="ap_memory" xd:dataWidth="8"/>
+  <xd:arg xd:name="mlen" xd:originalName="mlen" xd:direction="in" xd:interfaceRef="mlen" xd:busTypeRef="register" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(ad)" xd:originalName="ad" xd:direction="in" xd:interfaceRef="ad_q0" xd:busTypeRef="ap_memory" xd:dataWidth="8"/>
+  <xd:arg xd:name="adlen" xd:originalName="adlen" xd:direction="in" xd:interfaceRef="adlen" xd:busTypeRef="register" xd:dataWidth="64"/>
+  <xd:arg xd:name="*(npub)" xd:originalName="npub" xd:direction="in" xd:interfaceRef="npub_q0" xd:busTypeRef="ap_memory" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(k)" xd:originalName="k" xd:direction="in" xd:interfaceRef="k_q0" xd:busTypeRef="ap_memory" xd:dataWidth="8"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="15586" xd:FF="4539" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

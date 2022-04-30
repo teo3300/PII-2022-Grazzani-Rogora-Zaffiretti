@@ -1,0 +1,8 @@
+Test #,Target Clock Period (ns),Est,Uncertainty (ns),Slack,Top Function FF,Top Function LUT,Top Function BRAM,Functions in timing violation,Schedule heavy functions,Notes on syntesis
+1,30,30.293,0.5,-0.79,3640,19708,0,"ROUND-permutations.h
+Xor-aead.c",LOADBYTES,"Default synthesis, optimization enabled"
+2,40,30.293,0.5,-0.13,3255,23951,0,"ROUND-permutations.h
+Xor-aead.c",LOADBYTES,"Default synthesis, optimization enabled"
+3,50,48.127,0.5,none,3255,28167,0,none,LOADBYTES,"Default synthesis, optimization enabled"
+4,30,22.626,8.10 (automatic),-0.73,4539,15586,0,"ROUND-permutations.h
+Xor-aead.c",LOADBYTES,"Default synthesis, optimization enabled"

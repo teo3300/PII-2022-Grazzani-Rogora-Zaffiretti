@@ -9,8 +9,8 @@
 <ProductFamily>kintex7</ProductFamily>
 <Part>xc7k160t-fbv484-2</Part>
 <TopModelName>LOADBYTES_1</TopModelName>
-<TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>2.70</ClockUncertainty>
+<TargetClockPeriod>30.00</TargetClockPeriod>
+<ClockUncertainty>8.10</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -25,22 +25,22 @@
 <Best-caseLatency>10</Best-caseLatency>
 <Average-caseLatency>10</Average-caseLatency>
 <Worst-caseLatency>10</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.100 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.100 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.100 us</Worst-caseRealTimeLatency>
+<Best-caseRealTimeLatency>0.300 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.300 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.300 us</Worst-caseRealTimeLatency>
 <Interval-min>10</Interval-min>
 <Interval-max>10</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_22_1>
+<VITIS_LOOP_18_1>
 <TripCount>8</TripCount>
 <Latency>8</Latency>
-<AbsoluteTimeLatency>80</AbsoluteTimeLatency>
+<AbsoluteTimeLatency>240</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>2</PipelineDepth>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_22_1>
+</VITIS_LOOP_18_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 

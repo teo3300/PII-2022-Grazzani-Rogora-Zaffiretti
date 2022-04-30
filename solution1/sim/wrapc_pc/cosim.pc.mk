@@ -46,11 +46,12 @@ IFLAG += -D__SIM_DDS__
 IFLAG += -D__DSP48E1__
 IFLAG += -DUSE_BINARY_TV_FILE
 IFLAG += -DNT
-IFLAG += -Wno-unknown-pragmas
+IFLAG += -O3 -Wno-unknown-pragmas
 LFLAG += -L "${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools/systemc/lib" -lsystemc -lpthread
 LFLAG += -L "${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools/clang-3.9-csynth/lib/clang/7.0.0/lib/windows" -lhls_half2float
 IFLAG += -D__RTL_SIMULATION__
 IFLAG += -D__xilinx_ip_top=
+AP_ENABLE_OPTIMIZED := 1
 LFLAG += -Wl,--enable-auto-import
 DFLAG += -DAUTOCC
 DFLAG += -DAESL_EXTERN_C
@@ -61,12 +62,8 @@ all : $(TARGET)
 
 AUTOCC := cmd //c apcc.bat
 
-$(ObjDir)/original_genkat_aead.c_pre.c.tb.o : original_genkat_aead.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) original_genkat_aead.c_pre.c.tb.c" $(AVE_DIR_DLOG)
-	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
-
-$(ObjDir)/printstate.c_pre.c.tb.o : printstate.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) printstate.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+$(ObjDir)/genkat_aead.c_pre.c.tb.o : genkat_aead.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) genkat_aead.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
 $(ObjDir)/aead.c_pre.c.tb.o : aead.c_pre.c.tb.c $(ObjDir)/.dir

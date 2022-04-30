@@ -1,39 +1,32 @@
    Build using "C:/Xilinx/Vitis_HLS/2021.2/tps/win64/msys64/mingw64/bin/g++"
-   Compiling apatb_crypto_aead_decrypt_c.cpp
-   Compiling (apcc) printstate.c_pre.c.tb.c
-INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Tue Apr 05 21:51:14 +0200 2022
-INFO: [HLS 200-10] In directory 'H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/solution1/sim/wrapc'
-clang: warning: argument unused during compilation: '-fno-builtin-isinf'
-clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-INFO: [APCC 202-3] Tmp directory is apcc_db
-INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.676 seconds; peak allocated memory: 2.461 MB.
+   Compiling apatb_crypto_aead_encrypt.cpp
    Compiling (apcc) aead.c_pre.c.tb.c
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Tue Apr 05 21:51:18 +0200 2022
+INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Sat Apr 30 12:15:50 +0200 2022
 INFO: [HLS 200-10] In directory 'H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
 INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.842 seconds; peak allocated memory: 2.691 MB.
-   Compiling (apcc) original_genkat_aead.c_pre.c.tb.c
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 10.012 seconds; peak allocated memory: 2.359 MB.
+   Compiling (apcc) genkat_aead.c_pre.c.tb.c
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Tue Apr 05 21:51:22 +0200 2022
+INFO: [HLS 200-10] For user 'Matteo' on host 'rosa' (Windows NT_amd64 version 6.2) on Sat Apr 30 12:16:01 +0200 2022
 INFO: [HLS 200-10] In directory 'H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
-In file included from H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/original_genkat_aead.c:1:
-H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/original_genkat_aead.c:91:68: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
-                "crypto_aead_decrypt returned bad 'mlen': Got <%" "I64u"
-                                                               ~~~~^
-H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/original_genkat_aead.c:92:35: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
-                ">, expected <%" "I64u" ">\n",
-                              ~~~~^
+In file included from H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/genkat_aead.c:1:
+H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/genkat_aead.c:115:65: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+                "crypto_aead_decrypt returned bad 'mlen': Got <%I64u>, expected <%I64u>\n",
+                                                               ~^
+H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/genkat_aead.c:115:83: warning: invalid conversion specifier 'I' [-Wformat-invalid-specifier]
+                "crypto_aead_decrypt returned bad 'mlen': Got <%I64u>, expected <%I64u>\n",
+                                                                                 ~^
 2 warnings generated.
 INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.707 seconds; peak allocated memory: 3.223 MB.
-   Compiling apatb_crypto_aead_decrypt_c_ir.ll
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.886 seconds; peak allocated memory: 2.652 MB.
+   Compiling apatb_crypto_aead_encrypt_ir.ll
    Generating cosim.tv.exe

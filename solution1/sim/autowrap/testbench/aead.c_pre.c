@@ -1,55 +1,43 @@
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c"
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c" 1
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/aead.c"
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/aead.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c" 2
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/api.h" 1
-# 2 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c" 2
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/ascon.h" 1
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/aead.c" 2
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/api.h" 1
+# 2 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/aead.c" 2
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/ascon.h" 1
 
 
 
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/types.h" 1
-# 5 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/ascon.h" 2
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/types.h" 1
+# 5 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/ascon.h" 2
 
 typedef unsigned long long int state_t[5];
-# 3 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c" 2
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/crypto_aead.h" 1
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/api.h" 1
-# 2 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/crypto_aead.h" 2
+# 3 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/aead.c" 2
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/crypto_aead.h" 1
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/api.h" 1
+# 2 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/crypto_aead.h" 2
 
 
 
-int crypto_aead_encrypt_c(
+int crypto_aead_encrypt(
         unsigned char c[32 + 16], volatile unsigned long long int* clen,
-        volatile unsigned char m[32], unsigned long long int mlen,
-        volatile unsigned char ad[32], unsigned long long int adlen,
-        volatile unsigned char nsec[0], volatile unsigned char npub[16],
-        volatile unsigned char k[16]);
-int crypto_aead_encrypt_h(
-        unsigned char c[32 + 16], volatile unsigned long long int* clen,
-        volatile unsigned char m[32], unsigned long long int mlen,
-        volatile unsigned char ad[32], unsigned long long int adlen,
-        volatile unsigned char nsec[0], volatile unsigned char npub[16],
-        volatile unsigned char k[16]);
+        unsigned char m[32], unsigned long long int mlen,
+        unsigned char ad[32], unsigned long long int adlen,
+        unsigned char nsec[0], unsigned char npub[16],
+        unsigned char k[16]);
 
-int crypto_aead_decrypt_c(
+int crypto_aead_decrypt(
         unsigned char m[32], volatile unsigned long long int* mlen,
-        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
-        unsigned long long int clen, volatile unsigned char ad[32],
-        unsigned long long int adlen, volatile unsigned char npub[16],
-        volatile unsigned char k[16]);
-int crypto_aead_decrypt_h(
-        unsigned char m[32], volatile unsigned long long int* mlen,
-        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
-        unsigned long long int clen, volatile unsigned char ad[32],
-        unsigned long long int adlen, volatile unsigned char npub[16],
-        volatile unsigned char k[16]);
-# 4 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c" 2
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/permutations.h" 1
+        unsigned char nsec[0], unsigned char c[32 + 16],
+        unsigned long long int clen, unsigned char ad[32],
+        unsigned long long int adlen, unsigned char npub[16],
+        unsigned char k[16]);
+# 4 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/aead.c" 2
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/permutations.h" 1
 
 
 
@@ -257,14 +245,14 @@ __extension__ typedef unsigned long long uint_fast64_t;
 __extension__ typedef long long intmax_t;
 __extension__ typedef unsigned long long uintmax_t;
 # 33 "C:/Xilinx/Vitis_HLS/2021.2/win64/tools/clang/bin/../lib/clang/3.1/include\\stdint.h" 2 3 4
-# 5 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/permutations.h" 2
+# 5 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/permutations.h" 2
 
 
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/constants.h" 1
-# 8 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/permutations.h" 2
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/printstate.h" 1
-# 9 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/permutations.h" 2
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/round.h" 1
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/constants.h" 1
+# 8 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/permutations.h" 2
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/printstate.h" 1
+# 9 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/permutations.h" 2
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/round.h" 1
 
 
 
@@ -304,15 +292,9 @@ static inline void ROUND(unsigned long long int s[5], unsigned char C) {
   s[4] = t[4] ^ ROR(t[4], 7) ^ ROR(t[4], 41);
   do { } while (0);
 }
-# 10 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/permutations.h" 2
+# 10 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/permutations.h" 2
 
-static inline void P12(unsigned long long int s[5]) {
-  ROUND(s, 0xf0);
-  ROUND(s, 0xe1);
-  ROUND(s, 0xd2);
-  ROUND(s, 0xc3);
-  ROUND(s, 0xb4);
-  ROUND(s, 0xa5);
+static inline void P6(unsigned long long int s[5]) {
   ROUND(s, 0x96);
   ROUND(s, 0x87);
   ROUND(s, 0x78);
@@ -324,42 +306,29 @@ static inline void P12(unsigned long long int s[5]) {
 static inline void P8(unsigned long long int s[5]) {
   ROUND(s, 0xb4);
   ROUND(s, 0xa5);
-  ROUND(s, 0x96);
-  ROUND(s, 0x87);
-  ROUND(s, 0x78);
-  ROUND(s, 0x69);
-  ROUND(s, 0x5a);
-  ROUND(s, 0x4b);
+  P6(s);
 }
 
-static inline void P6(unsigned long long int s[5]) {
-  ROUND(s, 0x96);
-  ROUND(s, 0x87);
-  ROUND(s, 0x78);
-  ROUND(s, 0x69);
-  ROUND(s, 0x5a);
-  ROUND(s, 0x4b);
+static inline void P12(unsigned long long int s[5]) {
+  ROUND(s, 0xf0);
+  ROUND(s, 0xe1);
+  ROUND(s, 0xd2);
+  ROUND(s, 0xc3);
+  P8(s);
 }
-# 5 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c" 2
+# 5 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/aead.c" 2
 
-# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h" 1
-
-
-
-
-
-
-
-typedef uint64_t uint64_t;
-# 20 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/word.h"
-static inline unsigned long long int LOADBYTES(volatile const unsigned char bytes[8], int n) {
+# 1 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/word.h" 1
+# 16 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/word.h"
+static inline unsigned long long int LOADBYTES(const unsigned char bytes[8], int n) {
  unsigned long long int x = 0;
-  for (int i = 0; i < n; ++i) x |= ((unsigned long long int)(bytes[i]) << (56 - 8 * (i)));
+  for (int i = 0; i < n; ++i)
+   x |= ((unsigned long long int)(bytes[i]) << (56 - 8 * (i)));
   return x;
 }
 
 
-static inline void STOREBYTES(volatile unsigned char bytes[8], unsigned long long int x, int n) {
+static inline void STOREBYTES(unsigned char bytes[32 + 16], unsigned long long int x, int n) {
   for (int i = 0; i < n; ++i) bytes[i] = ((unsigned char)((unsigned long long int)(x) >> (56 - 8 * (i))));
 }
 
@@ -368,47 +337,15 @@ static inline unsigned long long int CLEARBYTES(unsigned long long int x, int n)
   for (int i = 0; i < n; ++i) x &= ~((unsigned long long int)(0xff) << (56 - 8 * (i)));
   return x;
 }
-# 7 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/src-v3/aead.c" 2
+# 7 "H:/home/Documents/Git/PII-2022-Grazzani-Rogora-Zaffiretti/code_optimization/aead.c" 2
 
-
-
-
-
-
-void copyState(volatile unsigned long long int a[5], volatile unsigned long long int b[5]){
-    for(int i=0; i<5; i++){
-        b[i] = a[i];
-    }
-}
 
 int crypto_aead_encrypt(
         unsigned char c[32 + 16], volatile unsigned long long int* clen,
-  volatile unsigned char m[32], unsigned long long int mlen,
-  volatile unsigned char ad[32], unsigned long long int adlen,
-  volatile unsigned char nsec[0], volatile unsigned char npub[16],
-  volatile unsigned char k[16]);
-
-int crypto_aead_encrypt_c(
-        unsigned char c[32 + 16], volatile unsigned long long int* clen,
-  volatile unsigned char m[32], unsigned long long int mlen,
-  volatile unsigned char ad[32], unsigned long long int adlen,
-  volatile unsigned char nsec[0], volatile unsigned char npub[16],
-  volatile unsigned char k[16]){
- return crypto_aead_encrypt(c, clen, m, mlen, ad, adlen, nsec, npub, k);}
-int crypto_aead_encrypt_h(
-        unsigned char c[32 + 16], volatile unsigned long long int* clen,
-  volatile unsigned char m[32], unsigned long long int mlen,
-  volatile unsigned char ad[32], unsigned long long int adlen,
-  volatile unsigned char nsec[0], volatile unsigned char npub[16],
-  volatile unsigned char k[16]){
- return crypto_aead_encrypt(c, clen, m, mlen, ad, adlen, nsec, npub, k);}
-
-int crypto_aead_encrypt(
-        unsigned char c[32 + 16], volatile unsigned long long int* clen,
-  volatile unsigned char m[32], unsigned long long int mlen,
-  volatile unsigned char ad[32], unsigned long long int adlen,
-  volatile unsigned char nsec[0], volatile unsigned char npub[16],
-  volatile unsigned char k[16]){
+  unsigned char m[32], unsigned long long int mlen,
+  unsigned char ad[32], unsigned long long int adlen,
+  unsigned char nsec[0], unsigned char npub[16],
+  unsigned char k[16]){
     (void)nsec;
 
 
@@ -427,25 +364,16 @@ int crypto_aead_encrypt(
     s[2] = K1;
     s[3] = N0;
     s[4] = N1;
-
-
-
     do { } while (0);
     P12(s);
     s[3] ^= K0;
     s[4] ^= K1;
-
-
-
     do { } while (0);
 
     if (adlen) {
 
         while (adlen >= 8) {
         s[0] ^= LOADBYTES(ad, 8);
-
-
-
     do { } while (0);
         P6(s);
         ad += 8;
@@ -454,26 +382,17 @@ int crypto_aead_encrypt(
 
         s[0] ^= LOADBYTES(ad, adlen);
         s[0] ^= ((unsigned long long int)(0x80) << (56 - 8 * (adlen)));
-
-
-
     do { } while (0);
         P6(s);
     }
 
     s[4] ^= 1;
-
-
-
     do { } while (0);
 
 
     while (mlen >= 8) {
         s[0] ^= LOADBYTES(m, 8);
         STOREBYTES(c, s[0], 8);
-
-
-
     do { } while (0);
         P6(s);
         m += 8;
@@ -485,24 +404,15 @@ int crypto_aead_encrypt(
     STOREBYTES(c, s[0], mlen);
     s[0] ^= ((unsigned long long int)(0x80) << (56 - 8 * (mlen)));
     c += mlen;
-
-
-
     do { } while (0);
 
 
     s[1] ^= K0;
     s[2] ^= K1;
-
-
-
     do { } while (0);
     P12(s);
     s[3] ^= K0;
     s[4] ^= K1;
-
-
-
     do { } while (0);
 
 
@@ -511,33 +421,13 @@ int crypto_aead_encrypt(
 
     return 0;
 }
-int crypto_aead_decrypt(
-        unsigned char m[32], volatile unsigned long long int* mlen,
-        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
-        unsigned long long int clen, volatile unsigned char ad[32],
-        unsigned long long int adlen, volatile unsigned char npub[16],
-        volatile unsigned char k[16]);
-int crypto_aead_decrypt_c(
-        unsigned char m[32], volatile unsigned long long int* mlen,
-        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
-        unsigned long long int clen, volatile unsigned char ad[32],
-        unsigned long long int adlen, volatile unsigned char npub[16],
-        volatile unsigned char k[16]){
-    return crypto_aead_decrypt(m,mlen,nsec,c,clen,ad,adlen,npub,k);}
-int crypto_aead_decrypt_h(
-        unsigned char m[32], volatile unsigned long long int* mlen,
-        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
-        unsigned long long int clen, volatile unsigned char ad[32],
-        unsigned long long int adlen, volatile unsigned char npub[16],
-        volatile unsigned char k[16]){
-    return crypto_aead_decrypt(m,mlen,nsec,c,clen,ad,adlen,npub,k);}
 
 int crypto_aead_decrypt(
         unsigned char m[32], volatile unsigned long long int* mlen,
-        volatile unsigned char nsec[0], volatile unsigned char c[32 + 16],
-        unsigned long long int clen, volatile unsigned char ad[32],
-        unsigned long long int adlen, volatile unsigned char npub[16],
-        volatile unsigned char k[16]){
+        unsigned char nsec[0], unsigned char c[32 + 16],
+        unsigned long long int clen, unsigned char ad[32],
+        unsigned long long int adlen, unsigned char npub[16],
+        unsigned char k[16]){
     (void)nsec;
 
     if (clen < 16) return -1;
@@ -547,9 +437,9 @@ int crypto_aead_decrypt(
 
 
     const unsigned long long int K0 = LOADBYTES(k, 8);
-    const unsigned long long int K1 = LOADBYTES(k + 8, 8);
+    const unsigned long long int K1 = LOADBYTES(&k[8], 8);
     const unsigned long long int N0 = LOADBYTES(npub, 8);
-    const unsigned long long int N1 = LOADBYTES(npub + 8, 8);
+    const unsigned long long int N1 = LOADBYTES(&k[8], 8);
 
 
     unsigned long long int s[5];
@@ -558,25 +448,16 @@ int crypto_aead_decrypt(
     s[2] = K1;
     s[3] = N0;
     s[4] = N1;
-
-
-
     do { } while (0);
     P12(s);
     s[3] ^= K0;
     s[4] ^= K1;
-
-
-
     do { } while (0);
 
     if (adlen) {
 
         while (adlen >= 8) {
         s[0] ^= LOADBYTES(ad, 8);
-
-
-
     do { } while (0);
         P6(s);
         ad += 8;
@@ -585,17 +466,11 @@ int crypto_aead_decrypt(
 
         s[0] ^= LOADBYTES(ad, adlen);
         s[0] ^= ((unsigned long long int)(0x80) << (56 - 8 * (adlen)));
-
-
-
     do { } while (0);
         P6(s);
     }
 
     s[4] ^= 1;
-
-
-
     do { } while (0);
 
 
@@ -617,24 +492,15 @@ int crypto_aead_decrypt(
     s[0] |= c0;
     s[0] ^= ((unsigned long long int)(0x80) << (56 - 8 * (clen)));
     c += clen;
-
-
-
     do { } while (0);
 
 
     s[1] ^= K0;
     s[2] ^= K1;
-
-
-
     do { } while (0);
     P12(s);
     s[3] ^= K0;
     s[4] ^= K1;
-
-
-
     do { } while (0);
 
 

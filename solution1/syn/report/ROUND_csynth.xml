@@ -9,8 +9,8 @@
 <ProductFamily>kintex7</ProductFamily>
 <Part>xc7k160t-fbv484-2</Part>
 <TopModelName>ROUND</TopModelName>
-<TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>2.70</ClockUncertainty>
+<TargetClockPeriod>30.00</TargetClockPeriod>
+<ClockUncertainty>8.10</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 

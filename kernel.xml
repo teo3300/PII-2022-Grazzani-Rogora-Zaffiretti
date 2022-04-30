@@ -1,0 +1,10 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel name="crypto_aead_encrypt" language="c" vlnv="xilinx.com:hls:crypto_aead_encrypt:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" compileOptions="" profileType="" hwControlProtocol="ap_ctrl_hs">
+    <ports>
+    </ports>
+    <args>
+    </args>
+    <compileWorkGroupSize x="1" y="1" z="1"/>
+    <maxWorkGroupSize x="1" y="1" z="1"/>
+  </kernel>
+</root>

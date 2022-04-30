@@ -12,7 +12,12 @@ ascon-hardware/ascon-vhdl.*/
 ascon-hardware/ascon-vhdl.sim/sim_1/behav/xsim/*
 !ascon-hardware/ascon-vhdl.sim/sim_1/behav/xsim/KAT/
 
-ascon-hardware/ascon-vhdl.sim/sim_1/*/*/xsim/*
-!ascon-hardware/ascon-vhdl.sim/sim_1/*/*/xsim/KAT/
+ascon-hardware/ascon-vhdl.sim/sim_1/**/xsim/*
+!ascon-hardware/ascon-vhdl.sim/sim_1/**/xsim/KAT/
+
+code_optimization/vivado_project_1/
+!code_optimization/vivado_project_1/project_1.runs/
+!code_optimization/vivado_project_1/project_1.srcs/
+!code_optimization/vivado_project_1/report/
 
 !.gitignore
