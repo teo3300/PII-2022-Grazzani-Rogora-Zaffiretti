@@ -44,4 +44,12 @@ static inline u64 FASTFLOAD(const u32 word[2]) {
   return x |= SETWORD(word[1],4) | SETWORD(word[1],5) | SETWORD(word[1],6) | SETWORD(word[1],7);*/
 }
 
+static inline u64 FASTVLOAD(const u32 word[2], u8 n) {
+  u64 x = SETWORD(word[0],0);
+  for (u8 i = 1; i < n; ++i) {
+    x |= SETWORD(word[i>>2], i);
+  }
+  return x;
+}
+
 #endif /* WORD_H_ */
