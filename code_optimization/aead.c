@@ -8,10 +8,10 @@
 
 u8 crypto_aead_encrypt(
         u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES], 	volatile u8* clen,
-		u8 m[MAX_MESSAGE_LENGTH], 				   	u8  mlen,
-		u8 ad[MAX_ASSOCIATED_DATA_LENGTH], 	   	u8  adlen,
-		u32 npub[CRYPTO_NPUBBYTES],
-		u32 k[CRYPTO_KEYBYTES]){
+		u32 m[MAX_MESSAGE_LENGTH/4], 				   	u8  mlen,
+		u32 ad[MAX_ASSOCIATED_DATA_LENGTH/4], 	   	u8  adlen,
+		u32 npub[CRYPTO_NPUBBYTES/4],
+		u32 k[CRYPTO_KEYBYTES/4]){
 
     /* set ciphertext size */
     *clen = mlen + CRYPTO_ABYTES;
@@ -38,14 +38,14 @@ u8 crypto_aead_encrypt(
     if (adlen) {
         /* full associated data blocks */
         ad_full_block_load: while (adlen >= ASCON_128_RATE) {
-        s[0] ^= LOADBYTES(ad, 8);
+        s[0] ^= FASTFLOAD(ad);
 
         P6(s);
-        ad += ASCON_128_RATE;
+        ad += ASCON_128_RATE/4;
         adlen -= ASCON_128_RATE;
         }
         /* final associated data block */
-        s[0] ^= LOADBYTES(ad, adlen);
+        s[0] ^= FASTVLOAD(ad, adlen);
         s[0] ^= PAD(adlen);
 
         P6(s);
@@ -55,17 +55,17 @@ u8 crypto_aead_encrypt(
 
 
     /* full plaintext blocks */
-      msg_full_block_load: while (mlen >= ASCON_128_RATE) {
-        s[0] ^= LOADBYTES(m, 8);
+    msg_full_block_load: while (mlen >= ASCON_128_RATE) {
+        s[0] ^= FASTFLOAD(m);
         STOREBYTES(c, s[0], 8);
 
         P6(s);
-        m += ASCON_128_RATE;
+        m += ASCON_128_RATE/4;
         c += ASCON_128_RATE;
         mlen -= ASCON_128_RATE;
     }
     /* final plaintext block */
-    s[0] ^= LOADBYTES(m, mlen);
+    s[0] ^= FASTVLOAD(m, mlen);
     STOREBYTES(c, s[0], mlen);
     s[0] ^= PAD(mlen);
     c += mlen;
@@ -89,10 +89,10 @@ u8 crypto_aead_encrypt(
 
 u8 crypto_aead_decrypt(
         u8 m[MAX_MESSAGE_LENGTH], volatile u8* mlen,
-		u8 c[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES],
-        u8 clen, u8 ad[MAX_ASSOCIATED_DATA_LENGTH],
-        u8 adlen, u8 npub[CRYPTO_NPUBBYTES],
-        u8 k[CRYPTO_KEYBYTES]){
+		u32 c[(MAX_MESSAGE_LENGTH + CRYPTO_ABYTES)/4],
+        u8 clen, u32 ad[MAX_ASSOCIATED_DATA_LENGTH/4],
+        u8 adlen, u32 npub[CRYPTO_NPUBBYTES/4],
+        u32 k[CRYPTO_KEYBYTES/4]){
 
     if (clen < CRYPTO_ABYTES) return -1;
 
@@ -100,10 +100,10 @@ u8 crypto_aead_decrypt(
     *mlen = clen - CRYPTO_ABYTES;
 
     /* load key and nonce */
-    const u64 K0 = LOADBYTES(k, 8);
-    const u64 K1 = LOADBYTES(&k[8], 8);
-    const u64 N0 = LOADBYTES(npub, 8);
-    const u64 N1 = LOADBYTES(&k[8], 8);
+    const u64 K0 = FASTFLOAD(k);
+    const u64 K1 = FASTFLOAD(&k[2]);
+    const u64 N0 = FASTFLOAD(npub);
+    const u64 N1 = FASTFLOAD(&k[2]);
 
     /* initialize */
     u64 s[5];
@@ -121,14 +121,14 @@ u8 crypto_aead_decrypt(
     if (adlen) {
         /* full associated data blocks */
     	ad_full_block_load: while (adlen >= ASCON_128_RATE) {
-        s[0] ^= LOADBYTES(ad, 8);
+			s[0] ^= FASTFLOAD(ad);
 
-        P6(s);
-        ad += ASCON_128_RATE;
-        adlen -= ASCON_128_RATE;
+			P6(s);
+			ad += ASCON_128_RATE/4;
+			adlen -= ASCON_128_RATE;
         }
         /* final associated data block */
-        s[0] ^= LOADBYTES(ad, adlen);
+        s[0] ^= FASTVLOAD(ad, adlen);
         s[0] ^= PAD(adlen);
 
         P6(s);
@@ -140,17 +140,17 @@ u8 crypto_aead_decrypt(
     /* full ciphertext blocks */
     clen -= CRYPTO_ABYTES;
     msg_full_block_load: while (clen >= ASCON_128_RATE) {
-        u64 c0 = LOADBYTES(c, 8);
+        u64 c0 = FASTFLOAD(c);
         STOREBYTES(m, s[0] ^ c0, 8);
         s[0] = c0;
 
         P6(s);
         m += ASCON_128_RATE;
-        c += ASCON_128_RATE;
+        c += ASCON_128_RATE/4;
         clen -= ASCON_128_RATE;
     }
     /* final ciphertext block */
-    u64 c0 = LOADBYTES(c, clen);
+    u64 c0 = FASTVLOAD(c, clen);
     STOREBYTES(m, s[0] ^ c0, clen);
     s[0] = CLEARBYTES(s[0], clen);
     s[0] |= c0;

@@ -88,16 +88,16 @@ int generate_test_vectors() {
     return KAT_FILE_OPEN_ERROR;
   }
 
-  for (unsigned long long mlen = 0;
+  loop_mlen: for (unsigned long long mlen = 0;
        (mlen <= MAX_MESSAGE_LENGTH) && (ret_val == KAT_SUCCESS); mlen++) {
-    for (unsigned long long adlen = 0; adlen <= MAX_ASSOCIATED_DATA_LENGTH;
+    loop_adlen: for (unsigned long long adlen = 0; adlen <= MAX_ASSOCIATED_DATA_LENGTH;
          adlen++) {
       fprintf(fp, "Count = %d\n", count++);
       fprint_bstr(fp, "Key = ", key, CRYPTO_KEYBYTES);
       fprint_bstr(fp, "Nonce = ", nonce, CRYPTO_NPUBBYTES);
       fprint_bstr(fp, "PT = ", msg, mlen);
       fprint_bstr(fp, "AD = ", ad, adlen);
-      if ((func_ret = crypto_aead_encrypt(ct, &clen, msg, mlen, ad, adlen,
+      if ((func_ret = crypto_aead_encrypt(ct, &clen, (u32*)msg, mlen, (u32*)ad, adlen,
                                           (u32*)nonce, (u32*)key)) != 0) {
         fprintf(fp, "crypto_aead_encrypt returned <%d>\n", func_ret);
         ret_val = KAT_CRYPTO_FAILURE;
@@ -105,8 +105,8 @@ int generate_test_vectors() {
       }
       fprint_bstr(fp, "CT = ", ct, clen);
       fprintf(fp, "\n");
-      if ((func_ret = crypto_aead_decrypt(msg2, &mlen2, ct, clen, ad,
-                                          adlen, nonce, key)) != 0) {
+      if ((func_ret = crypto_aead_decrypt(msg2, &mlen2, (u32*)ct, clen, (u32*)ad,
+                                          adlen, (u32*)nonce, (u32*)key)) != 0) {
         fprintf(fp, "crypto_aead_decrypt returned <%d>\n", func_ret);
         ret_val = KAT_CRYPTO_FAILURE;
         break;
@@ -132,11 +132,11 @@ int generate_test_vectors() {
 void fprint_bstr(FILE *fp, const char *label, const unsigned char *data,
                  unsigned long long length) {
   fprintf(fp, "%s", label);
-  for (unsigned long long i = 0; i < length; i++) fprintf(fp, "%02X", data[i]);
+  kat_write: for (unsigned long long i = 0; i < length; i++) fprintf(fp, "%02X", data[i]);
   fprintf(fp, "\n");
 }
 
 void init_buffer(unsigned char *buffer, unsigned long long numbytes) {
-  for (unsigned long long i = 0; i < numbytes; i++)
+  fill_vector: for (unsigned long long i = 0; i < numbytes; i++)
     buffer[i] = (unsigned char)i;
 }

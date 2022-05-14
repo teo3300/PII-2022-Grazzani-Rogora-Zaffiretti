@@ -35,18 +35,18 @@ static inline u64 CLEARBYTES(u64 x, int n) {
 #define SETWORD(b, i) (((u64)((b & (0xff << 8*(i&3))) >> 8*(i&3))) << (56 - 8 * (i)))
 
 static inline u64 FASTFLOAD(const u32 word[2]) {
-  u64 x = SETWORD(word[0],0);
+  /*u64 x = SETWORD(word[0],0);
   for (u8 i = 1; i < 8; ++i) {
     x |= SETWORD(word[i>>2], i);
   }
-  return x;
-  /*u64   x  = SETWORD(word[0],0) | SETWORD(word[0],1) | SETWORD(word[0],2) | SETWORD(word[0],3);
-  return x |= SETWORD(word[1],4) | SETWORD(word[1],5) | SETWORD(word[1],6) | SETWORD(word[1],7);*/
+  return x;*/
+  u64 	 x  = SETWORD(word[0],0) | SETWORD(word[0],1) | SETWORD(word[0],2) | SETWORD(word[0],3);
+  return x |= SETWORD(word[1],4) | SETWORD(word[1],5) | SETWORD(word[1],6) | SETWORD(word[1],7);
 }
 
 static inline u64 FASTVLOAD(const u32 word[2], u8 n) {
-  u64 x = SETWORD(word[0],0);
-  for (u8 i = 1; i < n; ++i) {
+  u64 x = 0;
+  for (u8 i = 0; i < n; ++i) {
     x |= SETWORD(word[i>>2], i);
   }
   return x;
