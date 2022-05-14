@@ -67,15 +67,15 @@ int main() {
 int generate_test_vectors() {
   FILE *fp;
   char fileName[MAX_FILE_NAME];
-  unsigned char key[CRYPTO_KEYBYTES];
-  unsigned char nonce[CRYPTO_NPUBBYTES];
-  unsigned char msg[MAX_MESSAGE_LENGTH];
-  unsigned char msg2[MAX_MESSAGE_LENGTH];
-  unsigned char ad[MAX_ASSOCIATED_DATA_LENGTH];
-  unsigned char ct[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES];
-  unsigned long long clen, mlen2;
-  int count = 1;
-  int func_ret, ret_val = KAT_SUCCESS;
+  u8 key[CRYPTO_KEYBYTES];
+  u8 nonce[CRYPTO_NPUBBYTES];
+  u8 msg[MAX_MESSAGE_LENGTH];
+  u8 msg2[MAX_MESSAGE_LENGTH];
+  u8 ad[MAX_ASSOCIATED_DATA_LENGTH];
+  u8 ct[MAX_MESSAGE_LENGTH + CRYPTO_ABYTES];
+  u8 clen, mlen2;
+  u32 count = 1;
+  u8 func_ret, ret_val = KAT_SUCCESS;
 
   init_buffer(key, sizeof(key));
   init_buffer(nonce, sizeof(nonce));
@@ -98,7 +98,7 @@ int generate_test_vectors() {
       fprint_bstr(fp, "PT = ", msg, mlen);
       fprint_bstr(fp, "AD = ", ad, adlen);
       if ((func_ret = crypto_aead_encrypt(ct, &clen, msg, mlen, ad, adlen,
-                                          nonce, key)) != 0) {
+                                          (u32*)nonce, (u32*)key)) != 0) {
         fprintf(fp, "crypto_aead_encrypt returned <%d>\n", func_ret);
         ret_val = KAT_CRYPTO_FAILURE;
         break;
@@ -113,7 +113,7 @@ int generate_test_vectors() {
       }
       if (mlen != mlen2) {
         fprintf(fp,
-                "crypto_aead_decrypt returned bad 'mlen': Got <%I64u>, expected <%I64u>\n",
+                "crypto_aead_decrypt returned bad 'mlen': Got <%llu>, expected <%llu>\n",
                 (u64)mlen2, (u64)mlen);
         ret_val = KAT_CRYPTO_FAILURE;
         break;
